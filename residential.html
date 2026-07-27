@@ -8,16 +8,24 @@
 <link rel="canonical" href="https://konfideinone.com/residential">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#1A1A1A">
+<link rel="icon" type="image/svg+xml" href="./favicon.svg">
+<link rel="apple-touch-icon" href="./apple-touch-icon.png">
+<style>body{opacity:0}body.dc-ready{opacity:1;transition:opacity .25s ease}</style>
+<noscript><style>body{opacity:1 !important}</style></noscript>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Elevate your property with on-site wellness — Konfide In One">
 <meta property="og:description" content="Bring expert training, nutrition, recovery and measurement to your residents. For property managers, HOAs and residents in Austin, TX.">
 <meta property="og:url" content="https://konfideinone.com/residential">
 <meta property="og:site_name" content="Konfide In One">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://konfideinone.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://konfideinone.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Residential wellness by Konfide In One">
 <meta name="twitter:description" content="Premium on-site wellness for residential properties. Austin, TX.">
-<script src="./support.js"></script>
+<script src="./support.js" defer></script>
 </head>
 <body>
 <x-dc>
@@ -46,25 +54,69 @@
       h1 { font-size: 32px !important; }
       h2 { font-size: 24px !important; }
     }
+    /* ===== KN1 responsive & details ===== */
+    html { scroll-behavior: smooth; }
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .faq-x { display: inline-block; transition: transform 0.25s ease; }
+    details[open] > summary .faq-x { transform: rotate(45deg); }
+    @media (max-width: 1100px) {
+      [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
+      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
+      [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+    @media (max-width: 760px) {
+      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 24px !important; padding-right: 24px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
+      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      [style*="width: 760px"] { width: 100% !important; }
+      [style*="height: 900px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
+      [style*="min-height: 700px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 480px"] { min-height: 340px !important; }
+      [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
+      [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
+      [style*="gap: 96px"] { gap: 40px !important; }
+      [style*="gap: 72px"] { gap: 36px !important; }
+      [style*="gap: 64px"] { gap: 32px !important; }
+      [style*="gap: 56px"] { gap: 28px !important; }
+      [style*="gap: 48px"] { gap: 24px !important; }
+      [style*="gap: 32px"] { gap: 18px !important; }
+      [style*="font-size: 108px"] { font-size: 46px !important; }
+      [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 84px"] { font-size: 40px !important; }
+      [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
+      [style*="font-size: 66px"] { font-size: 44px !important; }
+      [style*="font-size: 64px"] { font-size: 38px !important; }
+      [style*="font-size: 52px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
+      [style*="font-size: 42px"], [style*="font-size: 40px"] { font-size: 26px !important; }
+      [style*="font-size: 36px"] { font-size: 24px !important; }
+      [style*="font-size: 34px"], [style*="font-size: 32px"] { font-size: 24px !important; }
+      [style*="font-size: 26px"] { font-size: 22px !important; }
+      blockquote { font-size: 26px !important; line-height: 1.35 !important; }
+      [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
+      [style*="padding: 19px 42px"] { padding: 14px 24px !important; }
+      [style*="padding: 18px 41px"] { padding: 13px 22px !important; }
+      [style*="padding: 20px 52px"], [style*="padding: 20px 56px"] { padding: 15px 28px !important; }
+      [style*="margin-top: 132px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
+    }
   </style>
 </helmet>
 
 <div style="max-width: 1440px; width: 100%; margin: 0 auto; background: #1A1A1A; color: #F5F2ED; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
 
   <!-- ===== NAV ===== -->
-  <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
+  <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" style="display: flex; flex-direction: column; line-height: 1;">
       <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F5F2ED;">Konfide In One</div>
       <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #A67C52; margin-top: 6px;">Unified Wellness</div>
     </a>
     <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.8); font-weight: 500;">
-      <a href="corporate.dc.html">Corporate</a>
-      <a href="residential.dc.html" style="color: #F5F2ED; border-bottom: 1px solid #A67C52; padding-bottom: 4px;">Residential</a>
-      <a href="ecosystem.dc.html">Ecosystem</a>
-      <a href="mission.dc.html">Mission</a>
-      <a href="get-started.dc.html" style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="residential.html" style="color: #F5F2ED; border-bottom: 1px solid #A67C52; padding-bottom: 4px;">Residential</a>
+      <a href="ecosystem.html">Ecosystem</a>
+      <a href="mission.html">Mission</a>
+      <a href="get-started.html" style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</a>
     </div>
-  </div>
+  </nav>
 
   <!-- ===================== SECTION A — PROPERTY DECISION-MAKERS ===================== -->
 
@@ -80,7 +132,7 @@
       <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">For Properties &amp; Residents &middot; Property Managers &amp; HOAs</div>
       <h1 class="fr" style="font-size: 88px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; max-width: 1080px;">Elevate your property. Bring expert wellness to your residents.</h1>
       <div style="font-size: 19px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.8); max-width: 600px; margin-top: 28px;">A premium property is defined by its amenities. An underutilized gym is a missed opportunity.</div>
-      <div style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 19px 42px; margin-top: 40px;">Bring KN1 to your property</div>
+      <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 19px 42px; margin-top: 40px;">Bring KN1 to your property</a>
     </div>
   </div>
 
@@ -155,7 +207,7 @@
       <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">For Residents</div>
       <h2 class="fr" style="font-size: 88px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; max-width: 1000px;">Transform your health. Right where you live.</h2>
       <div style="font-size: 19px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.8); max-width: 600px; margin-top: 28px;">Your building gym just got better. Expert coaching, nutrition guidance, and recovery, all delivered on-site, all designed around your life. No commute. No excuses. Just results.</div>
-      <div style="display: inline-block; border: 1px solid rgba(245,242,237,0.5); color: #F5F2ED; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; padding: 18px 41px; margin-top: 40px;">Book a consultation</div>
+      <a href="get-started.html" style="display: inline-block; border: 1px solid rgba(245,242,237,0.5); color: #F5F2ED; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; padding: 18px 41px; margin-top: 40px;">Book a consultation</a>
     </div>
   </div>
 
@@ -201,17 +253,45 @@
     <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.42); margin-top: 8px;">Founder &amp; Business Executive</div>
   </div>
 
+  <!-- ===== FAQ ===== -->
+  <section style="border-top: 1px solid rgba(245,242,237,0.07); padding: 120px 72px;">
+    <div style="max-width: 880px; margin: 0 auto;">
+      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">FAQ</div>
+      <h2 class="fr" style="font-size: 44px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 56px;">Frequently asked questions</h2>
+      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is residential wellness at Konfide In One?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Konfide In One brings a unified, on-site wellness program to luxury residential properties. Expert coaching, nutrition, recovery and measurement are delivered directly to residents where they live &mdash; no commute, no excuses.</div>
+      </details>
+      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">Who is the residential wellness program for?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">It serves property managers, HOA boards and individual residents. For property managers and HOAs, KN1 activates the existing gym as a resident draw; for residents, it provides expert personal training, nutrition coaching, recovery services and quarterly body composition tracking.</div>
+      </details>
+      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">Do residents need to travel to train with Konfide In One?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">No. All coaching and services are delivered on-site at the building gym. The coaching is tailored to each resident's goals and fitness level, starting with a functional movement assessment.</div>
+      </details>
+      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">How is Konfide In One different from a standard personal trainer?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">KN1 uses a systematized methodology built around <a href="ecosystem.html" style="color:#A67C52;">four pillars</a> &mdash; Train, Fuel, Restore and Measure. Every engagement begins with a functional assessment, programming is science-backed, and nutrition and recovery are integrated from day one rather than treated as afterthoughts.</div>
+      </details>
+      <details style="border-top: 1px solid rgba(245,242,237,0.09); border-bottom: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">How do I bring Konfide In One to my building?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;"><a href="get-started.html" style="color:#A67C52;">Book a consultation</a> through the Get Started page. We will discuss your property, resident demographic and goals, and design an on-site wellness program for your community.</div>
+      </details>
+    </div>
+  </section>
+
   <!-- FOOTER CTA -->
-  <div style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
+  <div role="contentinfo" style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
     <div style="text-align: center;">
       <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 28px; font-weight: 500;">Let&rsquo;s talk</div>
       <h2 class="fr" style="font-size: 72px; line-height: 1; font-weight: 400; letter-spacing: -0.025em; max-width: 900px; margin: 0 auto 44px;">Book a consultation</h2>
-      <div style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</div>
+      <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</a>
     </div>
     <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 132px; padding-top: 40px; border-top: 1px solid rgba(245,242,237,0.07); font-size: 12px; letter-spacing: 0.04em; color: rgba(245,242,237,0.4);">
       <div class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(245,242,237,0.7);">Konfide In One</div>
       <div style="display: flex; gap: 32px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500;">
-        <a href="corporate.dc.html">Corporate</a><a href="residential.dc.html">Residential</a><a href="ecosystem.dc.html">Ecosystem</a><a href="mission.dc.html">Mission</a><a href="get-started.dc.html">Get Started</a>
+        <a href="corporate.html">Corporate</a><a href="residential.html">Residential</a><a href="ecosystem.html">Ecosystem</a><a href="mission.html">Mission</a><a href="get-started.html">Get Started</a>
       </div>
       <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX</div>
     </div>

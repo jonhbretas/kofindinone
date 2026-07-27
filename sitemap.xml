@@ -6,28 +6,28 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://konfideinone.com/corporate.dc.html</loc>
+    <loc>https://konfideinone.com/corporate</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://konfideinone.com/residential.dc.html</loc>
+    <loc>https://konfideinone.com/residential</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://konfideinone.com/ecosystem.dc.html</loc>
+    <loc>https://konfideinone.com/ecosystem</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://konfideinone.com/mission.dc.html</loc>
+    <loc>https://konfideinone.com/mission</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://konfideinone.com/get-started.dc.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://konfideinone.com/get-started</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
