@@ -81,6 +81,42 @@
   }
   stripMedia();
 
+  /* ============================================================
+     Full-bleed responsive layout for viewports ≥ 1441px
+     (below this, the zoom-to-fit fallback scales the 1440px canvas)
+     Strategy: container becomes 100% wide so section backgrounds fill the
+     screen edge-to-edge, while content (text, icons, grids) is anchored
+     to a centered 1440px box via dynamic padding. No more side band of
+     body bg and no bloated layout — the design breathes on big screens.
+     ============================================================ */
+  (function injectResponsive() {
+    var css =
+      '@media (min-width: 1441px) {' +
+        /* canvas fills viewport width */
+        'div[style*="width: 1440px"], div[style*="width:1440px"] { width: 100% !important; overflow: visible !important; }' +
+        /* section backgrounds now bleed full-width because the section itself
+           spans 100% — we keep their content centered in a 1440px box */
+        'div[style*="width: 1440px"] > div, div[style*="width:1440px"] > div,' +
+        'div[style*="width: 1440px"] > section, div[style*="width:1440px"] > section,' +
+        'div[style*="width: 1440px"] > nav, div[style*="width:1440px"] > nav {' +
+          'padding-left: max(24px, calc((100vw - 1440px) / 2 + 24px)) !important;' +
+          'padding-right: max(24px, calc((100vw - 1440px) / 2 + 24px)) !important;' +
+        '}' +
+        /* hero text overlay + any absolute overlay anchored at left:72/right:72
+           now anchored to the centered content box, not to the screen edge */
+        'div[style*="position: absolute"][style*="left: 72px"] {' +
+          'left: max(72px, calc((100vw - 1440px) / 2 + 72px)) !important;' +
+        '}' +
+        'div[style*="position: absolute"][style*="right: 72px"] {' +
+          'right: max(72px, calc((100vw - 1440px) / 2 + 72px)) !important;' +
+        '}' +
+      '}';
+    var s = document.createElement('style');
+    s.setAttribute('data-kn1-responsive', '');
+    s.textContent = css;
+    document.head.appendChild(s);
+  })();
+
   function evalInScope(expr, scope) {
     try {
       var keys = Object.keys(scope);
