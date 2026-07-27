@@ -25,17 +25,23 @@
   function fitDesign() {
     var w = document.documentElement.clientWidth || window.innerWidth;
     var h = window.innerHeight;
-    var z = w / DESIGN_W;
+    /* Cap zoom at 1.0 — never enlarge beyond the authored 1440px design.
+       On wider viewports the canvas centers (margin:0 auto) with seamless
+       body bg; on narrower viewports it scales down to fit. This keeps the
+       original design proportions on large screens instead of bloating them. */
+    var z = Math.min(w / DESIGN_W, 1);
     var cs = document.querySelectorAll('div[style*="width: 1440px"], div[style*="width:1440px"]');
     for (var i = 0; i < cs.length; i++) cs[i].style.zoom = z;
-    /* Resize every hero so that, after the zoom factor is applied, it sits at
-       exactly 100vh — keeping the first fold full-bleed on any screen size. */
-    var preVH = (h / z) + 'px';
+    /* Only the FIRST hero (the actual first fold) is set to 100vh — so the
+       above-the-fold stays full-bleed on any screen. Subsequent heroes keep
+       their authored heights, preserving the original rhythm/proportions. */
     var heroes = document.querySelectorAll('div[style*="width: 100%; overflow: hidden"]');
+    var firstHero = null;
     for (var j = 0; j < heroes.length; j++) {
       var s = heroes[j].getAttribute('style') || '';
-      if (HERO_PX.test(s)) heroes[j].style.height = preVH;
+      if (HERO_PX.test(s)) { firstHero = heroes[j]; break; }
     }
+    if (firstHero) firstHero.style.height = (h / z) + 'px';
   }
   var rafT = null;
   window.addEventListener('resize', function () {
