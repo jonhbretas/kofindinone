@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
+    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
+  </style>
+</helmet>
+
+<div style="width: 1440px; margin: 0 auto; background: #1A1A1A; color: #F5F2ED; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
+
+  <!-- ===== NAV ===== -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; flex-direction: column; line-height: 1;">
+      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F5F2ED;">Konfide In One</div>
+      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #A67C52; margin-top: 6px;">Unified Wellness</div>
+    </div>
+    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.8); font-weight: 500;">
+      <span>Corporate</span>
+      <span>Residential</span>
+      <span style="color: #F5F2ED; border-bottom: 1px solid #A67C52; padding-bottom: 4px;">Ecosystem</span>
+      <span>Mission</span>
+      <span style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</span>
+    </div>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <div style="position: relative; height: 700px; width: 100%; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, #202020 0 22px, #1c1c1c 22px 44px); animation: heroKen 18s ease-in-out infinite alternate;"></div>
+    <div style="position: absolute; top: 110px; left: 0; right: 0; display: flex; justify-content: center;">
+      <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.28); text-align: center; max-width: 560px; line-height: 1.8;">photograph &middot; luxury residential gym setting</span>
+    </div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.9) 100%);"></div>
+    <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
+      <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">The Ecosystem</div>
+      <div class="fr" style="font-size: 92px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; max-width: 1000px;">Built by experts. For your whole health.</div>
+      <div style="font-size: 19px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.8); max-width: 620px; margin-top: 28px;">Konfide In One isn&rsquo;t one person. It&rsquo;s a curated network of specialists, each bringing world-class expertise to your training, nutrition, recovery, and measurement. Everything is integrated. Everything works together.</div>
+    </div>
+  </div>
+
+  <!-- ===== PILLARS ===== -->
+  <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+
+    <div style="border-top: 1px solid rgba(245,242,237,0.07);">
+
+      <!-- pillar header photo -->
+      <div style="position: relative; height: 340px; overflow: hidden;">
+        <div style="{{ p.imgStyle }}"></div>
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.3) 0%, rgba(20,20,20,0.85) 100%);"></div>
+        <div style="position: absolute; left: 72px; bottom: 44px;">
+          <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 16px; font-weight: 500;">{{ p.tag }}</div>
+          <div class="fr" style="font-size: 64px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; color: #F5F2ED;">{{ p.title }}</div>
+        </div>
+      </div>
+
+      <!-- pillar copy -->
+      <div style="padding: 88px 72px 64px; max-width: 900px;">
+        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.7);">{{ p.desc }}</div>
+      </div>
+
+      <!-- partner card: logo left, headshot+bio right -->
+      <div style="padding: 0 72px 108px;">
+        <div style="background: #161616; border: 1px solid rgba(245,242,237,0.07); padding: 56px 64px; display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center;">
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(245,242,237,0.4); font-weight: 500;">Partner</div>
+            <div style="height: 68px; display: flex; align-items: center;">
+              <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(245,242,237,0.35); border: 1px dashed rgba(245,242,237,0.2); padding: 18px 24px; width: 100%; text-align: center; box-sizing: border-box;">{{ p.partnerLabel }}</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 28px; align-items: center;">
+            <div style="width: 88px; height: 88px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2a2a2a 0 6px, #232323 6px 12px); border: 1px solid rgba(245,242,237,0.1); position: relative;">
+              <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(245,242,237,0.35); text-align: center;">headshot</span>
+            </div>
+            <div>
+              <div class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.005em; color: #F5F2ED;">{{ p.partnerName }}</div>
+              <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #A67C52; margin-top: 8px; font-weight: 500;">{{ p.partnerRole }}</div>
+              <div style="font-size: 14px; line-height: 1.65; color: rgba(245,242,237,0.6); margin-top: 14px; max-width: 480px;">{{ p.partnerBio }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </sc-for>
+
+  <!-- ===== FOOTER CTA ===== -->
+  <div style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
+    <div style="text-align: center;">
+      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 28px; font-weight: 500;">See it come together</div>
+      <div class="fr" style="font-size: 72px; line-height: 1; font-weight: 400; letter-spacing: -0.025em; max-width: 900px; margin: 0 auto 44px;">Book a consultation</div>
+      <div style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</div>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 132px; padding-top: 40px; border-top: 1px solid rgba(245,242,237,0.07); font-size: 12px; letter-spacing: 0.04em; color: rgba(245,242,237,0.4);">
+      <div class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(245,242,237,0.7);">Konfide In One</div>
+      <div style="display: flex; gap: 32px; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 500;">
+        <span>Corporate</span><span>Residential</span><span>Ecosystem</span><span>Mission</span><span>Get Started</span>
+      </div>
+      <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const angles = [118, 106, 132, 122];
+    const data = [
+      {
+        tag: "Pillar 1 — Train", title: "Train",
+        desc: "Personal coaching and functional movement assessment. Every client starts with a comprehensive assessment to identify limitations, imbalances, and movement patterns. From there, programming is tailored, progressive, and backed by science. On-site delivery at your property or residence. Group classes and one-on-one coaching available.",
+        partnerLabel: "KN1 Founder & Head Coach logo",
+        partnerName: "[KN1 Founder & Head Coach]",
+        partnerRole: "Founder & Head Coach",
+        partnerBio: "Add a two to three sentence bio covering coaching philosophy and credentials.",
+      },
+      {
+        tag: "Pillar 2 — Fuel", title: "Fuel",
+        desc: "Nutrition coaching delivered on-site to support your training and goals. Clients receive guidance on meal planning, supplementation, and eating patterns that align with their training and recovery. Nutrition is not an afterthought — it is part of the system from day one.",
+        partnerLabel: "Nutrition Partner logo",
+        partnerName: "[Nutrition Partner Name]",
+        partnerRole: "Nutrition Partner",
+        partnerBio: "Add a two to three sentence bio covering nutrition expertise and approach.",
+      },
+      {
+        tag: "Pillar 3 — Restore", title: "Restore",
+        desc: "Recovery services including massage therapy and functional medicine, delivered on-site. Your body needs recovery to adapt and grow. Our partners in massage and functional medicine work alongside your training to accelerate results, reduce injury risk, and optimize how you feel.",
+        partnerLabel: "Massage Therapist & Functional Medicine Provider logos",
+        partnerName: "[Massage Therapist Name] & [Functional Medicine Provider Name]",
+        partnerRole: "Massage Therapy & Functional Medicine",
+        partnerBio: "Add two to three sentence bios for each specialist covering expertise and approach.",
+      },
+      {
+        tag: "Pillar 4 — Measure", title: "Measure",
+        desc: "Track your progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh. Siloh is a health and nutrition tracking app that integrates seamlessly with your KN1 coaching. See your data in real time, adjust as needed, and watch tangible progress unfold.",
+        partnerLabel: "Siloh logo",
+        partnerName: "[Siloh Founder & App Lead]",
+        partnerRole: "Founder & App Lead, Siloh",
+        partnerBio: "Add a two to three sentence bio covering the app, philosophy, and KN1 integration.",
+      },
+    ];
+    const pillars = data.map((p, i) => ({
+      ...p,
+      imgStyle: `position:absolute; inset:0; background: repeating-linear-gradient(${angles[i]}deg, #262626 0 20px, #1e1e1e 20px 40px);`,
+    }));
+    return { pillars };
+  }
+}
+</script>
+</body>
+</html>
