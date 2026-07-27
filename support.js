@@ -21,11 +21,21 @@
      preserved 100% (just scaled). Media queries that re-flow the layout are
      stripped below so they never conflict with the zoom. */
   var DESIGN_W = 1440;
+  var HERO_PX = /(?:^|;\s)height:\s*(?:\d{3,4})px/; // matches `height: 900px` etc, not `min-height`
   function fitDesign() {
     var w = document.documentElement.clientWidth || window.innerWidth;
+    var h = window.innerHeight;
     var z = w / DESIGN_W;
     var cs = document.querySelectorAll('div[style*="width: 1440px"], div[style*="width:1440px"]');
     for (var i = 0; i < cs.length; i++) cs[i].style.zoom = z;
+    /* Resize every hero so that, after the zoom factor is applied, it sits at
+       exactly 100vh — keeping the first fold full-bleed on any screen size. */
+    var preVH = (h / z) + 'px';
+    var heroes = document.querySelectorAll('div[style*="width: 100%; overflow: hidden"]');
+    for (var j = 0; j < heroes.length; j++) {
+      var s = heroes[j].getAttribute('style') || '';
+      if (HERO_PX.test(s)) heroes[j].style.height = preVH;
+    }
   }
   var rafT = null;
   window.addEventListener('resize', function () {
