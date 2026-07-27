@@ -14,6 +14,57 @@
     onkeyup: 'keyup', onfocus: 'focus', onblur: 'blur'
   };
 
+  /* ===== Zoom the design canvas to exactly fill any viewport width =====
+     The site is authored at a fixed 1440px width (original .dc.html files).
+     We scale that canvas so it ALWAYS fills the available width — no left/right
+     borders on large screens, no broken layout on small screens. Design is
+     preserved 100% (just scaled). Media queries that re-flow the layout are
+     stripped below so they never conflict with the zoom. */
+  var DESIGN_W = 1440;
+  function fitDesign() {
+    var w = document.documentElement.clientWidth || window.innerWidth;
+    var z = w / DESIGN_W;
+    var cs = document.querySelectorAll('div[style*="width: 1440px"], div[style*="width:1440px"]');
+    for (var i = 0; i < cs.length; i++) cs[i].style.zoom = z;
+  }
+  var rafT = null;
+  window.addEventListener('resize', function () {
+    if (rafT) cancelAnimationFrame(rafT);
+    rafT = requestAnimationFrame(fitDesign);
+  });
+
+  /* ===== Strip all @media blocks from every <style> tag =====
+     Re-flow media queries would conflict with zoom scaling, so they are
+     removed at boot. Inline (author) styles remain untouched. */
+  function removeAtMediaBlocks(css) {
+    var out = '', i = 0;
+    while (i < css.length) {
+      var idx = css.indexOf('@media', i);
+      if (idx === -1) { out += css.slice(i); break; }
+      out += css.slice(i, idx);
+      var open = css.indexOf('{', idx);
+      if (open === -1) { out += css.slice(idx); break; }
+      var depth = 1, j = open + 1;
+      while (j < css.length && depth > 0) {
+        var c = css.charAt(j);
+        if (c === '{') depth++;
+        else if (c === '}') depth--;
+        j++;
+      }
+      i = j;
+    }
+    return out;
+  }
+  function stripMedia() {
+    var ss = document.querySelectorAll('style');
+    for (var k = 0; k < ss.length; k++) {
+      var css = ss[k].textContent;
+      if (css.indexOf('@media') === -1) continue;
+      ss[k].textContent = removeAtMediaBlocks(css);
+    }
+  }
+  stripMedia();
+
   function evalInScope(expr, scope) {
     try {
       var keys = Object.keys(scope);
@@ -70,7 +121,8 @@
 
     if (tag === 'sc-if') {
       var scopeIf = mergeScope(ctx, locals);
-      var cond = !!evalInScope(node.getAttribute('value') || 'false', scopeIf);
+      var condExpr = (node.getAttribute('value') || 'false').replace(/^\{\{|\}\}$/g, '').trim();
+      var cond = !!evalInScope(condExpr, scopeIf);
       signature.push('i' + (cond ? '1' : '0'));
       if (!cond) return [];
       return [expandChildren(node, ctx, locals, registry, signature)];
@@ -129,7 +181,8 @@
         if (c.nodeType !== 1) continue;
         var tag = c.tagName.toLowerCase();
         if (tag === 'sc-if') {
-          var cond = !!evalInScope(c.getAttribute('value') || 'false', ctx);
+          var condExpr = (c.getAttribute('value') || 'false').replace(/^\{\{|\}\}$/g, '').trim();
+          var cond = !!evalInScope(condExpr, ctx);
           sig.push('i' + (cond ? '1' : '0'));
           if (cond) walk(c);
         } else if (tag === 'sc-for') {
@@ -274,6 +327,7 @@
         var script = xdc.parentNode.querySelector('script[type="text/x-dc"]');
         if (script) initPage(xdc, script);
       }
+      fitDesign();
     } catch (e) {
       console.error('[x-dc] boot failed', e);
     } finally {
