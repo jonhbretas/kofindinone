@@ -122,10 +122,7 @@
 
   <!-- HERO A -->
   <div style="position: relative; height: 780px; width: 100%; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, #202020 0 22px, #1c1c1c 22px 44px); animation: heroKen 18s ease-in-out infinite alternate;"></div>
-    <div style="position: absolute; top: 110px; left: 0; right: 0; display: flex; justify-content: center;">
-      <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.28); text-align: center; max-width: 560px; line-height: 1.8;">photograph &middot; luxury residential building gym, community feel</span>
-    </div>
+    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-56.webp'); background-size: cover; background-position: center; animation: heroKen 18s ease-in-out infinite alternate;"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.9) 100%);"></div>
 
     <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
@@ -138,9 +135,7 @@
 
   <!-- OPENING COPY A — asymmetric, photo bleeds left -->
   <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;">
-    <div style="position: relative; min-height: 620px; background: repeating-linear-gradient(125deg, #232323 0 20px, #1e1e1e 20px 40px);">
-      <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,237,0.3); text-align: center; padding: 0 40px;">photograph &middot; residents training together &middot; bleeds off left edge</span>
-    </div>
+    <div style="position: relative; min-height: 620px; background-image: url('images/ChanCL-38.webp'); background-size: cover; background-position: center;"></div>
     <div style="padding: 104px 128px 104px 96px; display: flex; flex-direction: column; justify-content: center;">
       <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">Turn an amenity into an advantage</div>
       <h2 class="fr" style="font-size: 42px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Your gym is an asset. Let&rsquo;s make it perform like one.</h2>
@@ -197,10 +192,7 @@
 
   <!-- HERO B -->
   <div style="position: relative; height: 760px; width: 100%; overflow: hidden; margin-top: 60px;">
-    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(105deg, #212121 0 22px, #1b1b1b 22px 44px);"></div>
-    <div style="position: absolute; top: 90px; left: 0; right: 0; display: flex; justify-content: center;">
-      <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.28); text-align: center; max-width: 560px; line-height: 1.8;">photograph &middot; resident training on-site, community feel</span>
-    </div>
+    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-59.webp'); background-size: cover; background-position: center;"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.2) 40%, rgba(20,20,20,0.88) 100%);"></div>
 
     <div style="position: absolute; left: 72px; right: 72px; bottom: 80px; z-index: 10;">
@@ -238,9 +230,7 @@
         <h2 class="fr" style="font-size: 40px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">Systematized methodology, built around your body.</h2>
         <div style="font-size: 16px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 26px; max-width: 460px;">Your first session includes a functional assessment so the coach understands your body. Programming builds intelligently. Recovery and nutrition aren&rsquo;t afterthoughts &mdash; they&rsquo;re part of the plan from day one.</div>
       </div>
-      <div style="position: relative; min-height: 480px; background: repeating-linear-gradient(120deg, #232323 0 20px, #1e1e1e 20px 40px);">
-        <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,237,0.3); text-align: center; padding: 0 40px;">photograph &middot; functional assessment session &middot; bleeds off right edge</span>
-      </div>
+      <div style="position: relative; min-height: 480px; background-image: url('images/ChanCL-56.webp'); background-size: cover; background-position: center;"></div>
     </div>
   </div>
 
@@ -359,10 +349,9 @@
 class Component extends DCLogic {
   renderVals() {
     const cardBase = "position: relative; display: block; height: 400px; overflow: hidden;";
-    const angles = [120, 108, 132, 116];
-    const mk = (arr) => arr.map((v, i) => ({
+    const mk = (arr) => arr.map((v) => ({
       ...v,
-      imgStyle: `position:absolute; inset:0; background: repeating-linear-gradient(${angles[i]}deg, #262626 0 20px, #1e1e1e 20px 40px);`,
+      imgStyle: `position:absolute; inset:0; background-image: url('images/${v.img}'); background-size: cover; background-position: center;`,
       style: cardBase,
     }));
     return {
@@ -373,16 +362,16 @@ class Component extends DCLogic {
         "Professional, white-glove delivery, no operational burden on your team",
       ],
       verbsA: mk([
-        { title: "Train", tag: "photo — coaching", desc: "On-site personal and group coaching, customized to your resident demographic." },
-        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to residents." },
-        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to residents." },
-        { title: "Measure", tag: "photo — data", desc: "Progress tracking so residents see tangible results." },
+        { title: "Train", tag: "photo — coaching", desc: "On-site personal and group coaching, customized to your resident demographic.", img: "ChanCL-4.webp" },
+        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to residents.", img: "ChanCL-51.webp" },
+        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to residents.", img: "ChanCL-65.webp" },
+        { title: "Measure", tag: "photo — data", desc: "Progress tracking so residents see tangible results.", img: "ChanCL-72.webp" },
       ]),
       verbsB: mk([
-        { title: "Train", tag: "photo — coaching", desc: "Personal coaching and group classes tailored to your goals and fitness level." },
-        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to align eating with training." },
-        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to maximize results." },
-        { title: "Measure", tag: "photo — data", desc: "Quarterly progress tracking so you see what's working." },
+        { title: "Train", tag: "photo — coaching", desc: "Personal coaching and group classes tailored to your goals and fitness level.", img: "ChanCL-5.webp" },
+        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to align eating with training.", img: "ChanCL-59.webp" },
+        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to maximize results.", img: "ChanCL-71.webp" },
+        { title: "Measure", tag: "photo — data", desc: "Quarterly progress tracking so you see what's working.", img: "ChanCL-38.webp" },
       ]),
     };
   }

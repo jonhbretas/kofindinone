@@ -119,10 +119,7 @@
 
   <!-- ===== HERO ===== -->
   <div style="position: relative; height: 700px; width: 100%; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, #202020 0 22px, #1c1c1c 22px 44px); animation: heroKen 18s ease-in-out infinite alternate;"></div>
-    <div style="position: absolute; top: 110px; left: 0; right: 0; display: flex; justify-content: center;">
-      <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.28); text-align: center; max-width: 560px; line-height: 1.8;">photograph &middot; luxury residential gym setting</span>
-    </div>
+    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-56.webp'); background-size: cover; background-position: center; animation: heroKen 18s ease-in-out infinite alternate;"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.9) 100%);"></div>
     <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
       <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">The Ecosystem</div>
@@ -278,10 +275,9 @@
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   renderVals() {
-    const angles = [118, 106, 132, 122];
     const data = [
       {
-        tag: "Pillar 1 — Train", title: "Train",
+        tag: "Pillar 1 — Train", title: "Train", img: "ChanCL-5.webp",
         desc: "Personal coaching and functional movement assessment. Every client starts with a comprehensive assessment to identify limitations, imbalances, and movement patterns. From there, programming is tailored, progressive, and backed by science. On-site delivery at your property or residence. Group classes and one-on-one coaching available.",
         partnerLabel: "KN1 Founder & Head Coach logo",
         partnerName: "[KN1 Founder & Head Coach]",
@@ -289,7 +285,7 @@ class Component extends DCLogic {
         partnerBio: "Add a two to three sentence bio covering coaching philosophy and credentials.",
       },
       {
-        tag: "Pillar 2 — Fuel", title: "Fuel",
+        tag: "Pillar 2 — Fuel", title: "Fuel", img: "ChanCL-59.webp",
         desc: "Nutrition coaching delivered on-site to support your training and goals. Clients receive guidance on meal planning, supplementation, and eating patterns that align with their training and recovery. Nutrition is not an afterthought — it is part of the system from day one.",
         partnerLabel: "Nutrition Partner logo",
         partnerName: "[Nutrition Partner Name]",
@@ -297,7 +293,7 @@ class Component extends DCLogic {
         partnerBio: "Add a two to three sentence bio covering nutrition expertise and approach.",
       },
       {
-        tag: "Pillar 3 — Restore", title: "Restore",
+        tag: "Pillar 3 — Restore", title: "Restore", img: "ChanCL-65.webp",
         desc: "Recovery services including massage therapy and functional medicine, delivered on-site. Your body needs recovery to adapt and grow. Our partners in massage and functional medicine work alongside your training to accelerate results, reduce injury risk, and optimize how you feel.",
         partnerLabel: "Massage Therapist & Functional Medicine Provider logos",
         partnerName: "[Massage Therapist Name] & [Functional Medicine Provider Name]",
@@ -305,7 +301,7 @@ class Component extends DCLogic {
         partnerBio: "Add two to three sentence bios for each specialist covering expertise and approach.",
       },
       {
-        tag: "Pillar 4 — Measure", title: "Measure",
+        tag: "Pillar 4 — Measure", title: "Measure", img: "ChanCL-72.webp",
         desc: "Track your progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh. Siloh is a health and nutrition tracking app that integrates seamlessly with your KN1 coaching. See your data in real time, adjust as needed, and watch tangible progress unfold.",
         partnerLabel: "Siloh logo",
         partnerName: "[Siloh Founder & App Lead]",
@@ -313,9 +309,9 @@ class Component extends DCLogic {
         partnerBio: "Add a two to three sentence bio covering the app, philosophy, and KN1 integration.",
       },
     ];
-    const pillars = data.map((p, i) => ({
+    const pillars = data.map((p) => ({
       ...p,
-      imgStyle: `position:absolute; inset:0; background: repeating-linear-gradient(${angles[i]}deg, #262626 0 20px, #1e1e1e 20px 40px);`,
+      imgStyle: `position:absolute; inset:0; background-image: url('images/${p.img}'); background-size: cover; background-position: center;`,
     }));
     return { pillars };
   }

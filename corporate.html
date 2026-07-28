@@ -119,10 +119,7 @@
 
   <!-- ===== HERO ===== -->
   <div style="position: relative; height: 780px; width: 100%; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: repeating-linear-gradient(115deg, #202020 0 22px, #1c1c1c 22px 44px); animation: heroKen 18s ease-in-out infinite alternate;"></div>
-    <div style="position: absolute; top: 110px; left: 0; right: 0; display: flex; justify-content: center;">
-      <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(245,242,237,0.28); text-align: center; max-width: 560px; line-height: 1.8;">photograph &middot; underused corporate gym activated by KN1 coach</span>
-    </div>
+    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-4.webp'); background-size: cover; background-position: center; animation: heroKen 18s ease-in-out infinite alternate;"></div>
     <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.9) 100%);"></div>
 
     <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
@@ -135,9 +132,7 @@
 
   <!-- ===== OPENING COPY — asymmetric, photo bleeds left ===== -->
   <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch;">
-    <div style="position: relative; min-height: 640px; background: repeating-linear-gradient(125deg, #232323 0 20px, #1e1e1e 20px 40px);">
-      <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(245,242,237,0.3); text-align: center; padding: 0 40px;">photograph &middot; office gym, empty racks &middot; bleeds off left edge</span>
-    </div>
+    <div style="position: relative; min-height: 640px; background-image: url('images/ChanCL-51.webp'); background-size: cover; background-position: center;"></div>
     <div style="padding: 108px 128px 108px 96px; display: flex; flex-direction: column; justify-content: center;">
       <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">A conversation for the CPO, CHRO, CEO</div>
       <h2 class="fr" style="font-size: 44px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Your building already has a gym. It just sits there.</h2>
@@ -306,15 +301,14 @@ class Component extends DCLogic {
   renderVals() {
     const cardBase = "position: relative; display: block; height: 440px; overflow: hidden;";
     const verbData = [
-      { title: "Train", tag: "photo — coaching", desc: "On-site personal coaching and group classes. Every engagement starts with a functional movement assessment." },
-      { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching through KN1's curated nutrition partner." },
-      { title: "Restore", tag: "photo — recovery", desc: "Recovery services, including massage and functional medicine, available to employees." },
-      { title: "Measure", tag: "photo — data", desc: "Quarterly body composition tracking so progress is visible, not anecdotal." },
+      { title: "Train", tag: "photo — coaching", desc: "On-site personal coaching and group classes. Every engagement starts with a functional movement assessment.", img: "ChanCL-71.webp" },
+      { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching through KN1's curated nutrition partner.", img: "ChanCL-63.webp" },
+      { title: "Restore", tag: "photo — recovery", desc: "Recovery services, including massage and functional medicine, available to employees.", img: "ChanCL-65.webp" },
+      { title: "Measure", tag: "photo — data", desc: "Quarterly body composition tracking so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
     ];
-    const angles = [120, 108, 132, 116];
     const verbs = verbData.map((v, i) => ({
       ...v,
-      imgStyle: `position:absolute; inset:0; background: repeating-linear-gradient(${angles[i]}deg, #262626 0 20px, #1e1e1e 20px 40px);`,
+      imgStyle: `position:absolute; inset:0; background-image: url('images/${v.img}'); background-size: cover; background-position: center;`,
       style: cardBase,
     }));
     return {
