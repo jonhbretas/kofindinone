@@ -10,7 +10,21 @@
 <meta name="theme-color" content="#1A1A1A">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<style>body{opacity:0}body.dc-ready{opacity:1;transition:opacity .25s ease}</style>
+<style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
+    blockquote { margin: 0; }
+    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
+    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    html { scroll-behavior: smooth; }
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .faq-x { display: inline-block; transition: transform 0.25s ease; }
+    details[open] > summary .faq-x { transform: rotate(45deg); }
+</style>
 <noscript><style>body{opacity:1 !important}</style></noscript>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Konfide In One | On-Site Wellness &amp; Training in Austin, TX">
