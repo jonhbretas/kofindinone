@@ -26,9 +26,9 @@ Konfide In One serves three audiences:
 3. **Individuals** — High performers, executives, founders
 
 ## Pages
-- Home: https://konfideinone.com/
-- Corporate: https://konfideinone.com/corporate
-- Residential: https://konfideinone.com/residential
-- Ecosystem: https://konfideinone.com/ecosystem
-- Mission: https://konfideinone.com/mission
-- Get Started: https://konfideinone.com/get-started
+- [Home](https://konfideinone.com/)
+- [Corporate](https://konfideinone.com/corporate)
+- [Residential](https://konfideinone.com/residential)
+- [Ecosystem](https://konfideinone.com/ecosystem)
+- [Mission](https://konfideinone.com/mission)
+- [Get Started](https://konfideinone.com/get-started)
