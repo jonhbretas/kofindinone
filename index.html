@@ -181,9 +181,9 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
       <sc-for list="{{ verbs }}" as="v" hint-placeholder-count="4">
-        <a href="#" style="{{ v.style }}">
+        <a href="ecosystem.html" style="{{ v.style }}">
           <div style="{{ v.imgStyle }}">
-            <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.4);">{{ v.tag }}</span>
+            <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.85); text-shadow: 0 1px 4px rgba(0,0,0,0.85);">{{ v.tag }}</span>
           </div>
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);"></div>
           <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">

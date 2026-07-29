@@ -14,34 +14,24 @@
     onkeyup: 'keyup', onfocus: 'focus', onblur: 'blur'
   };
 
-  /* ===== Zoom the design canvas to exactly fill any viewport width =====
-     The site is authored at a fixed 1440px width (original .dc.html files).
-     We scale that canvas so it ALWAYS fills the available width — no left/right
-     borders on large screens, no broken layout on small screens. Design is
-     preserved 100% (just scaled). Media queries that re-flow the layout are
-     stripped below so they never conflict with the zoom. */
-  var DESIGN_W = 1440;
+  /* ===== First-fold hero fills the viewport height =====
+     Only the FIRST hero (the actual first fold) is set to 100vh — so the
+     above-the-fold stays full-bleed on any screen. Subsequent heroes keep
+     their authored heights, preserving the original rhythm/proportions.
+     Below 1440px, the canvas becomes fluid (see injectResponsive below) and
+     the @media rules authored in each page's <style> block handle re-flow —
+     no JS-driven zoom is used, since CSS `zoom` does not reliably reflow
+     across browsers/engines. */
   var HERO_PX = /(?:^|;\s)height:\s*(?:\d{3,4})px/; // matches `height: 900px` etc, not `min-height`
   function fitDesign() {
-    var w = document.documentElement.clientWidth || window.innerWidth;
     var h = window.innerHeight;
-    /* Cap zoom at 1.0 — never enlarge beyond the authored 1440px design.
-       On wider viewports the canvas centers (margin:0 auto) with seamless
-       body bg; on narrower viewports it scales down to fit. This keeps the
-       original design proportions on large screens instead of bloating them. */
-    var z = Math.min(w / DESIGN_W, 1);
-    var cs = document.querySelectorAll('div[style*="width: 1440px"], div[style*="width:1440px"]');
-    for (var i = 0; i < cs.length; i++) cs[i].style.zoom = z;
-    /* Only the FIRST hero (the actual first fold) is set to 100vh — so the
-       above-the-fold stays full-bleed on any screen. Subsequent heroes keep
-       their authored heights, preserving the original rhythm/proportions. */
     var heroes = document.querySelectorAll('div[style*="width: 100%; overflow: hidden"]');
     var firstHero = null;
     for (var j = 0; j < heroes.length; j++) {
       var s = heroes[j].getAttribute('style') || '';
       if (HERO_PX.test(s)) { firstHero = heroes[j]; break; }
     }
-    if (firstHero) firstHero.style.height = (h / z) + 'px';
+    if (firstHero) firstHero.style.height = h + 'px';
   }
   var rafT = null;
   window.addEventListener('resize', function () {
@@ -49,48 +39,27 @@
     rafT = requestAnimationFrame(fitDesign);
   });
 
-  /* ===== Strip all @media blocks from every <style> tag =====
-     Re-flow media queries would conflict with zoom scaling, so they are
-     removed at boot. Inline (author) styles remain untouched. */
-  function removeAtMediaBlocks(css) {
-    var out = '', i = 0;
-    while (i < css.length) {
-      var idx = css.indexOf('@media', i);
-      if (idx === -1) { out += css.slice(i); break; }
-      out += css.slice(i, idx);
-      var open = css.indexOf('{', idx);
-      if (open === -1) { out += css.slice(idx); break; }
-      var depth = 1, j = open + 1;
-      while (j < css.length && depth > 0) {
-        var c = css.charAt(j);
-        if (c === '{') depth++;
-        else if (c === '}') depth--;
-        j++;
-      }
-      i = j;
-    }
-    return out;
-  }
-  function stripMedia() {
-    var ss = document.querySelectorAll('style');
-    for (var k = 0; k < ss.length; k++) {
-      var css = ss[k].textContent;
-      if (css.indexOf('@media') === -1) continue;
-      ss[k].textContent = removeAtMediaBlocks(css);
-    }
-  }
-  stripMedia();
-
   /* ============================================================
-     Full-bleed responsive layout for viewports ≥ 1441px
-     (below this, the zoom-to-fit fallback scales the 1440px canvas)
-     Strategy: container becomes 100% wide so section backgrounds fill the
-     screen edge-to-edge, while content (text, icons, grids) is anchored
-     to a centered 1440px box via dynamic padding. No more side band of
-     body bg and no bloated layout — the design breathes on big screens.
+     Fluid canvas outside the authored 1440px width
+     - Below 1440px: canvas becomes 100% wide (fluid) so it fits any small/
+       medium viewport with no horizontal scroll; the per-page @media rules
+       (1100px/760px breakpoints) handle padding/font/grid re-flow within it.
+     - At 1441px+: container becomes 100% wide so section backgrounds fill
+       the screen edge-to-edge, while content (text, icons, grids) is
+       anchored to a centered 1440px box via dynamic padding. No more side
+       band of body bg and no bloated layout — the design breathes on big
+       screens.
      ============================================================ */
   (function injectResponsive() {
     var css =
+      '@media (max-width: 1439px) {' +
+        'div[style*="width: 1440px"], div[style*="width:1440px"] { width: 100% !important; overflow: visible !important; }' +
+      '}' +
+      '@media (max-width: 500px) {' +
+        /* footer secondary-nav row has no flex-wrap authored, so it overflows
+           narrow phones — wrap it instead of letting it force horizontal scroll */
+        'div[style*="gap: 32px; text-transform: uppercase"] { flex-wrap: wrap !important; justify-content: flex-end !important; row-gap: 10px !important; }' +
+      '}' +
       '@media (min-width: 1441px) {' +
         /* canvas fills viewport width */
         'div[style*="width: 1440px"], div[style*="width:1440px"] { width: 100% !important; overflow: visible !important; }' +
