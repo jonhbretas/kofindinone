@@ -169,7 +169,7 @@
       <h2 class="fr" style="font-size: 52px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em;">You know you need to train. Everything after that is where it falls apart.</h2>
       <h3 class="fr" style="font-size: 26px; line-height: 1.3; font-weight: 400; letter-spacing: -0.01em; color: rgba(245,242,237,0.8); margin-top: 24px;">The missing pieces of your wellness journey</h3>
       <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Recovery, nutrition, injury prevention, measurement &mdash; the pieces most people never get to. We bring one accountable team and a curated network of specialists directly to where you live and work, so nothing is left to guesswork.</div>
-      <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Our integrated approach means your personal coach, nutritionist, massage therapist and health data analyst all collaborate on your plan. Every specialist understands your goals, your movement patterns, and your progress. This unified model eliminates the fragmentation that leaves most wellness programs falling short of their promise.</div>
+      <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Your coach, your nutritionist, your massage therapist &mdash; they actually talk to each other. Everyone knows your goals, how your body moves, and where you are right now. That is the part almost nobody gets right.</div>
       <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Founded by an enterprise operator with over a decade of experience scaling client ecosystems at major technology companies, Konfide In One brings corporate rigor to personal wellness. Every 2026 program includes a functional movement screening, personalized coaching curriculum, and quarterly body composition tracking to measure what matters.</div>
       <a href="ecosystem.html" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #A67C52; margin-top: 38px; font-weight: 600;">See the ecosystem &rarr;</a>
     </div>
@@ -185,9 +185,7 @@
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
       <sc-for list="{{ verbs }}" as="v" hint-placeholder-count="4">
         <a href="{{ v.href }}" class="pillar-card" aria-label="{{ v.title }} — jump to this pillar on the Ecosystem page" style="{{ v.style }}">
-          <div class="pillar-img" style="{{ v.imgStyle }}">
-            <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.85); text-shadow: 0 1px 4px rgba(0,0,0,0.85);">{{ v.tag }}</span>
-          </div>
+          <div class="pillar-img" style="{{ v.imgStyle }}"></div>
           <div style="{{ v.overlayStyle }}"></div>
           <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">
             <div class="fr" style="font-size: 34px; font-weight: 500; letter-spacing: -0.01em; color: #F5F2ED;">{{ v.title }}</div>
@@ -231,7 +229,6 @@
         </div>
       </sc-for>
     </div>
-    <div style="font-size: 12px; color: rgba(26,26,26,0.65); margin-top: 60px; letter-spacing: 0.02em;">Partner logos in full brand colors &mdash; findable online by brand name.</div>
   </div>
 
   <!-- ===== FAQ ===== -->
@@ -339,10 +336,10 @@ class Component extends DCLogic {
     const cardBase = "position: relative; display: block; height: 480px; overflow: hidden; cursor: pointer; transition: transform 0.4s ease, box-shadow 0.4s ease;";
     const currentSlug = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
     const verbData = [
-      { title: "Train", slug: "train", tag: "photo — coaching", desc: "On-site personal coaching. Every client starts with a functional movement screening.", img: "ChanCL-5.webp" },
-      { title: "Fuel", slug: "fuel", tag: "photo — nutrition", desc: "Nutrition coaching that aligns your eating with your training and recovery.", img: "ChanCL-59.webp" },
-      { title: "Restore", slug: "restore", tag: "photo — recovery", desc: "Massage and functional medicine, integrated from day one — not an afterthought.", img: "ChanCL-65.webp" },
-      { title: "Measure", slug: "measure", tag: "photo — data", desc: "Quarterly body composition tracking, so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
+      { title: "Train", slug: "train", desc: "On-site personal coaching. Every client starts with a functional movement screening.", img: "ChanCL-5.webp" },
+      { title: "Fuel", slug: "fuel", desc: "Nutrition coaching that aligns your eating with your training and recovery.", img: "ChanCL-59.webp" },
+      { title: "Restore", slug: "restore", desc: "Massage and functional medicine, integrated from day one — not an afterthought.", img: "ChanCL-65.webp" },
+      { title: "Measure", slug: "measure", desc: "Quarterly body composition tracking, so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
     ];
     const verbs = verbData.map((v) => {
       const isActive = v.slug === currentSlug;

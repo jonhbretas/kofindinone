@@ -164,9 +164,7 @@
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
       <sc-for list="{{ verbsA }}" as="v" hint-placeholder-count="4">
         <div style="{{ v.style }}">
-          <div style="{{ v.imgStyle }}">
-            <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.85); text-shadow: 0 1px 4px rgba(0,0,0,0.85);">{{ v.tag }}</span>
-          </div>
+          <div style="{{ v.imgStyle }}"></div>
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);"></div>
           <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">
             <div class="fr" style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em; color: #F5F2ED;">{{ v.title }}</div>
@@ -216,9 +214,7 @@
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
       <sc-for list="{{ verbsB }}" as="v" hint-placeholder-count="4">
         <div style="{{ v.style }}">
-          <div style="{{ v.imgStyle }}">
-            <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.85); text-shadow: 0 1px 4px rgba(0,0,0,0.85);">{{ v.tag }}</span>
-          </div>
+          <div style="{{ v.imgStyle }}"></div>
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);"></div>
           <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">
             <div class="fr" style="font-size: 32px; font-weight: 500; letter-spacing: -0.01em; color: #F5F2ED;">{{ v.title }}</div>
@@ -387,21 +383,21 @@ class Component extends DCLogic {
     return {
       buildingValueProps: [
         "Activates your existing gym space with expert programming",
-        "Increases resident satisfaction and property stickiness",
-        "Positions your building as a wellness-first community",
-        "Professional, white-glove delivery, no operational burden on your team",
+        "Residents stay longer — and tell their neighbors why",
+        "Gives your building something the one down the street doesn't have",
+        "We run it end to end. Your team doesn't lift a finger.",
       ],
       verbsA: mk([
-        { title: "Train", tag: "photo — coaching", desc: "On-site personal and group coaching, customized to your resident demographic.", img: "ChanCL-4.webp" },
-        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to residents.", img: "ChanCL-51.webp" },
-        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to residents.", img: "ChanCL-65.webp" },
-        { title: "Measure", tag: "photo — data", desc: "Progress tracking so residents see tangible results.", img: "ChanCL-72.webp" },
+        { title: "Train", desc: "On-site personal and group coaching, customized to your resident demographic.", img: "ChanCL-4.webp" },
+        { title: "Fuel", desc: "Nutrition coaching delivered on-site to residents.", img: "ChanCL-51.webp" },
+        { title: "Restore", desc: "Massage and functional medicine services delivered on-site to residents.", img: "ChanCL-65.webp" },
+        { title: "Measure", desc: "Progress tracking so residents see tangible results.", img: "ChanCL-72.webp" },
       ]),
       verbsB: mk([
-        { title: "Train", tag: "photo — coaching", desc: "Personal coaching and group classes tailored to your goals and fitness level.", img: "ChanCL-5.webp" },
-        { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching delivered on-site to align eating with training.", img: "ChanCL-59.webp" },
-        { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine services delivered on-site to maximize results.", img: "ChanCL-71.webp" },
-        { title: "Measure", tag: "photo — data", desc: "Quarterly progress tracking so you see what's working.", img: "ChanCL-38.webp" },
+        { title: "Train", desc: "Personal coaching and group classes tailored to your goals and fitness level.", img: "ChanCL-5.webp" },
+        { title: "Fuel", desc: "Nutrition coaching delivered on-site to align eating with training.", img: "ChanCL-59.webp" },
+        { title: "Restore", desc: "Massage and functional medicine services delivered on-site to maximize results.", img: "ChanCL-71.webp" },
+        { title: "Measure", desc: "Quarterly progress tracking so you see what's working.", img: "ChanCL-38.webp" },
       ]),
     };
   }
