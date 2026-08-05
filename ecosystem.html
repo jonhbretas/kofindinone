@@ -64,6 +64,8 @@
     summary::-webkit-details-marker { display: none; }
     .faq-x { display: inline-block; transition: transform 0.25s ease; }
     details[open] > summary .faq-x { transform: rotate(45deg); }
+    .pillar-block { transition: background 0.6s ease, box-shadow 0.6s ease; }
+    .pillar-block.pillar-active { background: rgba(166,124,82,0.06); box-shadow: inset 4px 0 0 #A67C52; }
     @media (max-width: 1100px) {
       [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
       [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
@@ -136,7 +138,7 @@
   <!-- ===== PILLARS ===== -->
   <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
 
-    <div style="border-top: 1px solid rgba(245,242,237,0.07);">
+    <div id="{{ p.slug }}" class="pillar-block" style="border-top: 1px solid rgba(245,242,237,0.07); scroll-margin-top: 32px;">
 
       <!-- pillar header photo -->
       <div style="position: relative; height: 340px; overflow: hidden;">
@@ -248,6 +250,23 @@
 
 </div>
 </x-dc>
+<script>
+(function () {
+  function highlightPillar() {
+    var slug = window.location.hash.replace('#', '');
+    var blocks = document.querySelectorAll('.pillar-block');
+    for (var i = 0; i < blocks.length; i++) {
+      blocks[i].classList.toggle('pillar-active', !!slug && blocks[i].id === slug);
+    }
+  }
+  function init() {
+    highlightPillar();
+    window.addEventListener('hashchange', highlightPillar);
+  }
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
 <script type="application/ld+json">
 [
   {
@@ -317,7 +336,7 @@ class Component extends DCLogic {
   renderVals() {
     const data = [
       {
-        tag: "Pillar 1 — Train", title: "Train", img: "ChanCL-5.webp",
+        tag: "Pillar 1 — Train", title: "Train", slug: "train", img: "ChanCL-5.webp",
         desc: "Personal coaching and functional movement assessment. Every client starts with a comprehensive assessment to identify limitations, imbalances, and movement patterns. From there, programming is tailored, progressive, and backed by science. On-site delivery at your property or residence. Group classes and one-on-one coaching available.",
         partnerLabel: "KN1 Founder & Head Coach logo",
         partnerName: "[KN1 Founder & Head Coach]",
@@ -325,7 +344,7 @@ class Component extends DCLogic {
         partnerBio: "Add a two to three sentence bio covering coaching philosophy and credentials.",
       },
       {
-        tag: "Pillar 2 — Fuel", title: "Fuel", img: "ChanCL-59.webp",
+        tag: "Pillar 2 — Fuel", title: "Fuel", slug: "fuel", img: "ChanCL-59.webp",
         desc: "Nutrition coaching delivered on-site to support your training and goals. Clients receive guidance on meal planning, supplementation, and eating patterns that align with their training and recovery. Nutrition is not an afterthought — it is part of the system from day one.",
         partnerLabel: "Nutrition Partner logo",
         partnerName: "[Nutrition Partner Name]",
@@ -333,7 +352,7 @@ class Component extends DCLogic {
         partnerBio: "Add a two to three sentence bio covering nutrition expertise and approach.",
       },
       {
-        tag: "Pillar 3 — Restore", title: "Restore", img: "ChanCL-65.webp",
+        tag: "Pillar 3 — Restore", title: "Restore", slug: "restore", img: "ChanCL-65.webp",
         desc: "Recovery services including massage therapy and functional medicine, delivered on-site. Your body needs recovery to adapt and grow. Our partners in massage and functional medicine work alongside your training to accelerate results, reduce injury risk, and optimize how you feel.",
         partnerLabel: "Massage Therapist & Functional Medicine Provider logos",
         partnerName: "[Massage Therapist Name] & [Functional Medicine Provider Name]",
@@ -341,7 +360,7 @@ class Component extends DCLogic {
         partnerBio: "Add two to three sentence bios for each specialist covering expertise and approach.",
       },
       {
-        tag: "Pillar 4 — Measure", title: "Measure", img: "ChanCL-72.webp",
+        tag: "Pillar 4 — Measure", title: "Measure", slug: "measure", img: "ChanCL-72.webp",
         desc: "Track your progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh. Siloh is a health and nutrition tracking app that integrates seamlessly with your KN1 coaching. See your data in real time, adjust as needed, and watch tangible progress unfold.",
         partnerLabel: "Siloh logo",
         partnerName: "[Siloh Founder & App Lead]",

@@ -82,6 +82,9 @@
     summary::-webkit-details-marker { display: none; }
     .faq-x { display: inline-block; transition: transform 0.25s ease; }
     details[open] > summary .faq-x { transform: rotate(45deg); }
+    .pillar-card:hover, .pillar-card:focus-visible { transform: translateY(-6px) !important; }
+    .pillar-card:hover .pillar-img, .pillar-card:focus-visible .pillar-img { transform: scale(1.06) !important; }
+    .pillar-card:focus-visible { outline: 2px solid #A67C52; outline-offset: 3px; }
     @media (max-width: 1100px) {
       [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
       [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
@@ -181,11 +184,11 @@
     </div>
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
       <sc-for list="{{ verbs }}" as="v" hint-placeholder-count="4">
-        <a href="ecosystem.html" style="{{ v.style }}">
-          <div style="{{ v.imgStyle }}">
+        <a href="{{ v.href }}" class="pillar-card" aria-label="{{ v.title }} — jump to this pillar on the Ecosystem page" style="{{ v.style }}">
+          <div class="pillar-img" style="{{ v.imgStyle }}">
             <span style="position: absolute; top: 20px; left: 20px; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.85); text-shadow: 0 1px 4px rgba(0,0,0,0.85);">{{ v.tag }}</span>
           </div>
-          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);"></div>
+          <div style="{{ v.overlayStyle }}"></div>
           <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">
             <div class="fr" style="font-size: 34px; font-weight: 500; letter-spacing: -0.01em; color: #F5F2ED;">{{ v.title }}</div>
             <div style="font-size: 13px; line-height: 1.55; color: rgba(245,242,237,0.72); margin-top: 12px;">{{ v.desc }}</div>
@@ -242,7 +245,7 @@
       </details>
       <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
         <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">How does the unified model work?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Every client starts with a functional movement assessment. From there, four pillars &mdash; <a href="ecosystem.html" style="color:#A67C52;">Train</a>, <a href="ecosystem.html" style="color:#A67C52;">Fuel</a>, <a href="ecosystem.html" style="color:#A67C52;">Restore</a>, <a href="ecosystem.html" style="color:#A67C52;">Measure</a> &mdash; run as one connected system so nothing is left to guesswork.</div>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Every client starts with a functional movement assessment. From there, four pillars &mdash; <a href="ecosystem.html#train" style="color:#A67C52;">Train</a>, <a href="ecosystem.html#fuel" style="color:#A67C52;">Fuel</a>, <a href="ecosystem.html#restore" style="color:#A67C52;">Restore</a>, <a href="ecosystem.html#measure" style="color:#A67C52;">Measure</a> &mdash; run as one connected system so nothing is left to guesswork.</div>
       </details>
       <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
         <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">Who is Konfide In One for?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
@@ -332,22 +335,25 @@
 </script>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
-  state = { hover: null };
   renderVals() {
-    const cardBase = "position: relative; display: block; height: 480px; overflow: hidden; cursor: pointer; transition: transform 0.4s ease;";
+    const cardBase = "position: relative; display: block; height: 480px; overflow: hidden; cursor: pointer; transition: transform 0.4s ease, box-shadow 0.4s ease;";
+    const currentSlug = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
     const verbData = [
-      { title: "Train", tag: "photo — coaching", desc: "On-site personal coaching. Every client starts with a functional movement screening.", img: "ChanCL-5.webp" },
-      { title: "Fuel", tag: "photo — nutrition", desc: "Nutrition coaching that aligns your eating with your training and recovery.", img: "ChanCL-59.webp" },
-      { title: "Restore", tag: "photo — recovery", desc: "Massage and functional medicine, integrated from day one — not an afterthought.", img: "ChanCL-65.webp" },
-      { title: "Measure", tag: "photo — data", desc: "Quarterly body composition tracking, so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
+      { title: "Train", slug: "train", tag: "photo — coaching", desc: "On-site personal coaching. Every client starts with a functional movement screening.", img: "ChanCL-5.webp" },
+      { title: "Fuel", slug: "fuel", tag: "photo — nutrition", desc: "Nutrition coaching that aligns your eating with your training and recovery.", img: "ChanCL-59.webp" },
+      { title: "Restore", slug: "restore", tag: "photo — recovery", desc: "Massage and functional medicine, integrated from day one — not an afterthought.", img: "ChanCL-65.webp" },
+      { title: "Measure", slug: "measure", tag: "photo — data", desc: "Quarterly body composition tracking, so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
     ];
-    const verbs = verbData.map((v, i) => ({
-      ...v,
-      imgStyle: `position:absolute; inset:0; background-image: url('images/${v.img}'); background-size: cover; background-position: center; transition: transform 0.4s ease; transform: scale(${this.state.hover === i ? 1.06 : 1});`,
-      style: cardBase + (this.state.hover === i ? " transform: translateY(-6px);" : ""),
-      onMouseEnter: () => this.setState({ hover: i }),
-      onMouseLeave: () => this.setState({ hover: null }),
-    }));
+    const verbs = verbData.map((v) => {
+      const isActive = v.slug === currentSlug;
+      return {
+        ...v,
+        href: `ecosystem.html#${v.slug}`,
+        imgStyle: `position:absolute; inset:0; background-image: url('images/${v.img}'); background-size: cover; background-position: center; transition: transform 0.4s ease;`,
+        overlayStyle: `position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);`,
+        style: cardBase + (isActive ? " box-shadow: inset 0 0 0 2px #A67C52;" : ""),
+      };
+    });
     return {
       verbs,
       stats: [
