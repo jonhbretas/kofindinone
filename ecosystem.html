@@ -7,14 +7,12 @@
 <meta name="description" content="Konfide In One's four-pillar wellness ecosystem: Train (personal coaching), Fuel (nutrition), Restore (massage + functional medicine), Measure (body composition via Siloh). One connected system, Austin, TX.">
 <link rel="canonical" href="https://konfideinone.com/ecosystem">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1A1A1A">
+<meta name="theme-color" content="#17120F">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<style>body{opacity:0}body.dc-ready{opacity:1;transition:opacity .25s ease}</style>
-<noscript><style>body{opacity:1 !important}</style></noscript>
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Konfide In One Ecosystem — Four pillars, one system">
-<meta property="og:description" content="Train, Fuel, Restore, Measure — integrated under one accountable team. Built by experts. For your whole health.">
+<meta property="og:description" content="Train, Fuel, Restore, Measure — integrated under one accountable team. You tell your story once.">
 <meta property="og:url" content="https://konfideinone.com/ecosystem">
 <meta property="og:site_name" content="Konfide In One">
 <meta property="og:locale" content="en_US">
@@ -25,6 +23,132 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Konfide In One Ecosystem">
 <meta name="twitter:description" content="Four integrated pillars: Train, Fuel, Restore, Measure. Austin, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/ChanCL-56.webp" fetchpriority="high">
+<link rel="preload" as="script" href="./support.js">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; }
+    x-dc { display: block; }
+    body { margin: 0; background: #17120F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
+    blockquote { margin: 0; }
+    figure { margin: 0; }
+    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
+    @keyframes heroKen { from { transform: scale(1.05); } to { transform: scale(1.15); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    html { scroll-behavior: smooth; }
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .faq-x { display: inline-block; transition: transform 0.25s ease; }
+    details[open] > summary .faq-x { transform: rotate(45deg); }
+
+    /* ===== links & buttons ===== */
+    .cta-solid { background: #B4834F; color: #17120F; transition: background 0.25s ease; }
+    .cta-solid:hover, .cta-solid:focus-visible { background: #C79862; }
+    .link-accent { color: #C79862; }
+    .link-accent:hover, .link-accent:focus-visible { color: #E0B98A; }
+
+    /* ===== four pillars: tabs + panels =====
+       Each panel keeps the id the rest of the site deep-links to
+       (ecosystem.html#train and friends still open the right pillar). */
+    .pillar-tabs { flex-wrap: wrap; }
+    .pillar-tab {
+      flex: 1; display: flex; flex-direction: column; gap: 8px; text-align: left;
+      padding: 26px 30px; cursor: pointer; font: inherit; color: rgba(242,235,224,0.85);
+      background: transparent; border: 1px solid rgba(242,235,224,0.18);
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .pillar-tab:hover { border-color: rgba(180,131,79,0.7); }
+    .pillar-tab:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .pillar-tab.is-active { background: #B4834F; border-color: #B4834F; color: #17120F; }
+    /* the margin keeps the tab row on screen when a #pillar link jumps here */
+    .pillar-panel { display: none; scroll-margin-top: 140px; }
+    .pillar-panel.is-active { display: block; }
+    .pillar-video-play:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .pillar-video-play span { transition: transform 0.25s ease; }
+    .pillar-video-play:hover span, .pillar-video-play:focus-visible span { transform: scale(1.08); }
+
+    /* ===== responsive: preserved from the previous build, extended for the new type scale ===== */
+    @media (max-width: 1024px) {
+      h1 { font-size: 64px !important; line-height: 1.02 !important; }
+      h2 { font-size: 36px !important; line-height: 1.1 !important; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 44px !important; line-height: 1.06 !important; }
+      h2 { font-size: 28px !important; line-height: 1.15 !important; }
+      h3 { font-size: 22px !important; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 32px !important; }
+      h2 { font-size: 24px !important; }
+      .pillar-tab { flex: 1 1 100% !important; }
+    }
+    @media (max-width: 1100px) {
+      [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
+      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 40px !important; padding-right: 40px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
+      [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+      [style*="grid-template-columns: 620px 1fr"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="grid-template-columns: auto 1fr auto"] { grid-template-columns: auto 1fr !important; }
+    }
+    @media (max-width: 900px) {
+      .pillar-tab { flex: 1 1 calc(50% - 6px) !important; padding: 20px 22px !important; }
+      [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 760px) {
+      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 24px !important; padding-right: 24px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
+      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      [style*="width: 760px"] { width: 100% !important; }
+      [style*="height: 900px"], [style*="height: 880px"], [style*="height: 820px"], [style*="height: 800px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
+      [style*="height: 500px"], [style*="height: 480px"], [style*="height: 440px"], [style*="height: 420px"] { height: 300px !important; }
+      [style*="min-height: 700px"], [style*="min-height: 680px"], [style*="min-height: 660px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 560px"], [style*="min-height: 480px"], [style*="min-height: 300px"] { min-height: 340px !important; }
+      [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
+      [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
+      [style*="gap: 96px"] { gap: 40px !important; }
+      [style*="gap: 84px"] { gap: 36px !important; }
+      [style*="gap: 72px"] { gap: 36px !important; }
+      [style*="gap: 64px"] { gap: 32px !important; }
+      [style*="gap: 60px"] { gap: 30px !important; }
+      [style*="gap: 56px"] { gap: 28px !important; }
+      [style*="gap: 48px"] { gap: 24px !important; }
+      [style*="gap: 44px"] { gap: 26px !important; }
+      [style*="gap: 40px"] { gap: 24px !important; }
+      [style*="gap: 32px"] { gap: 18px !important; }
+      [style*="font-size: 108px"], [style*="font-size: 104px"] { font-size: 44px !important; }
+      [style*="font-size: 98px"], [style*="font-size: 94px"], [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 86px"], [style*="font-size: 84px"] { font-size: 40px !important; }
+      [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
+      [style*="font-size: 66px"] { font-size: 44px !important; }
+      [style*="font-size: 64px"] { font-size: 38px !important; }
+      [style*="font-size: 52px"], [style*="font-size: 50px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
+      [style*="font-size: 42px"], [style*="font-size: 40px"], [style*="font-size: 38px"] { font-size: 26px !important; }
+      [style*="font-size: 36px"] { font-size: 24px !important; }
+      [style*="font-size: 34px"], [style*="font-size: 32px"] { font-size: 24px !important; }
+      [style*="font-size: 28px"], [style*="font-size: 26px"] { font-size: 22px !important; }
+      blockquote { font-size: 26px !important; line-height: 1.35 !important; }
+      [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
+      [style*="padding: 19px 42px"], [style*="padding: 20px 42px"] { padding: 14px 24px !important; }
+      [style*="padding: 18px 41px"] { padding: 13px 22px !important; }
+      [style*="padding: 20px 52px"], [style*="padding: 20px 56px"], [style*="padding: 21px 52px"] { padding: 15px 28px !important; }
+      [style*="margin-top: 132px"], [style*="margin-top: 128px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
+      .hero-actions { flex-wrap: wrap !important; row-gap: 14px !important; }
+      /* stacked panels: the media column has only absolutely-positioned children,
+         so give it its own height instead of collapsing to zero */
+      .pillar-video { aspect-ratio: 16 / 9; min-height: 200px; }
+      .section-head { flex-wrap: wrap !important; align-items: flex-start !important; gap: 20px !important; }
+      .section-head > * { max-width: 100% !important; }
+      .partner-card { align-items: flex-start !important; }
+      .partner-aside { align-items: flex-start !important; }
+    }
+</style>
+<noscript><style>
+    /* without JS every pillar is shown stacked, so no content is lost */
+    .pillar-tabs { display: none !important; }
+    .pillar-panel { display: block !important; margin-bottom: 40px; }
+</style></noscript>
 <script src="./support.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
@@ -32,229 +156,328 @@
 </head>
 <body>
 <x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/ChanCL-56.webp" fetchpriority="high">
-  <link rel="preload" as="script" href="./support.js">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
-    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
-    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
-    @media (max-width: 1024px) {
-      h1 { font-size: 64px !important; line-height: 1.02 !important; }
-      h2 { font-size: 40px !important; line-height: 1.05 !important; }
-    }
-    @media (max-width: 768px) {
-      h1 { font-size: 44px !important; line-height: 1.06 !important; }
-      h2 { font-size: 30px !important; line-height: 1.1 !important; }
-      h3 { font-size: 22px !important; }
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 32px !important; }
-      h2 { font-size: 24px !important; }
-    }
-    /* ===== KN1 responsive & details ===== */
-    html { scroll-behavior: smooth; }
-    summary { list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    .faq-x { display: inline-block; transition: transform 0.25s ease; }
-    details[open] > summary .faq-x { transform: rotate(45deg); }
-    .pillar-block { transition: background 0.6s ease, box-shadow 0.6s ease; }
-    .pillar-block.pillar-active { background: rgba(166,124,82,0.06); box-shadow: inset 4px 0 0 #A67C52; }
-    .pillar-video-play:focus-visible { outline: 2px solid #A67C52; outline-offset: 3px; }
-    .pillar-video-play span { transition: transform 0.25s ease; }
-    .pillar-video-play:hover span, .pillar-video-play:focus-visible span { transform: scale(1.08); }
-    @media (max-width: 1100px) {
-      [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
-      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
-      [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
-      [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
-    }
-    @media (max-width: 760px) {
-      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 24px !important; padding-right: 24px !important; }
-      [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
-      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-      [style*="width: 760px"] { width: 100% !important; }
-      [style*="height: 900px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
-      [style*="min-height: 700px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 480px"] { min-height: 340px !important; }
-      [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
-      [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
-      [style*="gap: 96px"] { gap: 40px !important; }
-      [style*="gap: 72px"] { gap: 36px !important; }
-      [style*="gap: 64px"] { gap: 32px !important; }
-      [style*="gap: 56px"] { gap: 28px !important; }
-      [style*="gap: 48px"] { gap: 24px !important; }
-      [style*="gap: 32px"] { gap: 18px !important; }
-      [style*="font-size: 108px"] { font-size: 46px !important; }
-      [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 84px"] { font-size: 40px !important; }
-      [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
-      [style*="font-size: 66px"] { font-size: 44px !important; }
-      [style*="font-size: 64px"] { font-size: 38px !important; }
-      [style*="font-size: 52px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
-      [style*="font-size: 42px"], [style*="font-size: 40px"] { font-size: 26px !important; }
-      [style*="font-size: 36px"] { font-size: 24px !important; }
-      [style*="font-size: 34px"], [style*="font-size: 32px"] { font-size: 24px !important; }
-      [style*="font-size: 26px"] { font-size: 22px !important; }
-      blockquote { font-size: 26px !important; line-height: 1.35 !important; }
-      [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
-      [style*="padding: 19px 42px"] { padding: 14px 24px !important; }
-      [style*="padding: 18px 41px"] { padding: 13px 22px !important; }
-      [style*="padding: 20px 52px"], [style*="padding: 20px 56px"] { padding: 15px 28px !important; }
-      [style*="margin-top: 132px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
-    }
-  </style>
-</helmet>
 
-<div style="width: 1440px; margin: 0 auto; background: #1A1A1A; color: #F5F2ED; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
+<div style="width: 1440px; margin: 0 auto; background: #17120F; color: #F2EBE0; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
 
   <!-- ===== NAV ===== -->
-  <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
+  <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 30; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" style="display: flex; flex-direction: column; line-height: 1;">
-      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F5F2ED;">Konfide In One</div>
-      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #A67C52; margin-top: 6px;">Unified Wellness</div>
+      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F2EBE0;">Konfide In One</div>
+      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-top: 6px;">Unified Wellness</div>
     </a>
-    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.8); font-weight: 500;">
+    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,235,224,0.85); font-weight: 500;">
       <a href="corporate.html">Corporate</a>
       <a href="residential.html">Residential</a>
-      <a href="ecosystem.html" style="color: #F5F2ED; border-bottom: 1px solid #A67C52; padding-bottom: 4px;">Ecosystem</a>
+      <a href="ecosystem.html" style="color: #F2EBE0; border-bottom: 1px solid #B4834F; padding-bottom: 4px;">Ecosystem</a>
       <a href="mission.html">Mission</a>
-      <a href="get-started.html" style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</a>
+      <a href="get-started.html" class="cta-solid" style="padding: 13px 26px;">Get Started</a>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <div style="position: relative; height: 700px; width: 100%; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-56.webp'); background-size: cover; background-position: center; animation: heroKen 18s ease-in-out infinite alternate;"></div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.9) 100%);"></div>
-    <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
-      <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">The Ecosystem</div>
-      <h1 class="fr" style="font-size: 92px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; max-width: 1000px;">Built by experts. For your whole health.</h1>
-      <div style="font-size: 19px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.8); max-width: 620px; margin-top: 28px;">Konfide In One isn&rsquo;t one person. It&rsquo;s a curated network of specialists, each bringing world-class expertise to your training, nutrition, recovery, and measurement. Everything is integrated. Everything works together.</div>
+  <div style="position: relative; height: 800px; width: 100%; overflow: hidden;">
+    <video autoplay muted loop playsinline preload="metadata" poster="images/ChanCL-56.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;" id="heroVideo">
+      <source src="videos/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.72) 0%, rgba(23,18,15,0.22) 38%, rgba(23,18,15,0.94) 100%);"></div>
+
+    <div style="position: absolute; left: 72px; right: 72px; bottom: 82px; z-index: 10;">
+      <div style="font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-bottom: 24px; font-weight: 500; animation: fadeUp 0.9s ease both;">The ecosystem</div>
+      <h1 class="fr" style="font-size: 86px; line-height: 0.98; font-weight: 400; letter-spacing: -0.022em; max-width: 1120px; animation: fadeUp 1s ease 0.1s both;">You tell your story once. Everyone here already knows it.</h1>
+      <div style="font-size: 20px; line-height: 1.62; font-weight: 300; color: rgba(242,235,224,0.85); max-width: 620px; margin-top: 28px; animation: fadeUp 1s ease 0.2s both;">Four specialists, one plan, one conversation about you happening behind the scenes &mdash; instead of four professionals who&rsquo;ve never met.</div>
+      <div class="hero-actions" style="display: flex; gap: 18px; align-items: center; margin-top: 42px; animation: fadeUp 1s ease 0.3s both;">
+        <a href="#pillars" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 42px;">Meet the team</a>
+      </div>
     </div>
   </div>
 
-  <!-- ===== PILLARS ===== -->
-  <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="4">
+  <!-- ===== WHY THIS EXISTS — photo bleeds left ===== -->
+  <section style="display: grid; grid-template-columns: 620px 1fr; align-items: stretch; background: #1C1611;">
+    <div style="position: relative; min-height: 660px; overflow: hidden;">
+      <img src="images/ChanCL-51.webp" alt="A coach and client working through a plan together during an on-site session" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 35% center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.12) 45%, rgba(23,18,15,0.75) 100%);"></div>
+    </div>
+    <div style="padding: 112px 120px 112px 88px; display: flex; flex-direction: column; justify-content: center; gap: 26px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Why this exists</div>
+      <h2 class="fr" style="font-size: 48px; line-height: 1.08; font-weight: 400; letter-spacing: -0.02em;">Most people don&rsquo;t have a wellness problem. They have a coordination problem.</h2>
+      <div style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px;">A trainer who doesn&rsquo;t know what you eat. A nutritionist who doesn&rsquo;t know you&rsquo;re training for something in April. A massage therapist who never hears about the shoulder. Four good professionals, four separate plans, and you in the middle translating between them.</div>
+      <div style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px;">Here, they talk to each other. When your screening shows a hip restriction, your coach knows, your recovery specialist knows, and your program changes that week &mdash; without you making a single phone call.</div>
+      <blockquote style="border-left: 2px solid #B4834F; padding-left: 24px; margin-top: 8px;">
+        <div class="fr" style="font-size: 22px; line-height: 1.5; font-style: italic; color: #F2EBE0; max-width: 500px;">&ldquo;Every specialist here is someone I&rsquo;d send my own family to. That&rsquo;s the whole bar.&rdquo;</div>
+        <div style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #C79862; margin-top: 14px;">Chandler Thomas &middot; Founder</div>
+      </blockquote>
+    </div>
+  </section>
 
-    <div id="{{ p.slug }}" class="pillar-block" style="border-top: 1px solid rgba(245,242,237,0.07); scroll-margin-top: 32px;">
-
-      <!-- pillar header photo -->
-      <div style="position: relative; height: 340px; overflow: hidden;">
-        <div style="{{ p.imgStyle }}"></div>
-        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.3) 0%, rgba(20,20,20,0.85) 100%);"></div>
-        <div style="position: absolute; left: 72px; bottom: 44px;">
-          <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 16px; font-weight: 500;">{{ p.tag }}</div>
-          <h2 class="fr" style="font-size: 64px; line-height: 0.98; font-weight: 400; letter-spacing: -0.02em; color: #F5F2ED;">{{ p.title }}</h2>
-        </div>
+  <!-- ===== PILLAR NAV ===== -->
+  <section id="pillars" style="padding: 118px 72px 0; background: #17120F; scroll-margin-top: 24px;">
+    <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; gap: 60px;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">The four pillars</div>
+        <h2 class="fr" style="font-size: 50px; line-height: 1.04; font-weight: 400; letter-spacing: -0.02em; max-width: 640px;">Meet the people, not the service list.</h2>
       </div>
+      <div style="font-size: 16px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.7); max-width: 330px; padding-bottom: 6px;">Tap a pillar to jump to the specialist who runs it.</div>
+    </div>
+    <div class="pillar-tabs" role="tablist" aria-label="The four pillars" style="display: flex; gap: 12px;">
+      <button type="button" role="tab" id="tab-train" class="pillar-tab is-active" aria-selected="true" aria-controls="train" data-panel="train">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Train</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Coaching</span>
+      </button>
+      <button type="button" role="tab" id="tab-fuel" class="pillar-tab" aria-selected="false" aria-controls="fuel" data-panel="fuel">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Fuel</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Nutrition</span>
+      </button>
+      <button type="button" role="tab" id="tab-restore" class="pillar-tab" aria-selected="false" aria-controls="restore" data-panel="restore">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Restore</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Recovery</span>
+      </button>
+      <button type="button" role="tab" id="tab-measure" class="pillar-tab" aria-selected="false" aria-controls="measure" data-panel="measure">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Measure</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Data</span>
+      </button>
+    </div>
+  </section>
 
-      <!-- pillar copy -->
-      <div style="padding: 88px 72px 64px; max-width: 900px;">
-        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.7);">{{ p.desc }}</div>
-      </div>
+  <!-- ===== ACTIVE PILLAR: media + copy + the specialist who runs it ===== -->
+  <section style="padding: 34px 72px 118px; background: #17120F;">
 
-      <!-- pillar video: click-to-play, poster placeholder until real footage is provided -->
-      <div style="padding: 0 72px 64px; max-width: 900px;">
-        <div class="pillar-video" data-video-src="{{ p.videoSrc }}" style="position: relative; width: 100%; aspect-ratio: 16 / 9; background: #0d0d0d; overflow: hidden;">
-          <img src="images/{{ p.img }}" alt="{{ p.title }} video preview" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
-          <div style="position: absolute; inset: 0; background: rgba(20,20,20,0.32);"></div>
-          <button type="button" class="pillar-video-play" aria-label="Play {{ p.title }} video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 0;">
-            <span style="width: 76px; height: 76px; border-radius: 50%; background: #A67C52; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
-              <span style="width: 0; height: 0; border-top: 11px solid transparent; border-bottom: 11px solid transparent; border-left: 18px solid #1A1A1A; margin-left: 5px;"></span>
-            </span>
+    <!-- TRAIN -->
+    <div class="pillar-panel is-active" id="train" role="tabpanel" aria-labelledby="tab-train">
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+        <div class="pillar-video" data-video-src="videos/pilar-train.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+          <img src="images/ChanCL-5.webp" alt="A functional movement screening in progress, the coach watching closely" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+          <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+          <button type="button" class="pillar-video-play" aria-label="Play the Train video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+            <span style="width: 60px; height: 60px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);"><span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span></span>
           </button>
         </div>
-      </div>
-
-      <!-- partner card: logo left, headshot+bio right -->
-      <div style="padding: 0 72px 40px;">
-        <div style="background: #161616; border: 1px solid rgba(245,242,237,0.07); padding: 56px 64px; display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: center;">
-          <div style="display: flex; flex-direction: column; gap: 12px;">
-            <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(245,242,237,0.65); font-weight: 500;">Partner</div>
-            <div style="height: 68px; display: flex; align-items: center;">
-              <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(245,242,237,0.6); border: 1px dashed rgba(245,242,237,0.3); padding: 18px 24px; width: 100%; text-align: center; box-sizing: border-box;">{{ p.partnerLabel }}</span>
-            </div>
-          </div>
-          <div style="display: flex; gap: 28px; align-items: center;">
-            <div style="width: 88px; height: 88px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2a2a2a 0 6px, #232323 6px 12px); border: 1px solid rgba(245,242,237,0.1); position: relative;">
-              <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(245,242,237,0.35); text-align: center;">headshot</span>
-            </div>
-            <div>
-              <h3 class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.005em; color: #F5F2ED;">{{ p.partnerName }}</h3>
-              <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #A67C52; margin-top: 8px; font-weight: 500;">{{ p.partnerRole }}</div>
-              <div style="font-size: 14px; line-height: 1.65; color: rgba(245,242,237,0.6); margin-top: 14px; max-width: 480px;">{{ p.partnerBio }}</div>
-            </div>
-          </div>
+        <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Coaching</div>
+          <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">We find out how your body moves before we ask it to do anything.</h3>
+          <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Every client starts with a functional movement screening &mdash; not a workout. Restrictions, imbalances, old injuries you stopped mentioning. From there, programming is progressive, personal, and delivered in your building, 1:1 or small group.</div>
+          <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">What the others get from this: your screening results go to nutrition and recovery the same week.</div>
         </div>
       </div>
-
-      <!-- per-pillar CTA -->
-      <div style="padding: 0 72px 108px;">
-        <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Get started with {{ p.title }} &rarr;</a>
+      <div class="partner-card" style="background: #1C1611; border: 1px solid rgba(180,131,79,0.22); border-top: none; padding: 52px 60px; display: grid; grid-template-columns: auto 1fr auto; gap: 44px; align-items: center;">
+        <div style="width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2f251d 0 6px, #271e17 6px 12px); border: 1px solid rgba(180,131,79,0.3); position: relative;">
+          <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(242,235,224,0.45); text-align: center;">headshot</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="fr" style="font-size: 28px; font-weight: 500; letter-spacing: -0.005em; color: #F2EBE0;">Chandler Thomas</div>
+          <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C79862; font-weight: 500;">Founder &amp; Head Coach</div>
+          <div style="font-size: 15.5px; line-height: 1.7; color: rgba(242,235,224,0.72); max-width: 620px; margin-top: 4px;">Ten years in enterprise technology sales before building KN1 full time. Now coaches the founders and executives he used to sell to &mdash; which is why the program is built around real calendars, not ideal ones.</div>
+        </div>
+        <div class="partner-aside" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+          <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(242,235,224,0.5); border: 1px dashed rgba(242,235,224,0.28); padding: 22px 30px; text-align: center; line-height: 1.5; min-width: 190px;">KN1 crest logo</span>
+          <a href="get-started.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">Start with training &rarr;</a>
+        </div>
       </div>
-
     </div>
 
-  </sc-for>
+    <!-- FUEL -->
+    <div class="pillar-panel" id="fuel" role="tabpanel" aria-labelledby="tab-fuel">
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+        <div class="pillar-video" data-video-src="videos/pilar-fuel.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+          <img src="images/ChanCL-59.webp" alt="A nutrition consult during an on-site session" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+          <button type="button" class="pillar-video-play" aria-label="Play the Fuel video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+            <span style="width: 60px; height: 60px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);"><span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span></span>
+          </button>
+        </div>
+        <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Nutrition</div>
+          <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">A plan built around the week you actually have.</h3>
+          <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Nutrition coaching through our curated partner, delivered on site. Meal structure, supplementation, and eating patterns matched to what you&rsquo;re training and how you&rsquo;re recovering &mdash; travel weeks, client dinners, and all.</div>
+          <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">What this gets from the others: your training load and recovery data shape the plan, so it moves when your body does.</div>
+        </div>
+      </div>
+      <div class="partner-card" style="background: #1C1611; border: 1px solid rgba(180,131,79,0.22); border-top: none; padding: 52px 60px; display: grid; grid-template-columns: auto 1fr auto; gap: 44px; align-items: center;">
+        <div style="width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2f251d 0 6px, #271e17 6px 12px); border: 1px solid rgba(180,131,79,0.3); position: relative;">
+          <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(242,235,224,0.45); text-align: center;">headshot</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="fr" style="font-size: 28px; font-weight: 500; letter-spacing: -0.005em; color: #F2EBE0;">My Fit Foods</div>
+          <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C79862; font-weight: 500;">Nutrition Partner</div>
+          <div style="font-size: 15.5px; line-height: 1.7; color: rgba(242,235,224,0.72); max-width: 620px; margin-top: 4px;">Two to three sentences on their approach and credentials &mdash; written in their own voice, not corporate boilerplate.</div>
+        </div>
+        <div class="partner-aside" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+          <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(242,235,224,0.5); border: 1px dashed rgba(242,235,224,0.28); padding: 22px 30px; text-align: center; line-height: 1.5; min-width: 190px;">My Fit Foods logo</span>
+          <a href="get-started.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">Start with nutrition &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESTORE -->
+    <div class="pillar-panel" id="restore" role="tabpanel" aria-labelledby="tab-restore">
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+        <div class="pillar-video" data-video-src="videos/pilar-restore.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+          <img src="images/ChanCL-65.webp" alt="Hands-on recovery work at an unhurried pace" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+          <button type="button" class="pillar-video-play" aria-label="Play the Restore video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+            <span style="width: 60px; height: 60px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);"><span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span></span>
+          </button>
+        </div>
+        <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Recovery</div>
+          <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">Most of what people call aging is a problem nobody looked at.</h3>
+          <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Massage therapy and functional medicine, on site, from day one &mdash; not the thing you call after something tears. The stiff hip, the sleep, the bloodwork nobody explained. We look, and then we do something about it.</div>
+          <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">What the others get from this: what recovery finds changes next month&rsquo;s training block, automatically.</div>
+        </div>
+      </div>
+      <div class="partner-card" style="background: #1C1611; border: 1px solid rgba(180,131,79,0.22); border-top: none; padding: 52px 60px; display: grid; grid-template-columns: auto 1fr auto; gap: 44px; align-items: center;">
+        <div style="width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2f251d 0 6px, #271e17 6px 12px); border: 1px solid rgba(180,131,79,0.3); position: relative;">
+          <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(242,235,224,0.45); text-align: center;">headshot</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="fr" style="font-size: 28px; font-weight: 500; letter-spacing: -0.005em; color: #F2EBE0;">Airrosti &middot; Nirvanix Health</div>
+          <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C79862; font-weight: 500;">Massage Therapy &amp; Functional Medicine</div>
+          <div style="font-size: 15.5px; line-height: 1.7; color: rgba(242,235,224,0.72); max-width: 620px; margin-top: 4px;">Two to three sentences per specialist &mdash; what they treat, how they work, and why Chandler chose them.</div>
+        </div>
+        <div class="partner-aside" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+          <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(242,235,224,0.5); border: 1px dashed rgba(242,235,224,0.28); padding: 22px 30px; text-align: center; line-height: 1.5; min-width: 190px;">Airrosti + Nirvanix logos</span>
+          <a href="get-started.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">Start with recovery &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEASURE -->
+    <div class="pillar-panel" id="measure" role="tabpanel" aria-labelledby="tab-measure">
+      <div style="display: grid; grid-template-columns: 1.15fr 1fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+        <div class="pillar-video" data-video-src="videos/pilar-measure.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+          <img src="images/ChanCL-72.webp" alt="A client reviewing tracked progress with her coach" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+          <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+          <button type="button" class="pillar-video-play" aria-label="Play the Measure video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+            <span style="width: 60px; height: 60px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);"><span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span></span>
+          </button>
+        </div>
+        <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Data</div>
+          <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">Proof, so you stop guessing whether it&rsquo;s working.</h3>
+          <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Quarterly body composition analysis and movement re-screens, plus ongoing tracking through Siloh &mdash; the app that connects your training and nutrition in one place. You see what changed, in numbers you can read.</div>
+          <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">What the others get from this: every quarterly review is where the other three pillars get adjusted.</div>
+        </div>
+      </div>
+      <div class="partner-card" style="background: #1C1611; border: 1px solid rgba(180,131,79,0.22); border-top: none; padding: 52px 60px; display: grid; grid-template-columns: auto 1fr auto; gap: 44px; align-items: center;">
+        <div style="width: 104px; height: 104px; border-radius: 50%; flex-shrink: 0; background: repeating-linear-gradient(135deg, #2f251d 0 6px, #271e17 6px 12px); border: 1px solid rgba(180,131,79,0.3); position: relative;">
+          <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 8px; letter-spacing: 0.04em; color: rgba(242,235,224,0.45); text-align: center;">headshot</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <div class="fr" style="font-size: 28px; font-weight: 500; letter-spacing: -0.005em; color: #F2EBE0;">Siloh</div>
+          <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #C79862; font-weight: 500;">Health &amp; Nutrition Tracking</div>
+          <div style="font-size: 15.5px; line-height: 1.7; color: rgba(242,235,224,0.72); max-width: 620px; margin-top: 4px;">Two to three sentences on the app, the philosophy behind it, and how it plugs into KN1 coaching.</div>
+        </div>
+        <div class="partner-aside" style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+          <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(242,235,224,0.5); border: 1px dashed rgba(242,235,224,0.28); padding: 22px 30px; text-align: center; line-height: 1.5; min-width: 190px;">Siloh logo</span>
+          <a href="get-started.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">Start with measurement &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== HOW A PLAN COMES TOGETHER ===== -->
+  <section style="background: #F2EBE0; color: #211A15; padding: 124px 72px;">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
+      <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 60px;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(33,26,21,0.7); font-weight: 500;">How it comes together</div>
+          <h2 class="fr" style="font-size: 48px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em; max-width: 620px;">One screening. Four specialists. One plan you never have to manage.</h2>
+        </div>
+        <div style="font-size: 16px; line-height: 1.7; font-weight: 300; color: rgba(33,26,21,0.72); max-width: 320px; padding-bottom: 6px;">What actually happens after you say yes &mdash; and what you never have to do yourself.</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="fr" style="font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: #8F5A31; font-weight: 500;">Step one</div>
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">One screening</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">A functional movement assessment plus baseline body composition. Everything the four specialists need, collected once, by us.</div>
+        </div>
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="fr" style="font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: #8F5A31; font-weight: 500;">Step two</div>
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">One plan, four hands</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">Coach, nutritionist, and recovery specialist build a single plan from that screening. They coordinate; you don&rsquo;t attend a meeting about it.</div>
+        </div>
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <div class="fr" style="font-size: 15px; letter-spacing: 0.2em; text-transform: uppercase; color: #8F5A31; font-weight: 500;">Step three</div>
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">Quarterly recalibration</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">We re-measure, compare, and adjust all four pillars together. You get the summary in plain language, not a data dump.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PARTNERS STRIP ===== -->
+  <section style="background: #EAE1D3; color: #211A15; padding: 100px 72px; text-align: center;">
+    <h2 class="fr" style="font-size: 36px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 16px;">The people we hand you to.</h2>
+    <div style="font-size: 16px; font-weight: 300; color: rgba(33,26,21,0.72); max-width: 540px; margin: 0 auto 58px; line-height: 1.7;">Hand-picked, not sourced. Each one vetted personally, and each one talks to your coach.</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 860px; margin: 0 auto;">
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">My Fit Foods</span>
+      </div>
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">Nirvanix Health</span>
+      </div>
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">Airrosti</span>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== FAQ ===== -->
-  <section style="border-top: 1px solid rgba(245,242,237,0.07); padding: 120px 72px;">
+  <section style="border-top: 1px solid rgba(242,235,224,0.08); padding: 120px 72px; background: #17120F;">
     <div style="max-width: 880px; margin: 0 auto;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">FAQ</div>
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-bottom: 24px; font-weight: 500;">FAQ</div>
       <h2 class="fr" style="font-size: 44px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 56px;">Frequently asked questions</h2>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is the Konfide In One ecosystem?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">The ecosystem is a curated network of specialists working as one accountable team across four integrated pillars &mdash; Train, Fuel, Restore and Measure &mdash; so training, nutrition, recovery and body composition measurement work together instead of in silos.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is the Konfide In One ecosystem?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">The ecosystem is a curated network of specialists working as one accountable team across four integrated pillars &mdash; Train, Fuel, Restore and Measure &mdash; so training, nutrition, recovery and body composition measurement work together instead of in silos.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What are the four pillars of Konfide In One?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">The four pillars are Train (personal coaching), Fuel (nutrition coaching), Restore (massage therapy and functional medicine), and Measure (quarterly body composition analysis and ongoing tracking via the Siloh app).</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What are the four pillars of Konfide In One?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">The four pillars are <a href="#train" class="link-accent">Train</a> (personal coaching), <a href="#fuel" class="link-accent">Fuel</a> (nutrition coaching), <a href="#restore" class="link-accent">Restore</a> (massage therapy and functional medicine), and <a href="#measure" class="link-accent">Measure</a> (quarterly body composition analysis and ongoing tracking via the Siloh app).</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is the Train pillar?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Train is the personal coaching pillar. Every client starts with a functional movement assessment to identify limitations and imbalances. Programming is then tailored, progressive and backed by science, delivered on-site with one-on-one and group options.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is the Train pillar?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Train is the personal coaching pillar. Every client starts with a functional movement assessment to identify limitations and imbalances. Programming is then tailored, progressive and backed by science, delivered on-site with one-on-one and group options.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is the Fuel pillar?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Fuel is the nutrition pillar. Clients receive on-site nutrition coaching covering meal planning, supplementation and eating patterns aligned with their training and recovery, integrated from day one rather than treated as an afterthought.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is the Fuel pillar?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Fuel is the nutrition pillar. Clients receive on-site nutrition coaching covering meal planning, supplementation and eating patterns aligned with their training and recovery, integrated from day one rather than treated as an afterthought.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is the Restore pillar?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Restore delivers recovery services &mdash; massage therapy and functional medicine &mdash; on-site, working alongside training to accelerate results, reduce injury risk and optimize how clients feel.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is the Restore pillar?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Restore delivers recovery services &mdash; massage therapy and functional medicine &mdash; on-site, working alongside training to accelerate results, reduce injury risk and optimize how clients feel.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); border-bottom: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is the Measure pillar and what is Siloh?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Measure tracks progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh, a health and nutrition tracking app that integrates seamlessly with KN1 coaching so clients see their data in real time.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); border-bottom: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is the Measure pillar and what is Siloh?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Measure tracks progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh, a health and nutrition tracking app that integrates seamlessly with KN1 coaching so clients see their data in real time.</div>
       </details>
     </div>
   </section>
 
-  <!-- ===== FOOTER CTA ===== -->
-  <div role="contentinfo" style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
-    <div style="text-align: center;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 28px; font-weight: 500;">See it come together</div>
-      <h2 class="fr" style="font-size: 72px; line-height: 1; font-weight: 400; letter-spacing: -0.025em; max-width: 900px; margin: 0 auto 44px;">Book a consultation</h2>
-      <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</a>
+  <!-- ===== CLOSING CTA + FOOTER ===== -->
+  <div role="contentinfo" style="background: #14100D; border-top: 1px solid rgba(242,235,224,0.08); padding: 138px 72px 0;">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">One conversation</div>
+      <h2 class="fr" style="font-size: 72px; line-height: 1.02; font-weight: 400; letter-spacing: -0.025em; max-width: 880px;">Stop being your own project manager.</h2>
+      <div style="font-size: 18px; line-height: 1.66; font-weight: 300; color: rgba(242,235,224,0.72); max-width: 540px;">Fifteen minutes with me. Tell me what you&rsquo;ve been juggling, and I&rsquo;ll tell you which of these four you should start with &mdash; even if it&rsquo;s not with us.</div>
+      <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 21px 52px; margin-top: 12px;">Book a consultation</a>
+      <div class="fr" style="font-size: 20px; font-style: italic; color: rgba(242,235,224,0.6); margin-top: 6px;">&mdash; Chandler</div>
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(245,242,237,0.07); font-size: 12px; letter-spacing: 0.04em; color: rgba(245,242,237,0.65); gap: 32px;">
+
+    <div style="display: flex; flex-direction: column; margin-top: 128px; padding-top: 40px; border-top: 1px solid rgba(242,235,224,0.08); font-size: 12px; letter-spacing: 0.04em; color: rgba(242,235,224,0.7); gap: 32px; padding-bottom: 56px;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
         <div>
           <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 12px;">
-            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(245,242,237,0.7);">Konfide In One</span>
-            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.65);">
-      <a href="https://linkedin.com/company/konfideinone" target="_blank" rel="noopener nofollow">LinkedIn</a>
-            <a href="https://instagram.com/konfideinone" target="_blank" rel="noopener nofollow">Instagram</a>
+            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(242,235,224,0.8);">Konfide In One</span>
+            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,235,224,0.7);">
+              <a href="https://linkedin.com/company/konfideinone" target="_blank" rel="noopener nofollow">LinkedIn</a>
+              <a href="https://instagram.com/konfideinone" target="_blank" rel="noopener nofollow">Instagram</a>
             </span>
           </div>
-          <div style="line-height: 1.7; font-size: 15px; color: rgba(245,242,237,0.75);">
+          <div style="line-height: 1.7; font-size: 15px; color: rgba(242,235,224,0.78);">
             <div>100 Congress Ave, Suite 200</div>
             <div>Austin, TX 78701, United States</div>
-            <div><a href="tel:+15125550142" style="color: rgba(245,242,237,0.75);">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com" style="color: rgba(245,242,237,0.75);">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
+            <div><a href="tel:+15125550142">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
@@ -263,8 +486,8 @@
           </div>
         </div>
       </div>
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(245,242,237,0.05);">
-        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(245,242,237,0.55);">Est. 2026</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(242,235,224,0.06);">
+        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(242,235,224,0.6);">Est. 2026</span></div>
       </div>
     </div>
   </div>
@@ -273,38 +496,94 @@
 </x-dc>
 <script>
 (function () {
+  var SLUGS = ['train', 'fuel', 'restore', 'measure'];
+
+  /* ---- four-pillar tabs ----
+     The panel ids are the same slugs the rest of the site deep-links to, so
+     ecosystem.html#restore still lands on Restore — it just opens the tab
+     instead of scrolling past three other blocks. */
+  function activatePillar(slug, scroll) {
+    if (SLUGS.indexOf(slug) === -1) return;
+    var panels = document.querySelectorAll('.pillar-panel');
+    for (var i = 0; i < panels.length; i++) {
+      panels[i].classList.toggle('is-active', panels[i].id === slug);
+    }
+    var tabs = document.querySelectorAll('.pillar-tab');
+    for (var j = 0; j < tabs.length; j++) {
+      var on = tabs[j].getAttribute('data-panel') === slug;
+      tabs[j].classList.toggle('is-active', on);
+      tabs[j].setAttribute('aria-selected', on ? 'true' : 'false');
+    }
+    if (scroll) {
+      /* scroll the panel itself, so this matches exactly where the browser's
+         own #anchor jump lands (see .pillar-panel scroll-margin-top) */
+      var panel = document.getElementById(slug);
+      if (panel) panel.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  function initPillarTabs() {
+    var tabs = document.querySelectorAll('.pillar-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      (function (tab) {
+        tab.addEventListener('click', function () {
+          var slug = tab.getAttribute('data-panel');
+          activatePillar(slug, false);
+          try { history.replaceState(null, '', '#' + slug); } catch (e) {}
+        });
+      })(tabs[i]);
+    }
+    window.addEventListener('hashchange', function () {
+      activatePillar((window.location.hash || '').replace('#', '').toLowerCase(), true);
+    });
+  }
+
+  /* ---- click-to-play pillar videos.
+         If the footage isn't uploaded yet the poster is restored instead of
+         leaving a broken player on the page. ---- */
+  function bindPillarVideo(wrap) {
+    var btn = wrap.querySelector('.pillar-video-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var poster = wrap.innerHTML;
+      var video = document.createElement('video');
+      video.src = wrap.getAttribute('data-video-src');
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; object-fit:cover;';
+      video.addEventListener('error', function () {
+        wrap.innerHTML = poster;
+        bindPillarVideo(wrap);
+      });
+      wrap.innerHTML = '';
+      wrap.appendChild(video);
+      video.play().catch(function () {});
+    });
+  }
   function initPillarVideos() {
     var wraps = document.querySelectorAll('.pillar-video');
-    for (var i = 0; i < wraps.length; i++) {
-      (function (wrap) {
-        var btn = wrap.querySelector('.pillar-video-play');
-        if (!btn) return;
-        btn.addEventListener('click', function () {
-          var src = wrap.getAttribute('data-video-src');
-          var video = document.createElement('video');
-          video.src = src;
-          video.controls = true;
-          video.autoplay = true;
-          video.playsInline = true;
-          video.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; object-fit:cover;';
-          wrap.innerHTML = '';
-          wrap.appendChild(video);
-          video.play().catch(function () {});
-        });
-      })(wraps[i]);
-    }
+    for (var i = 0; i < wraps.length; i++) bindPillarVideo(wraps[i]);
   }
-  function highlightPillar() {
-    var slug = window.location.hash.replace('#', '');
-    var blocks = document.querySelectorAll('.pillar-block');
-    for (var i = 0; i < blocks.length; i++) {
-      blocks[i].classList.toggle('pillar-active', !!slug && blocks[i].id === slug);
-    }
+
+  /* ---- hero video: some browsers ignore the autoplay attribute ---- */
+  function initHeroVideo() {
+    var v = document.getElementById('heroVideo');
+    if (v && v.paused) v.play().catch(function () {});
   }
+
   function init() {
-    highlightPillar();
+    initPillarTabs();
     initPillarVideos();
-    window.addEventListener('hashchange', highlightPillar);
+    initHeroVideo();
+    var hash = (window.location.hash || '').replace('#', '').toLowerCase();
+    if (SLUGS.indexOf(hash) > -1) {
+      activatePillar(hash, false);
+      /* the browser already jumped to the anchor if that panel happened to be
+         the open one — re-scroll on the next frame so every pillar lands in
+         the same place, with the tab row in view */
+      (window.requestAnimationFrame || setTimeout)(function () { activatePillar(hash, true); });
+    }
   }
   if (document.readyState !== 'loading') init();
   else document.addEventListener('DOMContentLoaded', init);
@@ -373,55 +652,6 @@
     ]
   }
 ]
-</script>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    const data = [
-      {
-        tag: "Pillar 1 — Train", title: "Train", slug: "train", img: "ChanCL-5.webp",
-        videoSrc: "videos/pilar-train.mp4",
-        desc: "Personal coaching and functional movement assessment. Every client starts with a comprehensive assessment to identify limitations, imbalances, and movement patterns. From there, programming is tailored, progressive, and backed by science. On-site delivery at your property or residence. Group classes and one-on-one coaching available.",
-        partnerLabel: "KN1 Founder & Head Coach logo",
-        partnerName: "Chandler Thomas",
-        partnerRole: "Founder & Head Coach",
-        partnerBio: "The people I work with aren't lacking discipline — they're founders, executives, top performers. What they're missing is the resources and the knowledge to stay healthy along the way. Most wellness stops at \"just train harder.\" I wanted to build something that goes deeper.",
-      },
-      {
-        tag: "Pillar 2 — Fuel", title: "Fuel", slug: "fuel", img: "ChanCL-59.webp",
-        videoSrc: "videos/pilar-fuel.mp4",
-        desc: "Nutrition coaching delivered on-site to support your training and goals. Clients receive guidance on meal planning, supplementation, and eating patterns that align with their training and recovery. Nutrition is not an afterthought — it is part of the system from day one.",
-        partnerLabel: "Nutrition Partner logo",
-        partnerName: "[Nutrition Partner Name]",
-        partnerRole: "Nutrition Partner",
-        partnerBio: "Add a two to three sentence bio covering nutrition expertise and approach.",
-      },
-      {
-        tag: "Pillar 3 — Restore", title: "Restore", slug: "restore", img: "ChanCL-65.webp",
-        videoSrc: "videos/pilar-restore.mp4",
-        desc: "Recovery services including massage therapy and functional medicine, delivered on-site. Your body needs recovery to adapt and grow. Our partners in massage and functional medicine work alongside your training to accelerate results, reduce injury risk, and optimize how you feel.",
-        partnerLabel: "Massage Therapist & Functional Medicine Provider logos",
-        partnerName: "[Massage Therapist Name] & [Functional Medicine Provider Name]",
-        partnerRole: "Massage Therapy & Functional Medicine",
-        partnerBio: "Add two to three sentence bios for each specialist covering expertise and approach.",
-      },
-      {
-        tag: "Pillar 4 — Measure", title: "Measure", slug: "measure", img: "ChanCL-72.webp",
-        videoSrc: "videos/pilar-measure.mp4",
-        desc: "Track your progress through quarterly body composition analysis and ongoing fitness and nutrition tracking via Siloh. Siloh is a health and nutrition tracking app that integrates seamlessly with your KN1 coaching. See your data in real time, adjust as needed, and watch tangible progress unfold.",
-        partnerLabel: "Siloh logo",
-        partnerName: "[Siloh Founder & App Lead]",
-        partnerRole: "Founder & App Lead, Siloh",
-        partnerBio: "Add a two to three sentence bio covering the app, philosophy, and KN1 integration.",
-      },
-    ];
-    const pillars = data.map((p) => ({
-      ...p,
-      imgStyle: `position:absolute; inset:0; background-image: url('images/${p.img}'); background-size: cover; background-position: center;`,
-    }));
-    return { pillars };
-  }
-}
 </script>
 </body>
 </html>
