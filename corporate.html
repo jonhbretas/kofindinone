@@ -96,6 +96,13 @@
       [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
     }
     @media (max-width: 760px) {
+      /* Keep the nav compact so the wrapped link rows cannot run down into the
+         hero headline. The badge reads fine smaller, and the tagline is already
+         said by the wordmark next to it. */
+      .nav-badge { height: 38px !important; }
+      .nav-wordmark { font-size: 20px !important; }
+      .nav-tagline { display: none !important; }
+      .nav-logo { gap: 12px !important; }
       [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 24px !important; padding-right: 24px !important; }
       [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
       [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
@@ -132,8 +139,10 @@
       [style*="margin-top: 132px"], [style*="margin-top: 128px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
       .hero-actions { flex-wrap: wrap !important; row-gap: 14px !important; }
       /* stacked panels: the media column has only absolutely-positioned children,
-         so give it its own height instead of collapsing to zero */
-      .pillar-video { aspect-ratio: 16 / 9; min-height: 200px; }
+         so aspect-ratio gives it a height from its width instead of collapsing to
+         zero. No min-height here: with one, aspect-ratio resolves width from
+         height instead and pushes the column past its grid track. */
+      .pillar-video { aspect-ratio: 16 / 9; min-height: 0; }
       .section-head { flex-wrap: wrap !important; align-items: flex-start !important; gap: 20px !important; }
       .section-head > * { max-width: 100% !important; }
     }
@@ -155,9 +164,12 @@
 
   <!-- ===== NAV ===== -->
   <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
-    <a href="index.html" style="display: flex; flex-direction: column; line-height: 1;">
-      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F2EBE0;">Konfide In One</div>
-      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-top: 6px;">Unified Wellness</div>
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 16px;">
+      <img class="nav-badge" src="images/kn1-badge.webp" alt="" width="37" height="48" style="height: 48px; width: auto; display: block; flex-shrink: 0;">
+      <span style="display: flex; flex-direction: column; line-height: 1;">
+        <span class="fr nav-wordmark" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F2EBE0;">Konfide In One</span>
+        <span class="nav-tagline" style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-top: 6px;">Unified Wellness</span>
+      </span>
     </a>
     <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,235,224,0.85); font-weight: 500;">
       <a href="corporate.html" style="color: #F2EBE0; border-bottom: 1px solid #B4834F; padding-bottom: 4px;">Corporate</a>
