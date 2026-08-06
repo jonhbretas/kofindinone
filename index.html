@@ -7,25 +7,9 @@
 <meta name="description" content="Konfide In One delivers on-site personal training, nutrition coaching, recovery services &amp; body composition measurement for companies and residents in Austin, TX with one trusted team.">
 <link rel="canonical" href="https://konfideinone.com/">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1A1A1A">
+<meta name="theme-color" content="#17120F">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<style>
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
-    blockquote { margin: 0; }
-    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
-    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    html { scroll-behavior: smooth; }
-    summary { list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    .faq-x { display: inline-block; transition: transform 0.25s ease; }
-    details[open] > summary .faq-x { transform: rotate(45deg); }
-</style>
-<noscript><style>body{opacity:1 !important}</style></noscript>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Konfide In One | On-Site Wellness &amp; Training in Austin, TX">
 <meta property="og:description" content="On-site personal training, nutrition coaching, recovery &amp; body composition measurement for companies and residents in Austin, TX.">
@@ -39,30 +23,60 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Konfide In One | On-Site Wellness &amp; Training in Austin, TX">
 <meta name="twitter:description" content="On-site personal training, nutrition coaching &amp; recovery in Austin, TX.">
-<script src="./support.js" defer></script>
-<!-- Google tag (gtag.js) placeholder - replace GA_MEASUREMENT_ID with your actual ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
-<!-- Facebook Pixel placeholder - replace with your Pixel ID -->
-<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '000000000000000');fbq('track', 'PageView');</script>
-</head>
-<body>
-<x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="script" href="./support.js">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="script" href="./support.js">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
     *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    x-dc { display: block; }
+    body { margin: 0; background: #17120F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
     h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
     blockquote { margin: 0; }
+    figure { margin: 0; }
     .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
-    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
-    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-    
+    @keyframes heroKen { from { transform: scale(1.05); } to { transform: scale(1.15); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    html { scroll-behavior: smooth; }
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    .faq-x { display: inline-block; transition: transform 0.25s ease; }
+    details[open] > summary .faq-x { transform: rotate(45deg); }
+
+    /* ===== links & buttons ===== */
+    .cta-solid { background: #B4834F; color: #17120F; transition: background 0.25s ease; }
+    .cta-solid:hover, .cta-solid:focus-visible { background: #C79862; }
+    .cta-ghost { border: 1px solid rgba(242,235,224,0.45); color: #F2EBE0; transition: border-color 0.25s ease, color 0.25s ease; }
+    .cta-ghost:hover, .cta-ghost:focus-visible { border-color: #C79862; color: #C79862; }
+    .link-accent { color: #C79862; }
+    .link-accent:hover, .link-accent:focus-visible { color: #E0B98A; }
+
+    /* ===== four pillars: tabs + panels ===== */
+    .pillar-tabs { flex-wrap: wrap; }
+    .pillar-tab {
+      flex: 1; display: flex; flex-direction: column; gap: 8px; text-align: left;
+      padding: 26px 30px; cursor: pointer; font: inherit; color: rgba(242,235,224,0.85);
+      background: transparent; border: 1px solid rgba(242,235,224,0.18);
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .pillar-tab:hover { border-color: rgba(180,131,79,0.7); }
+    .pillar-tab:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .pillar-tab.is-active { background: #B4834F; border-color: #B4834F; color: #17120F; }
+    .pillar-panel { display: none; }
+    .pillar-panel.is-active { display: grid; }
+    .pillar-video-play:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .pillar-video-play span { transition: transform 0.25s ease; }
+    .pillar-video-play:hover span, .pillar-video-play:focus-visible span { transform: scale(1.08); }
+
+    /* ===== audience shortcut cards ===== */
+    .shortcut-card { transition: transform 0.4s ease; }
+    .shortcut-card:hover, .shortcut-card:focus-visible { transform: translateY(-6px); }
+    .shortcut-card:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .shortcut-card:hover .shortcut-img, .shortcut-card:focus-visible .shortcut-img { transform: scale(1.05); }
+    .shortcut-img { transition: transform 0.5s ease; }
+
+    /* ===== responsive: preserved from the previous build, extended for the new type scale ===== */
     @media (max-width: 1024px) {
       h1 { font-size: 72px !important; line-height: 1.02 !important; }
       h2 { font-size: 38px !important; line-height: 1.1 !important; }
@@ -75,44 +89,44 @@
     @media (max-width: 480px) {
       h1 { font-size: 34px !important; }
       h2 { font-size: 24px !important; }
+      .pillar-tab { flex: 1 1 100% !important; }
     }
-    /* ===== KN1 responsive & details ===== */
-    html { scroll-behavior: smooth; }
-    summary { list-style: none; }
-    summary::-webkit-details-marker { display: none; }
-    .faq-x { display: inline-block; transition: transform 0.25s ease; }
-    details[open] > summary .faq-x { transform: rotate(45deg); }
-    .pillar-card:hover, .pillar-card:focus-visible { transform: translateY(-6px) !important; }
-    .pillar-card:hover .pillar-img, .pillar-card:focus-visible .pillar-img { transform: scale(1.06) !important; }
-    .pillar-card:focus-visible { outline: 2px solid #A67C52; outline-offset: 3px; }
     @media (max-width: 1100px) {
       [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
-      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
+      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 40px !important; padding-right: 40px !important; }
       [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
       [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+      [style*="grid-template-columns: 620px 1fr"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="grid-template-columns: 420px 1fr"] { grid-template-columns: 320px 1fr !important; }
+    }
+    @media (max-width: 900px) {
+      .pillar-tab { flex: 1 1 calc(50% - 6px) !important; padding: 20px 22px !important; }
     }
     @media (max-width: 760px) {
-      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 24px !important; padding-right: 24px !important; }
+      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 24px !important; padding-right: 24px !important; }
       [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
       [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
       [style*="width: 760px"] { width: 100% !important; }
-      [style*="height: 900px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
+      [style*="height: 900px"], [style*="height: 880px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
+      [style*="height: 480px"], [style*="height: 420px"] { height: 300px !important; }
       [style*="min-height: 700px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 480px"] { min-height: 340px !important; }
       [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
       [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
       [style*="gap: 96px"] { gap: 40px !important; }
+      [style*="gap: 84px"] { gap: 36px !important; }
       [style*="gap: 72px"] { gap: 36px !important; }
       [style*="gap: 64px"] { gap: 32px !important; }
+      [style*="gap: 60px"] { gap: 30px !important; }
       [style*="gap: 56px"] { gap: 28px !important; }
       [style*="gap: 48px"] { gap: 24px !important; }
       [style*="gap: 32px"] { gap: 18px !important; }
-      [style*="font-size: 108px"] { font-size: 46px !important; }
+      [style*="font-size: 108px"], [style*="font-size: 104px"] { font-size: 44px !important; }
       [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 84px"] { font-size: 40px !important; }
       [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
       [style*="font-size: 66px"] { font-size: 44px !important; }
       [style*="font-size: 64px"] { font-size: 38px !important; }
-      [style*="font-size: 52px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
-      [style*="font-size: 42px"], [style*="font-size: 40px"] { font-size: 26px !important; }
+      [style*="font-size: 52px"], [style*="font-size: 50px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
+      [style*="font-size: 42px"], [style*="font-size: 40px"], [style*="font-size: 38px"] { font-size: 26px !important; }
       [style*="font-size: 36px"] { font-size: 24px !important; }
       [style*="font-size: 34px"], [style*="font-size: 32px"] { font-size: 24px !important; }
       [style*="font-size: 26px"] { font-size: 22px !important; }
@@ -120,191 +134,316 @@
       [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
       [style*="padding: 19px 42px"] { padding: 14px 24px !important; }
       [style*="padding: 18px 41px"] { padding: 13px 22px !important; }
-      [style*="padding: 20px 52px"], [style*="padding: 20px 56px"] { padding: 15px 28px !important; }
-      [style*="margin-top: 132px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
+      [style*="padding: 20px 52px"], [style*="padding: 20px 56px"], [style*="padding: 21px 52px"] { padding: 15px 28px !important; }
+      [style*="margin-top: 132px"], [style*="margin-top: 128px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
+      .hero-actions { flex-wrap: wrap !important; row-gap: 14px !important; }
+      /* stacked panels: the media column has only absolutely-positioned children,
+         so give it its own height instead of collapsing to zero */
+      .pillar-video { aspect-ratio: 16 / 9; min-height: 200px; }
+      .section-head { flex-wrap: wrap !important; align-items: flex-start !important; gap: 20px !important; }
+      .section-head > * { max-width: 100% !important; }
     }
-  </style>
-</helmet>
+</style>
+<noscript><style>
+    /* without JS every pillar panel is shown stacked, so no content is lost */
+    .pillar-tabs { display: none !important; }
+    .pillar-panel { display: grid !important; margin-bottom: 20px; }
+</style></noscript>
+<script src="./support.js" defer></script>
+<!-- Google tag (gtag.js) placeholder - replace GA_MEASUREMENT_ID with your actual ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
+<!-- Facebook Pixel placeholder - replace with your Pixel ID -->
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', '000000000000000');fbq('track', 'PageView');</script>
+</head>
+<body>
+<x-dc>
 
-<div style="width: 1440px; margin: 0 auto; background: #1A1A1A; color: #F5F2ED; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
+<div style="width: 1440px; margin: 0 auto; background: #17120F; color: #F2EBE0; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
 
   <!-- ===== NAV ===== -->
   <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" style="display: flex; flex-direction: column; line-height: 1;">
-      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F5F2ED;">Konfide In One</div>
-      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #A67C52; margin-top: 6px;">Unified Wellness</div>
+      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F2EBE0;">Konfide In One</div>
+      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-top: 6px;">Unified Wellness</div>
     </a>
-    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.8); font-weight: 500;">
+    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,235,224,0.85); font-weight: 500;">
       <a href="corporate.html">Corporate</a>
       <a href="residential.html">Residential</a>
       <a href="ecosystem.html">Ecosystem</a>
       <a href="mission.html">Mission</a>
-      <a href="get-started.html" style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</a>
+      <a href="get-started.html" class="cta-solid" style="padding: 13px 26px;">Get Started</a>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <div style="position: relative; height: 900px; width: 100%; overflow: hidden;">
+  <div style="position: relative; height: 880px; width: 100%; overflow: hidden;">
     <video autoplay muted loop playsinline preload="metadata" poster="images/ChanCL-56.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;" id="heroVideo">
       <source src="videos/hero-bg.mp4" type="video/mp4">
     </video>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.88) 0%, rgba(20,20,20,0.3) 35%, rgba(20,20,20,0.92) 100%);"></div>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.72) 0%, rgba(23,18,15,0.22) 38%, rgba(23,18,15,0.94) 100%);"></div>
 
     <div style="position: absolute; left: 72px; right: 72px; bottom: 88px; z-index: 10;">
-      <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 26px; font-weight: 500; animation: fadeUp 0.9s ease both;">Building Confidence in One&rsquo;s Health and Oneself</div>
-      <h1 class="fr" style="font-size: 108px; line-height: 0.94; font-weight: 400; letter-spacing: -0.025em; max-width: 1120px; animation: fadeUp 1s ease 0.1s both;">Your health, entirely handled.</h1>
-      <div style="font-size: 19px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.8); max-width: 600px; margin-top: 30px; animation: fadeUp 1s ease 0.2s both;">One trusted team. Your training, nutrition, recovery, and results &mdash; handled.</div>
-      <div style="display: flex; gap: 20px; margin-top: 44px; animation: fadeUp 1s ease 0.3s both;">
-        <a href="corporate.html" style="background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 19px 42px;">For Companies</a>
-        <a href="residential.html" style="border: 1px solid rgba(245,242,237,0.5); color: #F5F2ED; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; padding: 18px 41px;">For Properties &amp; Residents</a>
+      <div style="font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-bottom: 24px; font-weight: 500; animation: fadeUp 0.9s ease both;">Confidence in your health. Confidence in yourself.</div>
+      <h1 class="fr" style="font-size: 104px; line-height: 0.95; font-weight: 400; letter-spacing: -0.025em; max-width: 1060px; animation: fadeUp 1s ease 0.1s both;">You handle everything else. Let us handle you.</h1>
+      <div style="font-size: 20px; line-height: 1.62; font-weight: 300; color: rgba(242,235,224,0.85); max-width: 620px; margin-top: 28px; animation: fadeUp 1s ease 0.2s both;">Training, food, recovery, and real measurement &mdash; run by one team that knows your name, in the building where you already live and work.</div>
+      <div class="hero-actions" style="display: flex; gap: 18px; align-items: center; margin-top: 42px; animation: fadeUp 1s ease 0.3s both;">
+        <a href="corporate.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 19px 42px;">For companies</a>
+        <a href="residential.html" class="cta-ghost" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; padding: 18px 41px;">For properties &amp; residents</a>
+        <div style="font-size: 14px; color: rgba(242,235,224,0.7); font-weight: 300; margin-left: 10px;">Or just <a href="get-started.html" class="link-accent" style="border-bottom: 1px solid rgba(199,152,98,0.7);">talk to Chandler</a> &mdash; 15 minutes, no pitch.</div>
       </div>
     </div>
   </div>
 
-  <!-- ===== UNIFIED MODEL / PROBLEM-SOLUTION — asymmetric, photo bleeds left ===== -->
-  <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; margin-top: 80px;">
-    <div style="position: relative; min-height: 700px; background-image: url('images/ChanCL-38.webp'); background-size: cover; background-position: center;"></div>
-    <div style="padding: 120px 128px 120px 96px; display: flex; flex-direction: column; justify-content: center;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 26px; font-weight: 500;">The unified model</div>
-      <h2 class="fr" style="font-size: 52px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em;">You know you need to train. Everything after that is where it falls apart.</h2>
-      <h3 class="fr" style="font-size: 26px; line-height: 1.3; font-weight: 400; letter-spacing: -0.01em; color: rgba(245,242,237,0.8); margin-top: 24px;">The missing pieces of your wellness journey</h3>
-      <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Recovery, nutrition, injury prevention, measurement &mdash; the pieces most people never get to. We bring one accountable team and a curated network of specialists directly to where you live and work, so nothing is left to guesswork.</div>
-      <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Your coach, your nutritionist, your massage therapist &mdash; they actually talk to each other. Everyone knows your goals, how your body moves, and where you are right now. That is the part almost nobody gets right.</div>
-      <div style="font-size: 17px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 16px; max-width: 460px;">Almost everything traces back to a root cause &mdash; gut health, fatigue, brain fog, a nagging injury. Most wellness stops at &ldquo;just train harder.&rdquo; We start at the foundation instead. Every 2026 program includes a functional movement screening, a personalized coaching curriculum, and quarterly body composition tracking, so nothing is left to guesswork.</div>
-      <a href="ecosystem.html" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #A67C52; margin-top: 38px; font-weight: 600;">See the ecosystem &rarr;</a>
-    </div>
-  </div>
-
-  <!-- ===== FOUR VERB CARDS ===== -->
-  <div style="padding: 124px 72px 84px;">
-    <div style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 54px;">
-      <h2 class="fr" style="font-size: 44px; line-height: 1.02; font-weight: 400; letter-spacing: -0.02em; max-width: 620px;">Four pillars. One connected system.</h2>
-      <h3 class="fr" style="font-size: 22px; line-height: 1.3; font-weight: 400; letter-spacing: -0.005em; color: rgba(245,242,237,0.6); max-width: 560px;">Personal coaching, nutrition, recovery and measurement working as one.</h3>
-      <a href="ecosystem.html" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: #A67C52; font-weight: 600; padding-bottom: 8px;">The Ecosystem &rarr;</a>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-      <sc-for list="{{ verbs }}" as="v" hint-placeholder-count="4">
-        <a href="{{ v.href }}" class="pillar-card" aria-label="{{ v.title }} — jump to this pillar on the Ecosystem page" style="{{ v.style }}">
-          <div class="pillar-img" style="{{ v.imgStyle }}"></div>
-          <div style="{{ v.overlayStyle }}"></div>
-          <div style="position: absolute; left: 26px; right: 26px; bottom: 28px;">
-            <div class="fr" style="font-size: 34px; font-weight: 500; letter-spacing: -0.01em; color: #F5F2ED;">{{ v.title }}</div>
-            <div style="font-size: 13px; line-height: 1.55; color: rgba(245,242,237,0.72); margin-top: 12px;">{{ v.desc }}</div>
-          </div>
-        </a>
-      </sc-for>
-    </div>
-  </div>
-
-  <!-- ===== FROM THE FOUNDER ===== -->
-  <section style="border-top: 1px solid rgba(245,242,237,0.07); padding: 124px 72px 116px;">
-    <div style="display: grid; grid-template-columns: 1fr 1.55fr; gap: 96px; align-items: start;">
-
-      <!-- portrait + attribution -->
-      <div>
-        <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 26px; font-weight: 500;">From the founder</div>
-        <!-- TODO: replace with the founder portrait once the file is chosen (images/…webp) -->
-        <div style="width: 100%; aspect-ratio: 4 / 5; background: repeating-linear-gradient(135deg, #222 0 8px, #1d1d1d 8px 16px); border: 1px solid rgba(245,242,237,0.1); position: relative;">
-          <span style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-family: 'SF Mono', ui-monospace, monospace; font-size: 9px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(245,242,237,0.3);">founder portrait</span>
-        </div>
-        <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.005em; color: #F5F2ED; margin-top: 28px;">Chandler Thomas</div>
-        <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #A67C52; margin-top: 10px; font-weight: 500;">Founder &amp; Head Coach</div>
+  <!-- ===== FROM THE FOUNDER — photo bleeds left, human to human ===== -->
+  <section style="display: grid; grid-template-columns: 620px 1fr; align-items: stretch; background: #1C1611;">
+    <div style="position: relative; min-height: 620px; overflow: hidden;">
+      <img src="images/ChanCL-59.webp" alt="Chandler Thomas coaching a client through a kettlebell lift in a light-filled residential gym" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.15) 45%, rgba(23,18,15,0.92) 100%);"></div>
+      <div style="position: absolute; left: 40px; bottom: 40px; right: 40px;">
+        <div class="fr" style="font-size: 26px; font-weight: 500; color: #F2EBE0;">Chandler Thomas</div>
+        <div style="font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: #C79862; margin-top: 8px;">Founder &amp; Head Coach</div>
       </div>
-
-      <!-- his words, verbatim -->
-      <div>
-        <h2 class="fr" style="font-size: 46px; line-height: 1.08; font-weight: 400; letter-spacing: -0.02em; max-width: 660px;">One unified team in your corner.</h2>
-        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.72); margin-top: 36px; max-width: 680px;">I started Konfide In One because I kept seeing the same thing. The people I work with aren&rsquo;t lacking discipline &mdash; they&rsquo;re founders, executives, top performers. They&rsquo;ve proven they can commit. What they&rsquo;re missing is the resources and the knowledge to stay healthy along the way. That&rsquo;s the real reason they fall short of their goals: not willpower, but not having the right team and the right information in their corner.</div>
-        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.72); margin-top: 24px; max-width: 680px;">Someone gets sick and misses a week &mdash; that hits their training and their work. Someone gets injured and stops, without ever understanding why the injury happened in the first place. The truth is, almost everything traces back to a root cause. Whether it&rsquo;s gut health, fatigue, brain fog, or a nagging injury, you have to start at the foundation to actually solve it. Most wellness stops at &ldquo;just train harder.&rdquo; I wanted to build something that goes deeper.</div>
-        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.72); margin-top: 24px; max-width: 680px;">That&rsquo;s what KN1 is: one unified team in your corner. Training, nutrition, recovery, functional medicine, and real measurement &mdash; all working together, all built specifically around you and your goals. No guessing. Everything crafted, tracked, and coordinated so you never lose sight of how far you&rsquo;ve come.</div>
-        <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.72); margin-top: 24px; max-width: 680px;">This is personal to me because I live it. I train consistently and I&rsquo;m in good shape, but staying that way means prioritizing my whole health &mdash; not just how I look. I built KN1 for the busy professional who understands that too. Because confidence in your health becomes confidence in yourself, and that shows up everywhere: in the boardroom, in the hard decisions, in how you carry yourself every day.</div>
-        <blockquote class="fr" style="font-size: 28px; line-height: 1.35; font-weight: 400; font-style: italic; color: #F5F2ED; margin-top: 44px; padding-left: 28px; border-left: 2px solid #A67C52; max-width: 640px;">We&rsquo;re building for longevity. Your health is the gateway to a better life &mdash; and with KN1, you never have to navigate it alone.</blockquote>
-      </div>
-
+    </div>
+    <div style="padding: 118px 120px 118px 88px; display: flex; flex-direction: column; justify-content: center; gap: 26px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Why I built this</div>
+      <h2 class="fr" style="font-size: 50px; line-height: 1.08; font-weight: 400; letter-spacing: -0.02em; font-style: italic;">I kept meeting people who were winning at everything except their own body.</h2>
+      <div style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px;">Founders. Executives. People with no shortage of discipline. What they were missing was someone in their corner who actually knew them &mdash; their history, their schedule, the injury they never dealt with, the reason they stopped last time.</div>
+      <div style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px;">Almost everything traces back to a root cause. Gut health, fatigue, brain fog, a nagging injury &mdash; you have to start at the foundation to actually solve it. Most wellness stops at &ldquo;just train harder.&rdquo; I wanted to build something that goes deeper.</div>
+      <div style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px;">So I built the thing I wanted for myself: one team, one plan, and a coach who notices when you go quiet for a week. Everything under one roof, coordinated, so you never fall through the cracks again.</div>
+      <blockquote class="fr" style="border-left: 2px solid #B4834F; padding-left: 24px; margin-top: 8px; font-size: 22px; line-height: 1.5; font-style: italic; color: #F2EBE0; max-width: 500px;">&ldquo;Confidence in your health becomes confidence everywhere else. That&rsquo;s the whole point.&rdquo;</blockquote>
+      <a href="mission.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; margin-top: 8px;">Read the mission &rarr;</a>
     </div>
   </section>
 
-  <!-- ===== CREDIBILITY / NUMBERS ===== -->
-  <div style="padding: 84px 72px 124px; border-bottom: 1px solid rgba(245,242,237,0.07);">
-    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
-      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
-        <div style="border-top: 1px solid rgba(166,124,82,0.4); padding-top: 28px;">
-          <div class="fr" style="font-size: 66px; line-height: 0.9; font-weight: 400; letter-spacing: -0.03em; color: #A67C52;">{{ s.num }}</div>
-          <div style="font-size: 14px; line-height: 1.55; color: rgba(245,242,237,0.6); margin-top: 20px; max-width: 230px;">{{ s.label }}</div>
-        </div>
-      </sc-for>
+  <!-- ===== FOUR PILLARS — tabs, each with its own video + shortcut CTA ===== -->
+  <section style="padding: 120px 72px 130px; background: #17120F;">
+    <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 44px; gap: 60px;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">The four pillars</div>
+        <h2 class="fr" style="font-size: 52px; line-height: 1.04; font-weight: 400; letter-spacing: -0.02em; max-width: 660px;">Pick where you want to start. We&rsquo;ll handle the rest.</h2>
+      </div>
+      <div style="font-size: 16px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.7); max-width: 340px; padding-bottom: 6px;">Tap a pillar. See exactly what it looks like, then start there &mdash; you don&rsquo;t have to read the whole site.</div>
     </div>
-  </div>
+
+    <div class="pillar-tabs" role="tablist" aria-label="The four pillars" style="display: flex; gap: 12px; margin-bottom: 34px;">
+      <button type="button" role="tab" id="tab-train" class="pillar-tab is-active" aria-selected="true" aria-controls="panel-train" data-pillar="train">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Train</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Coaching</span>
+      </button>
+      <button type="button" role="tab" id="tab-fuel" class="pillar-tab" aria-selected="false" aria-controls="panel-fuel" data-pillar="fuel">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Fuel</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Nutrition</span>
+      </button>
+      <button type="button" role="tab" id="tab-restore" class="pillar-tab" aria-selected="false" aria-controls="panel-restore" data-pillar="restore">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Restore</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Recovery</span>
+      </button>
+      <button type="button" role="tab" id="tab-measure" class="pillar-tab" aria-selected="false" aria-controls="panel-measure" data-pillar="measure">
+        <span class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: -0.01em;">Measure</span>
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Data</span>
+      </button>
+    </div>
+
+    <!-- TRAIN -->
+    <div class="pillar-panel is-active" id="panel-train" role="tabpanel" aria-labelledby="tab-train" style="grid-template-columns: 1.15fr 1fr; gap: 0; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+      <div class="pillar-video" data-video-src="videos/pilar-train.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-5.webp" alt="Chandler Thomas correcting a client's form on a seated row machine" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+        <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+        <button type="button" class="pillar-video-play" aria-label="Play the Train video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span>
+          </span>
+        </button>
+      </div>
+      <div style="padding: 68px 64px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Coaching</div>
+        <h3 class="fr" style="font-size: 40px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Someone who knows your knee, your calendar, and your last excuse.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Every client starts with a functional movement screening &mdash; not a workout. We find out how your body actually moves before we ask it to do anything. Then it&rsquo;s 1:1, in your building, with a coach who remembers what happened last week.</div>
+        <div style="display: flex; align-items: center; gap: 22px; margin-top: 12px; flex-wrap: wrap;">
+          <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 18px 36px;">Start with training</a>
+          <a href="ecosystem.html#train" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">All four pillars &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FUEL -->
+    <div class="pillar-panel" id="panel-fuel" role="tabpanel" aria-labelledby="tab-fuel" style="grid-template-columns: 1.15fr 1fr; gap: 0; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+      <div class="pillar-video" data-video-src="videos/pilar-fuel.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-51.webp" alt="A coach and client talking through the plan during an on-site session" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+        <button type="button" class="pillar-video-play" aria-label="Play the Fuel video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span>
+          </span>
+        </button>
+      </div>
+      <div style="padding: 68px 64px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Nutrition</div>
+        <h3 class="fr" style="font-size: 40px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Eating that fits your life, not a meal plan you&rsquo;ll quit in nine days.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Your nutritionist talks to your coach. What you eat gets built around what you&rsquo;re training and how you&rsquo;re recovering &mdash; travel weeks, dinners with clients, and all.</div>
+        <div style="display: flex; align-items: center; gap: 22px; margin-top: 12px; flex-wrap: wrap;">
+          <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 18px 36px;">Start with nutrition</a>
+          <a href="ecosystem.html#fuel" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">All four pillars &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESTORE -->
+    <div class="pillar-panel" id="panel-restore" role="tabpanel" aria-labelledby="tab-restore" style="grid-template-columns: 1.15fr 1fr; gap: 0; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+      <div class="pillar-video" data-video-src="videos/pilar-restore.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-65.webp" alt="Hands-on mobility and recovery work during an on-site session" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+        <button type="button" class="pillar-video-play" aria-label="Play the Restore video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span>
+          </span>
+        </button>
+      </div>
+      <div style="padding: 68px 64px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Recovery</div>
+        <h3 class="fr" style="font-size: 40px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Recovery from day one &mdash; not after something tears.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Massage and functional medicine built into the plan from the start. Most of what people call &ldquo;aging&rdquo; is an untreated problem that nobody looked at. We look.</div>
+        <div style="display: flex; align-items: center; gap: 22px; margin-top: 12px; flex-wrap: wrap;">
+          <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 18px 36px;">Start with recovery</a>
+          <a href="ecosystem.html#restore" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">All four pillars &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEASURE -->
+    <div class="pillar-panel" id="panel-measure" role="tabpanel" aria-labelledby="tab-measure" style="grid-template-columns: 1.15fr 1fr; gap: 0; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 480px;">
+      <div class="pillar-video" data-video-src="videos/pilar-measure.mp4" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-72.webp" alt="A client working through a tracked core progression with her coach" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: rgba(23,18,15,0.34);"></div>
+        <button type="button" class="pillar-video-play" aria-label="Play the Measure video" style="position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: flex-start; padding: 32px;">
+          <span style="width: 64px; height: 64px; border-radius: 50%; background: #B4834F; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.35);">
+            <span style="width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #17120F; margin-left: 4px;"></span>
+          </span>
+        </button>
+      </div>
+      <div style="padding: 68px 64px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Data</div>
+        <h3 class="fr" style="font-size: 40px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em;">Proof, so you stop guessing whether it&rsquo;s working.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Quarterly body composition tracking and movement re-screens. You see what changed, in numbers, and we adjust the other three pillars around it.</div>
+        <div style="display: flex; align-items: center; gap: 22px; margin-top: 12px; flex-wrap: wrap;">
+          <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 18px 36px;">Start with measurement</a>
+          <a href="ecosystem.html#measure" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600;">All four pillars &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AUDIENCE SHORTCUTS ===== -->
+  <section style="padding: 0 72px 130px; background: #17120F;">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <a href="corporate.html" class="shortcut-card" style="position: relative; display: block; height: 420px; overflow: hidden; background: #1C1611;">
+        <img class="shortcut-img" src="images/ChanCL-4.webp" alt="Colleagues training together on a corporate gym floor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.2) 30%, rgba(23,18,15,0.94) 100%);"></div>
+        <div style="position: absolute; left: 40px; right: 40px; bottom: 40px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C79862; font-weight: 500;">You run a company</div>
+          <h2 class="fr" style="font-size: 38px; line-height: 1.08; font-weight: 500; color: #F2EBE0;">Turn the gym nobody uses into the perk everybody talks about.</h2>
+          <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #F2EBE0; font-weight: 600;">See corporate &rarr;</div>
+        </div>
+      </a>
+      <a href="residential.html" class="shortcut-card" style="position: relative; display: block; height: 420px; overflow: hidden; background: #1C1611;">
+        <img class="shortcut-img" src="images/ChanCL-38.webp" alt="A one-on-one session in a residence gym with floor-to-ceiling windows" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+        <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.2) 30%, rgba(23,18,15,0.94) 100%);"></div>
+        <div style="position: absolute; left: 40px; right: 40px; bottom: 40px; display: flex; flex-direction: column; gap: 14px;">
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #C79862; font-weight: 500;">You live in the building</div>
+          <h2 class="fr" style="font-size: 38px; line-height: 1.08; font-weight: 500; color: #F2EBE0;">Your coach is already downstairs. No commute, no excuses.</h2>
+          <div style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #F2EBE0; font-weight: 600;">See residential &rarr;</div>
+        </div>
+      </a>
+    </div>
+  </section>
 
   <!-- ===== TESTIMONIAL — Kim (real, locked) ===== -->
-  <div style="background: #1A1A1A; padding: 168px 72px; text-align: center;">
-    <div class="fr" style="font-size: 52px; line-height: 1; color: #A67C52; margin-bottom: 8px;">&ldquo;</div>
-    <blockquote class="fr" style="font-size: 44px; line-height: 1.38; font-weight: 400; font-style: italic; color: #F5F2ED; max-width: 1040px; margin: 0 auto;">Konfide In One changed more than my fitness. The training taught me to push through hard moments, and that mental fortitude shows up everywhere &mdash; in the boardroom, in tough decisions, in how I carry myself every day. It genuinely built confidence in my health and in myself.</blockquote>
-    <div style="width: 40px; height: 1px; background: #A67C52; margin: 52px auto 28px;"></div>
-    <div style="font-size: 14px; letter-spacing: 0.06em; color: #F5F2ED; font-weight: 500;">Kim</div>
-    <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.65); margin-top: 8px;">Tech Executive</div>
-  </div>
-
-  <!-- ===== PARTNER LOGOS ===== -->
-  <div style="background: #F5F2ED; color: #1A1A1A; padding: 128px 72px; text-align: center;">
-    <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: rgba(26,26,26,0.7); margin-bottom: 12px; font-weight: 500;">A curated ecosystem</div>
-    <h2 class="fr" style="font-size: 42px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 76px;">Specialists behind every pillar</h2>
-    <h3 class="fr" style="font-size: 20px; font-weight: 400; letter-spacing: -0.005em; color: rgba(26,26,26,0.8); margin-top: -56px; margin-bottom: 56px;">Each pillar is led by an expert partner with deep domain experience.</h3>
-    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 56px; max-width: 900px; margin: 0 auto;">
-      <sc-for list="{{ logos }}" as="l" hint-placeholder-count="3">
-        <div style="height: 72px; display: flex; align-items: center; justify-content: center;">
-          <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(26,26,26,0.65); border: 1px dashed rgba(26,26,26,0.2); padding: 22px 28px; width: 100%; text-align: center; box-sizing: border-box; line-height: 1.5;">{{ l }}</span>
-        </div>
-      </sc-for>
+  <section style="background: #F2EBE0; color: #211A15; padding: 132px 72px;">
+    <div style="display: grid; grid-template-columns: 420px 1fr; gap: 84px; align-items: center; max-width: 1180px; margin: 0 auto;">
+      <!-- TODO: swap for a portrait of Kim herself once one is available -->
+      <div style="position: relative; height: 480px; overflow: hidden; background: #E2D8C8;">
+        <img src="images/ChanCL-63.webp" alt="A Konfide In One client mid-session, smiling" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+      </div>
+      <figure style="display: flex; flex-direction: column; gap: 30px;">
+        <blockquote class="fr" style="font-size: 42px; line-height: 1.28; font-weight: 400; font-style: italic;">Konfide In One changed more than my fitness. The training taught me to push through hard moments, and that fortitude shows up everywhere &mdash; in the boardroom, in tough decisions, in how I carry myself every day.</blockquote>
+        <figcaption style="display: flex; align-items: center; gap: 16px;">
+          <div style="width: 32px; height: 1px; background: #B4834F;"></div>
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <div style="font-size: 15px; font-weight: 500;">Kim</div>
+            <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(33,26,21,0.7);">Tech executive &middot; client since 2024</div>
+          </div>
+        </figcaption>
+      </figure>
     </div>
-  </div>
+  </section>
+
+  <!-- ===== PARTNERS ===== -->
+  <section style="background: #EAE1D3; color: #211A15; padding: 104px 72px; text-align: center;">
+    <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(33,26,21,0.7); margin-bottom: 14px; font-weight: 500;">You&rsquo;re never handed off to a stranger</div>
+    <h2 class="fr" style="font-size: 40px; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 18px;">Every specialist is someone I&rsquo;d send my own family to.</h2>
+    <div style="font-size: 16px; font-weight: 300; color: rgba(33,26,21,0.72); max-width: 560px; margin: 0 auto 62px; line-height: 1.7;">Nutrition, recovery, functional medicine &mdash; hand-picked partners who talk to each other about you.</div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 860px; margin: 0 auto;">
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">My Fit Foods</span>
+      </div>
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">Nirvanix Health</span>
+      </div>
+      <div style="height: 68px; display: flex; align-items: center; justify-content: center;">
+        <span style="font-family: 'SF Mono', ui-monospace, monospace; font-size: 10px; letter-spacing: 0.06em; color: rgba(33,26,21,0.65); border: 1px dashed rgba(33,26,21,0.25); padding: 20px 26px; width: 100%; text-align: center; line-height: 1.5;">Airrosti</span>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== FAQ ===== -->
-  <section style="border-top: 1px solid rgba(245,242,237,0.07); padding: 120px 72px;">
+  <section style="border-top: 1px solid rgba(242,235,224,0.08); padding: 120px 72px; background: #17120F;">
     <div style="max-width: 880px; margin: 0 auto;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">FAQ</div>
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-bottom: 24px; font-weight: 500;">FAQ</div>
       <h2 class="fr" style="font-size: 44px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 56px;">Frequently asked questions</h2>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">What is Konfide In One?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Konfide In One is an on-site wellness company based in Austin, TX. One trusted team unifies training, nutrition, recovery and body composition measurement into a single accountable system, delivered directly where you live and work.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">What is Konfide In One?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Konfide In One is an on-site wellness company based in Austin, TX. One trusted team unifies training, nutrition, recovery and body composition measurement into a single accountable system, delivered directly where you live and work.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">How does the unified model work?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Every client starts with a functional movement assessment. From there, four pillars &mdash; <a href="ecosystem.html#train" style="color:#A67C52;">Train</a>, <a href="ecosystem.html#fuel" style="color:#A67C52;">Fuel</a>, <a href="ecosystem.html#restore" style="color:#A67C52;">Restore</a>, <a href="ecosystem.html#measure" style="color:#A67C52;">Measure</a> &mdash; run as one connected system so nothing is left to guesswork.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">How does the unified model work?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Every client starts with a functional movement assessment. From there, four pillars &mdash; <a href="ecosystem.html#train" class="link-accent">Train</a>, <a href="ecosystem.html#fuel" class="link-accent">Fuel</a>, <a href="ecosystem.html#restore" class="link-accent">Restore</a>, <a href="ecosystem.html#measure" class="link-accent">Measure</a> &mdash; run as one connected system so nothing is left to guesswork.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">Who is Konfide In One for?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">Three audiences: <a href="corporate.html" style="color:#A67C52;">companies</a> with an underused gym, <a href="residential.html" style="color:#A67C52;">luxury residential properties</a> and HOA boards, and individual high performers who value their time.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">Who is Konfide In One for?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">Three audiences: <a href="corporate.html" class="link-accent">companies</a> with an underused gym, <a href="residential.html" class="link-accent">luxury residential properties</a> and HOA boards, and individual high performers who value their time.</div>
       </details>
-      <details style="border-top: 1px solid rgba(245,242,237,0.09); border-bottom: 1px solid rgba(245,242,237,0.09); padding: 28px 0;">
-        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F5F2ED;">Where do sessions take place?<span class="faq-x" style="color: #A67C52; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
-        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.65); padding-top: 18px; max-width: 780px;">All coaching and recovery services are delivered on site &mdash; at your corporate gym or residential building. There are zero commutes; everything comes to you.</div>
+      <details style="border-top: 1px solid rgba(242,235,224,0.1); border-bottom: 1px solid rgba(242,235,224,0.1); padding: 28px 0;">
+        <summary style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: 19px; font-weight: 500; color: #F2EBE0;">Where do sessions take place?<span class="faq-x" style="color: #C79862; font-size: 26px; font-weight: 300; flex-shrink: 0;">+</span></summary>
+        <div style="font-size: 15px; line-height: 1.75; font-weight: 300; color: rgba(242,235,224,0.72); padding-top: 18px; max-width: 780px;">All coaching and recovery services are delivered on site &mdash; at your corporate gym or residential building. There are zero commutes; everything comes to you.</div>
       </details>
     </div>
   </section>
 
-  <!-- ===== FOOTER CTA ===== -->
-  <div role="contentinfo" style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
-    <div style="text-align: center;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 28px; font-weight: 500;">Let&rsquo;s talk</div>
-      <h2 class="fr" style="font-size: 78px; line-height: 1; font-weight: 400; letter-spacing: -0.025em; max-width: 900px; margin: 0 auto 32px;">Book a consultation</h2>
-      <div style="font-size: 17px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.6); max-width: 520px; margin: 0 auto 44px;">We&rsquo;ll discuss your goals, answer your questions, and find the right path forward.</div>
-      <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</a>
+  <!-- ===== CLOSING CTA + FOOTER ===== -->
+  <div role="contentinfo" style="background: #14100D; border-top: 1px solid rgba(242,235,224,0.08); padding: 138px 72px 0;">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">One conversation</div>
+      <h2 class="fr" style="font-size: 74px; line-height: 1.02; font-weight: 400; letter-spacing: -0.025em; max-width: 900px;">Come tell me where you actually are.</h2>
+      <div style="font-size: 18px; line-height: 1.66; font-weight: 300; color: rgba(242,235,224,0.72); max-width: 540px;">Fifteen minutes with me. No forms to fill out first, no program to buy. Just where you are, where you want to be, and whether we&rsquo;re the right team to get you there.</div>
+      <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 21px 52px; margin-top: 12px;">Book a consultation</a>
+      <div class="fr" style="font-size: 20px; font-style: italic; color: rgba(242,235,224,0.6); margin-top: 6px;">&mdash; Chandler</div>
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(245,242,237,0.07); font-size: 12px; letter-spacing: 0.04em; color: rgba(245,242,237,0.65); gap: 32px;">
+
+    <div style="display: flex; flex-direction: column; margin-top: 128px; padding-top: 40px; border-top: 1px solid rgba(242,235,224,0.08); font-size: 12px; letter-spacing: 0.04em; color: rgba(242,235,224,0.7); gap: 32px; padding-bottom: 56px;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
         <div>
           <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 12px;">
-            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(245,242,237,0.7);">Konfide In One</span>
-            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.65);">
+            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(242,235,224,0.8);">Konfide In One</span>
+            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,235,224,0.7);">
               <a href="https://linkedin.com/company/konfideinone" target="_blank" rel="noopener nofollow">LinkedIn</a>
               <a href="https://instagram.com/konfideinone" target="_blank" rel="noopener nofollow">Instagram</a>
             </span>
           </div>
-          <div style="line-height: 1.7; font-size: 15px; color: rgba(245,242,237,0.75);">
+          <div style="line-height: 1.7; font-size: 15px; color: rgba(242,235,224,0.78);">
             <div>100 Congress Ave, Suite 200</div>
             <div>Austin, TX 78701, United States</div>
-            <div><a href="tel:+15125550142" style="color: rgba(245,242,237,0.75);">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com" style="color: rgba(245,242,237,0.75);">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
+            <div><a href="tel:+15125550142">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
@@ -313,14 +452,81 @@
           </div>
         </div>
       </div>
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(245,242,237,0.05);">
-        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(245,242,237,0.55);">Est. 2026</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(242,235,224,0.06);">
+        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(242,235,224,0.6);">Est. 2026</span></div>
       </div>
     </div>
   </div>
 
 </div>
 </x-dc>
+<script>
+(function () {
+  /* ---- four-pillar tabs ---- */
+  function initPillarTabs() {
+    var tabs = document.querySelectorAll('.pillar-tab');
+    if (!tabs.length) return;
+    function activate(slug) {
+      for (var i = 0; i < tabs.length; i++) {
+        var on = tabs[i].getAttribute('data-pillar') === slug;
+        tabs[i].classList.toggle('is-active', on);
+        tabs[i].setAttribute('aria-selected', on ? 'true' : 'false');
+      }
+      var panels = document.querySelectorAll('.pillar-panel');
+      for (var j = 0; j < panels.length; j++) {
+        panels[j].classList.toggle('is-active', panels[j].id === 'panel-' + slug);
+      }
+    }
+    for (var k = 0; k < tabs.length; k++) {
+      (function (tab) {
+        tab.addEventListener('click', function () { activate(tab.getAttribute('data-pillar')); });
+      })(tabs[k]);
+    }
+  }
+
+  /* ---- click-to-play pillar videos (same behaviour as the Ecosystem page).
+         If the footage isn't uploaded yet the poster is restored instead of
+         leaving a broken player on the page. ---- */
+  function bindPillarVideo(wrap) {
+    var btn = wrap.querySelector('.pillar-video-play');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var poster = wrap.innerHTML;
+      var video = document.createElement('video');
+      video.src = wrap.getAttribute('data-video-src');
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+      video.style.cssText = 'position:absolute; inset:0; width:100%; height:100%; object-fit:cover;';
+      video.addEventListener('error', function () {
+        wrap.innerHTML = poster;
+        bindPillarVideo(wrap);
+      });
+      wrap.innerHTML = '';
+      wrap.appendChild(video);
+      video.play().catch(function () {});
+    });
+  }
+  function initPillarVideos() {
+    var wraps = document.querySelectorAll('.pillar-video');
+    for (var i = 0; i < wraps.length; i++) bindPillarVideo(wraps[i]);
+  }
+
+  /* ---- hero video: some browsers ignore the autoplay attribute ---- */
+  function initHeroVideo() {
+    var v = document.getElementById('heroVideo');
+    if (v && v.paused) v.play().catch(function () {});
+  }
+
+  function init() {
+    initPillarTabs();
+    initPillarVideos();
+    initHeroVideo();
+  }
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
 <script type="application/ld+json">
 [
   {
@@ -350,47 +556,44 @@
     "slogan": "Building Confidence in One's Health and Oneself",
     "foundingDate": "2026",
     "foundingLocation": "Austin, TX",
+    "founder": {
+      "@type": "Person",
+      "name": "Chandler Thomas",
+      "jobTitle": "Founder & Head Coach"
+    },
     "knowsAbout": ["Personal Training", "Nutrition Coaching", "Massage Therapy", "Functional Medicine", "Body Composition Measurement"],
     "sameAs": [
       "https://linkedin.com/company/konfideinone",
       "https://instagram.com/konfideinone"
     ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Konfide In One?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Konfide In One is an on-site wellness company based in Austin, TX. One trusted team unifies training, nutrition, recovery and body composition measurement into a single accountable system, delivered directly where you live and work." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the unified model work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Every client starts with a functional movement assessment. From there, four pillars — Train, Fuel, Restore and Measure — run as one connected system so nothing is left to guesswork." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who is Konfide In One for?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Three audiences: companies with an underused gym, luxury residential properties and HOA boards, and individual high performers who value their time." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do sessions take place?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All coaching and recovery services are delivered on site — at your corporate gym or residential building. There are zero commutes; everything comes to you." }
+      }
+    ]
   }
 ]
-</script>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    const cardBase = "position: relative; display: block; height: 480px; overflow: hidden; cursor: pointer; transition: transform 0.4s ease, box-shadow 0.4s ease;";
-    const currentSlug = typeof window !== "undefined" ? window.location.hash.replace("#", "") : "";
-    const verbData = [
-      { title: "Train", slug: "train", desc: "On-site personal coaching. Every client starts with a functional movement screening.", img: "ChanCL-5.webp" },
-      { title: "Fuel", slug: "fuel", desc: "Nutrition coaching that aligns your eating with your training and recovery.", img: "ChanCL-59.webp" },
-      { title: "Restore", slug: "restore", desc: "Massage and functional medicine, integrated from day one — not an afterthought.", img: "ChanCL-65.webp" },
-      { title: "Measure", slug: "measure", desc: "Quarterly body composition tracking, so progress is visible, not anecdotal.", img: "ChanCL-72.webp" },
-    ];
-    const verbs = verbData.map((v) => {
-      const isActive = v.slug === currentSlug;
-      return {
-        ...v,
-        href: `ecosystem.html#${v.slug}`,
-        imgStyle: `position:absolute; inset:0; background-image: url('images/${v.img}'); background-size: cover; background-position: center; transition: transform 0.4s ease;`,
-        overlayStyle: `position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.1) 30%, rgba(20,20,20,0.92) 100%);`,
-        style: cardBase + (isActive ? " box-shadow: inset 0 0 0 2px #A67C52;" : ""),
-      };
-    });
-    return {
-      verbs,
-      stats: [
-        { num: "4", label: "integrated pillars — Train, Fuel, Restore, Measure — run as one system." },
-        { num: "1:1", label: "assessment-first coaching. Every client begins with a functional movement screening." },
-        { num: "0", label: "commutes. Expert coaching delivered on-site, where you live and work." },
-        { num: "10yr+", label: "of founder experience at major technology companies." },
-      ],
-      logos: ["My Fit Foods", "Nirvanix Health", "Airrosti"],
-    };
-  }
-}
 </script>
 </body>
 </html>
