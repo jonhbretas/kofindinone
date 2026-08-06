@@ -4,17 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mission | Building Confidence in Health and Self | Konfide In One</title>
-<meta name="description" content="Konfide In One exists to empower high performers, executives and founders to achieve optimal health without fragmentation. Discover our mission and our unified wellness model in Austin, TX.">
+<meta name="description" content="Why Konfide In One exists, in Chandler Thomas's own words: one team holding the whole picture, so high performers stop managing their health in pieces. Austin, TX.">
 <link rel="canonical" href="https://konfideinone.com/mission">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#1A1A1A">
+<meta name="theme-color" content="#17120F">
 <link rel="icon" type="image/svg+xml" href="./favicon.svg">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-<style>body{opacity:0}body.dc-ready{opacity:1;transition:opacity .25s ease}</style>
-<noscript><style>body{opacity:1 !important}</style></noscript>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Our mission — Konfide In One">
-<meta property="og:description" content="Building confidence in one's health and oneself. A unified wellness model for high performers, executives and founders.">
+<meta property="og:description" content="Confidence in your health becomes confidence in yourself. A letter from the founder, and the four things we won't compromise on.">
 <meta property="og:url" content="https://konfideinone.com/mission">
 <meta property="og:site_name" content="Konfide In One">
 <meta property="og:locale" content="en_US">
@@ -25,6 +23,128 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Our mission — Konfide In One">
 <meta name="twitter:description" content="Building confidence in one's health and oneself. Austin, TX.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="images/ChanCL-63.webp" fetchpriority="high">
+<link rel="preload" as="script" href="./support.js">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    *, *::before, *::after { box-sizing: border-box; }
+    x-dc { display: block; }
+    body { margin: 0; background: #17120F; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
+    blockquote { margin: 0; }
+    figure { margin: 0; }
+    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
+    @keyframes heroKen { from { transform: scale(1.05); } to { transform: scale(1.15); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+    html { scroll-behavior: smooth; }
+
+    /* ===== links & buttons ===== */
+    .cta-solid { background: #B4834F; color: #17120F; transition: background 0.25s ease; }
+    .cta-solid:hover, .cta-solid:focus-visible { background: #C79862; }
+    .link-accent { color: #C79862; }
+    .link-accent:hover, .link-accent:focus-visible { color: #E0B98A; }
+    .link-cream { color: #8F5A31; }
+    .link-cream:hover, .link-cream:focus-visible { color: #6F4322; }
+
+    /* ===== the four beliefs: tabs + panels =====
+       Same pattern as the pillar tabs elsewhere on the site: all four panels
+       are plain HTML in the document, so every word stays crawlable and the
+       page degrades to a stacked list without JS. */
+    .belief-tabs { flex-wrap: wrap; }
+    .belief-tab {
+      flex: 1; display: flex; flex-direction: column-reverse; gap: 10px; text-align: left;
+      padding: 26px 28px; cursor: pointer; font: inherit; color: rgba(242,235,224,0.85);
+      background: transparent; border: 1px solid rgba(242,235,224,0.18);
+      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+    }
+    .belief-tab:hover { border-color: rgba(180,131,79,0.7); }
+    .belief-tab:focus-visible { outline: 2px solid #C79862; outline-offset: 3px; }
+    .belief-tab.is-active { background: #B4834F; border-color: #B4834F; color: #17120F; }
+    /* the margin keeps the tab row on screen when a #belief link jumps here */
+    .belief-panel { display: none; scroll-margin-top: 200px; }
+    .belief-panel.is-active { display: grid; }
+
+    /* ===== responsive: preserved from the previous build, extended for the new type scale ===== */
+    @media (max-width: 1024px) {
+      h1 { font-size: 64px !important; line-height: 1.02 !important; }
+      h2 { font-size: 36px !important; line-height: 1.1 !important; }
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 44px !important; line-height: 1.06 !important; }
+      h2 { font-size: 28px !important; line-height: 1.15 !important; }
+      h3 { font-size: 22px !important; }
+    }
+    @media (max-width: 480px) {
+      h1 { font-size: 32px !important; }
+      h2 { font-size: 24px !important; }
+      .belief-tab { flex: 1 1 100% !important; }
+    }
+    @media (max-width: 1100px) {
+      [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
+      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 40px !important; padding-right: 40px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
+      [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
+      [style*="grid-template-columns: 620px 1fr"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="grid-template-columns: 420px 1fr"] { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 900px) {
+      .belief-tab { flex: 1 1 calc(50% - 6px) !important; padding: 20px 22px !important; }
+      [style*="grid-template-columns: repeat(3, 1fr)"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 760px) {
+      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="88px"], [style*="padding"][style*="64px"] { padding-left: 24px !important; padding-right: 24px !important; }
+      [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
+      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+      [style*="width: 760px"] { width: 100% !important; }
+      [style*="height: 900px"], [style*="height: 880px"], [style*="height: 820px"], [style*="height: 800px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
+      [style*="height: 500px"], [style*="height: 480px"], [style*="height: 440px"], [style*="height: 420px"] { height: 300px !important; }
+      [style*="min-height: 780px"], [style*="min-height: 700px"], [style*="min-height: 680px"], [style*="min-height: 660px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 560px"], [style*="min-height: 480px"], [style*="min-height: 420px"], [style*="min-height: 300px"] { min-height: 340px !important; }
+      [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
+      [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
+      [style*="gap: 96px"] { gap: 40px !important; }
+      [style*="gap: 84px"] { gap: 36px !important; }
+      [style*="gap: 72px"] { gap: 36px !important; }
+      [style*="gap: 64px"] { gap: 32px !important; }
+      [style*="gap: 60px"] { gap: 30px !important; }
+      [style*="gap: 56px"] { gap: 28px !important; }
+      [style*="gap: 48px"] { gap: 24px !important; }
+      [style*="gap: 44px"] { gap: 26px !important; }
+      [style*="gap: 40px"] { gap: 24px !important; }
+      [style*="gap: 32px"] { gap: 18px !important; }
+      [style*="font-size: 108px"], [style*="font-size: 104px"] { font-size: 44px !important; }
+      [style*="font-size: 98px"], [style*="font-size: 94px"], [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 86px"], [style*="font-size: 84px"] { font-size: 40px !important; }
+      [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
+      [style*="font-size: 68px"], [style*="font-size: 66px"] { font-size: 44px !important; }
+      [style*="font-size: 64px"], [style*="font-size: 62px"] { font-size: 38px !important; }
+      [style*="font-size: 52px"], [style*="font-size: 50px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
+      [style*="font-size: 42px"], [style*="font-size: 40px"], [style*="font-size: 38px"] { font-size: 26px !important; }
+      [style*="font-size: 36px"] { font-size: 24px !important; }
+      [style*="font-size: 34px"], [style*="font-size: 32px"] { font-size: 24px !important; }
+      [style*="font-size: 28px"], [style*="font-size: 26px"] { font-size: 22px !important; }
+      blockquote { font-size: 26px !important; line-height: 1.35 !important; }
+      [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
+      [style*="padding: 19px 42px"], [style*="padding: 20px 42px"] { padding: 14px 24px !important; }
+      [style*="padding: 20px 52px"], [style*="padding: 21px 52px"] { padding: 15px 28px !important; }
+      [style*="margin-top: 132px"], [style*="margin-top: 128px"] { flex-wrap: wrap !important; gap: 16px !important; margin-top: 56px !important; }
+      /* Both of these hold only absolutely-positioned children, so stacked they
+         would collapse to zero height. Give them a height rather than an
+         aspect-ratio: with a min-height in play, aspect-ratio resolves width
+         from height and pushes the column wider than its grid track. */
+      .letter-portrait { height: 460px !important; min-height: 0 !important; }
+      .belief-media { height: 220px !important; min-height: 0 !important; }
+      .section-head { flex-wrap: wrap !important; align-items: flex-start !important; gap: 20px !important; }
+      .section-head > * { max-width: 100% !important; }
+      .hero-actions { flex-wrap: wrap !important; row-gap: 14px !important; }
+    }
+</style>
+<noscript><style>
+    /* without JS every belief is shown stacked, so no content is lost */
+    .belief-tabs { display: none !important; }
+    .belief-panel { display: grid !important; margin-bottom: 20px; }
+</style></noscript>
 <script src="./support.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-XXXXXXXXXX');</script>
@@ -32,193 +152,234 @@
 </head>
 <body>
 <x-dc>
-<helmet>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="image" href="images/ChanCL-63.webp" fetchpriority="high">
-  <link rel="preload" as="script" href="./support.js">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0,1;1,9..144,300..600,0,1&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; }
-    body { margin: 0; background: #1A1A1A; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, h4 { margin: 0; padding: 0; font-weight: inherit; }
-    blockquote { margin: 0; }
-    .fr { font-family: 'Fraunces', Georgia, serif; font-variation-settings: 'SOFT' 0, 'WONK' 1; }
-    @keyframes heroKen { from { transform: scale(1.06); } to { transform: scale(1.16); } }
-    @media (max-width: 1024px) {
-      h1 { font-size: 72px !important; line-height: 1.02 !important; }
-      h2 { font-size: 36px !important; line-height: 1.1 !important; }
-    }
-    @media (max-width: 768px) {
-      h1 { font-size: 44px !important; line-height: 1.06 !important; }
-      h2 { font-size: 28px !important; line-height: 1.15 !important; }
-    }
-    @media (max-width: 480px) {
-      h1 { font-size: 32px !important; }
-      h2 { font-size: 24px !important; }
-    }
-    /* ===== KN1 responsive ===== */
-    html { scroll-behavior: smooth; }
-    @media (max-width: 1100px) {
-      [style*="padding"][style*="72px"] { padding-left: 48px !important; padding-right: 48px !important; }
-      [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 40px !important; padding-right: 40px !important; }
-      [style*="left: 72px"][style*="right: 72px"] { left: 48px !important; right: 48px !important; }
-      [style*="grid-template-columns: repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
-    }
-    @media (max-width: 760px) {
-      [style*="padding"][style*="72px"], [style*="padding"][style*="128px"], [style*="padding"][style*="96px"], [style*="padding"][style*="64px"], [style*="padding"][style*="88px"] { padding-left: 24px !important; padding-right: 24px !important; }
-      [style*="left: 72px"][style*="right: 72px"] { left: 24px !important; right: 24px !important; }
-      [style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
-      [style*="width: 760px"] { width: 100% !important; }
-      [style*="height: 900px"], [style*="height: 780px"], [style*="height: 760px"], [style*="height: 700px"], [style*="height: 680px"] { height: 560px !important; }
-      [style*="min-height: 700px"], [style*="min-height: 640px"], [style*="min-height: 620px"], [style*="min-height: 480px"] { min-height: 340px !important; }
-      [style*="padding: 32px 72px"] { flex-wrap: wrap !important; row-gap: 14px !important; }
-      [style*="gap: 38px"] { gap: 14px !important; font-size: 9.5px !important; flex-wrap: wrap !important; row-gap: 12px !important; }
-      [style*="gap: 96px"] { gap: 40px !important; }
-      [style*="gap: 72px"] { gap: 36px !important; }
-      [style*="gap: 64px"] { gap: 32px !important; }
-      [style*="gap: 56px"] { gap: 28px !important; }
-      [style*="gap: 48px"] { gap: 24px !important; }
-      [style*="gap: 32px"] { gap: 18px !important; }
-      [style*="font-size: 108px"] { font-size: 46px !important; }
-      [style*="font-size: 92px"], [style*="font-size: 88px"], [style*="font-size: 84px"] { font-size: 40px !important; }
-      [style*="font-size: 78px"], [style*="font-size: 74px"], [style*="font-size: 72px"] { font-size: 36px !important; }
-      [style*="font-size: 68px"], [style*="font-size: 66px"] { font-size: 44px !important; }
-      [style*="font-size: 64px"] { font-size: 38px !important; }
-      [style*="font-size: 52px"], [style*="font-size: 48px"], [style*="font-size: 46px"], [style*="font-size: 44px"] { font-size: 30px !important; }
-      [style*="font-size: 42px"], [style*="font-size: 40px"] { font-size: 26px !important; }
-      [style*="font-size: 36px"] { font-size: 24px !important; }
-      blockquote { font-size: 26px !important; line-height: 1.35 !important; }
-      [style*="padding: 13px 26px"] { padding: 10px 14px !important; }
-      [style*="display: flex; justify-content: space-between; align-items: center; padding-top: 40px"] { flex-wrap: wrap !important; gap: 20px !important; }
-    }
-  </style>
-</helmet>
 
-<div style="width: 1440px; margin: 0 auto; background: #1A1A1A; color: #F5F2ED; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
+<div style="width: 1440px; margin: 0 auto; background: #17120F; color: #F2EBE0; font-family: 'Inter Tight', 'Helvetica Neue', Arial, sans-serif; position: relative; overflow: hidden;">
 
   <!-- ===== NAV ===== -->
-  <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
+  <nav aria-label="Primary" style="position: absolute; top: 0; left: 0; right: 0; z-index: 30; padding: 32px 72px; display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" style="display: flex; flex-direction: column; line-height: 1;">
-      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F5F2ED;">Konfide In One</div>
-      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #A67C52; margin-top: 6px;">Unified Wellness</div>
+      <div class="fr" style="font-size: 26px; font-weight: 500; letter-spacing: 0.02em; color: #F2EBE0;">Konfide In One</div>
+      <div style="font-size: 9px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-top: 6px;">Unified Wellness</div>
     </a>
-    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245,242,237,0.8); font-weight: 500;">
+    <div style="display: flex; gap: 38px; align-items: center; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(242,235,224,0.85); font-weight: 500;">
       <a href="corporate.html">Corporate</a>
       <a href="residential.html">Residential</a>
       <a href="ecosystem.html">Ecosystem</a>
-      <a href="mission.html" style="color: #F5F2ED; border-bottom: 1px solid #A67C52; padding-bottom: 4px;">Mission</a>
-      <a href="get-started.html" style="background: #A67C52; color: #1A1A1A; padding: 13px 26px;">Get Started</a>
+      <a href="mission.html" style="color: #F2EBE0; border-bottom: 1px solid #B4834F; padding-bottom: 4px;">Mission</a>
+      <a href="get-started.html" class="cta-solid" style="padding: 13px 26px;">Get Started</a>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
-  <div style="position: relative; height: 680px; width: 100%; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background-image: url('images/ChanCL-63.webp'); background-size: cover; background-position: center; animation: heroKen 18s ease-in-out infinite alternate;"></div>
-    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,20,20,0.55) 0%, rgba(20,20,20,0.25) 40%, rgba(20,20,20,0.92) 100%);"></div>
-    <div style="position: absolute; left: 72px; right: 72px; bottom: 84px; z-index: 10;">
-      <div style="font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">Why we exist</div>
-      <h1 class="fr" style="font-size: 108px; line-height: 0.96; font-weight: 400; letter-spacing: -0.025em;">Our mission.</h1>
-    </div>
-  </div>
+  <div style="position: relative; height: 800px; width: 100%; overflow: hidden;">
+    <video autoplay muted loop playsinline preload="metadata" poster="images/ChanCL-63.webp" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none;" id="heroVideo">
+      <source src="videos/hero-bg.mp4" type="video/mp4">
+    </video>
+    <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.7) 0%, rgba(23,18,15,0.22) 38%, rgba(23,18,15,0.94) 100%);"></div>
 
-  <!-- ===== OPENING COPY ===== -->
-  <div style="padding: 128px 72px; border-bottom: 1px solid rgba(245,242,237,0.07);">
-      <h2 class="fr" style="font-size: 46px; line-height: 1.32; font-weight: 400; letter-spacing: -0.015em; max-width: 1000px; margin: 0 auto;">Konfide In One exists to solve a fundamental gap in how high performers approach health and fitness. People understand they need to train. What they do not understand is everything that comes with it &mdash; recovery, nutrition, injury prevention, measurement. We are on a mission to change that.</h2>
-    <h3 class="fr" style="font-size: 24px; line-height: 1.3; font-weight: 400; letter-spacing: -0.01em; color: rgba(245,242,237,0.65); max-width: 720px; margin: 32px auto 0; text-align: center;">Confidence in your health builds confidence in everything you do.</h3>
-    <div style="font-size: 19px; line-height: 1.75; font-weight: 300; color: rgba(245,242,237,0.68); max-width: 720px; margin: 24px auto 0;">We believe that when you have the right guidance, access, and unified system, you do not just get fit &mdash; you build confidence in your health and in yourself. And that confidence touches everything.</div>
-  </div>
-
-  <!-- ===== THE MISSION — bronze heavy ===== -->
-  <div style="position: relative; padding: 140px 72px; overflow: hidden;">
-    <div style="position: absolute; inset: 0; background: linear-gradient(120deg, rgba(166,124,82,0.16) 0%, rgba(26,26,26,0) 60%);"></div>
-    <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 96px; align-items: center;">
-      <div>
-        <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">The mission</div>
-        <h2 class="fr" style="font-size: 44px; line-height: 1.15; font-weight: 400; letter-spacing: -0.015em;">Health, handled &mdash; so you can lead.</h2>
-      </div>
-      <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.7);">Konfide In One is on a mission to empower high performers, executives, founders, and entrepreneurs to achieve optimal health without the fragmentation, confusion, or wasted time that plagues traditional fitness. We believe your health should be handled so you can focus on what matters &mdash; your work, your leadership, your life.</div>
-    </div>
-  </div>
-
-  <!-- ===== THE SOLUTION — photo bleeds right ===== -->
-  <div id="the-solution" style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; border-top: 1px solid rgba(245,242,237,0.07);">
-    <div style="padding: 128px 96px 128px 72px; display: flex; flex-direction: column; justify-content: center;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">The solution</div>
-      <h2 class="fr" style="font-size: 44px; line-height: 1.12; font-weight: 400; letter-spacing: -0.015em;">One unified ecosystem. Four pillars.</h2>
-      <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 28px; max-width: 500px;">We built a unified ecosystem around four pillars: Train, Fuel, Restore, Measure. Every client starts with a comprehensive functional assessment. From there, they are connected directly to specialists in coaching, nutrition, recovery, and measurement. No searching. No guessing. No fragmentation. Everything is integrated. Everything works together.</div>
-      <div style="font-size: 17px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.65); margin-top: 24px; max-width: 500px;">The result is not just better fitness outcomes. It is confidence. Confidence in your health builds confidence in yourself. And that confidence ripples into your work, your leadership, your relationships, your life.</div>
-      <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px;">
-        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #A67C52; border: 1px solid rgba(166,124,82,0.4); border-radius: 100px; padding: 9px 18px;">Train</span>
-        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #A67C52; border: 1px solid rgba(166,124,82,0.4); border-radius: 100px; padding: 9px 18px;">Fuel</span>
-        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #A67C52; border: 1px solid rgba(166,124,82,0.4); border-radius: 100px; padding: 9px 18px;">Restore</span>
-        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; color: #A67C52; border: 1px solid rgba(166,124,82,0.4); border-radius: 100px; padding: 9px 18px;">Measure</span>
+    <div style="position: absolute; left: 72px; right: 72px; bottom: 82px; z-index: 10;">
+      <div style="font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; margin-bottom: 24px; font-weight: 500; animation: fadeUp 0.9s ease both;">Why we exist</div>
+      <h1 class="fr" style="font-size: 86px; line-height: 0.98; font-weight: 400; letter-spacing: -0.022em; max-width: 1120px; animation: fadeUp 1s ease 0.1s both;">Confidence in your health becomes confidence in yourself.</h1>
+      <div style="font-size: 20px; line-height: 1.62; font-weight: 300; color: rgba(242,235,224,0.85); max-width: 620px; margin-top: 28px; animation: fadeUp 1s ease 0.2s both;">That&rsquo;s not a tagline we wrote in a workshop. It&rsquo;s the thing I watch happen to people, over and over, and the reason this company exists.</div>
+      <div class="hero-actions" style="display: flex; gap: 18px; align-items: center; margin-top: 42px; animation: fadeUp 1s ease 0.3s both;">
+        <a href="#beliefs" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 42px;">What we believe</a>
+        <a href="get-started.html" class="link-accent" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 4px;">Book a consultation &rarr;</a>
       </div>
     </div>
-    <div style="position: relative; min-height: 620px; background-image: url('images/ChanCL-71.webp'); background-size: cover; background-position: center;"></div>
   </div>
 
-  <!-- ===== WHO WE SERVE ===== -->
-  <div id="who-we-serve" style="padding: 140px 72px; text-align: center; border-top: 1px solid rgba(245,242,237,0.07);">
-    <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 24px; font-weight: 500;">Who we serve</div>
-    <h2 class="fr" style="font-size: 48px; line-height: 1.14; font-weight: 400; letter-spacing: -0.015em; max-width: 940px; margin: 0 auto;">High performers who refuse to compromise on results.</h2>
-    <div style="font-size: 18px; line-height: 1.8; font-weight: 300; color: rgba(245,242,237,0.65); max-width: 720px; margin: 32px auto 0;">We work with executives, founders, entrepreneurs, and ambitious professionals who value their time. People with a go mentality, who are driven, who understand that investing in their health is investing in everything else.</div>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 36px;">
-      <span style="font-size: 12px; letter-spacing: 0.06em; color: rgba(245,242,237,0.75); border: 1px solid rgba(245,242,237,0.15); border-radius: 100px; padding: 10px 20px;">Executives</span>
-      <span style="font-size: 12px; letter-spacing: 0.06em; color: rgba(245,242,237,0.75); border: 1px solid rgba(245,242,237,0.15); border-radius: 100px; padding: 10px 20px;">Founders</span>
-      <span style="font-size: 12px; letter-spacing: 0.06em; color: rgba(245,242,237,0.75); border: 1px solid rgba(245,242,237,0.15); border-radius: 100px; padding: 10px 20px;">Entrepreneurs</span>
-      <span style="font-size: 12px; letter-spacing: 0.06em; color: rgba(245,242,237,0.75); border: 1px solid rgba(245,242,237,0.15); border-radius: 100px; padding: 10px 20px;">Ambitious professionals</span>
+  <!-- ===== FOUNDER LETTER — the heart of the page ===== -->
+  <section id="founder-letter" style="display: grid; grid-template-columns: 620px 1fr; align-items: stretch; background: #1C1611;">
+    <figure class="letter-portrait" style="position: relative; min-height: 780px; overflow: hidden; background: #100C0A;">
+      <img src="images/ChanCL-59.webp" alt="Chandler Thomas, founder and head coach of Konfide In One, on the gym floor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 38% center;">
+      <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(23,18,15,0.1) 0%, rgba(23,18,15,0.82) 100%);"></div>
+      <figcaption style="position: absolute; left: 40px; bottom: 40px; right: 40px;">
+        <div class="fr" style="font-size: 26px; font-weight: 500; color: #F2EBE0;">Chandler Thomas</div>
+        <div style="font-size: 11px; letter-spacing: 0.26em; text-transform: uppercase; color: #C79862; margin-top: 8px;">Founder &amp; Head Coach</div>
+      </figcaption>
+    </figure>
+    <div style="padding: 116px 120px 116px 88px; display: flex; flex-direction: column; justify-content: center; gap: 24px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">A letter from the founder</div>
+      <h2 class="fr" style="font-size: 46px; line-height: 1.1; font-weight: 400; letter-spacing: -0.02em; font-style: italic;">I kept meeting people who were winning at everything except their own body.</h2>
+      <p style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px; margin: 0;">Founders. Executives. People with no shortage of discipline &mdash; they&rsquo;d built companies on it. But when it came to their health, they were doing it alone, in pieces. A trainer here, a supplement there, a nagging injury they&rsquo;d stopped mentioning to anyone.</p>
+      <p style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px; margin: 0;">What they were missing wasn&rsquo;t willpower. It was someone in their corner who actually knew them &mdash; their history, their schedule, the reason they quit last time. Nobody was holding the whole picture.</p>
+      <p style="font-size: 17.5px; line-height: 1.8; font-weight: 300; color: rgba(242,235,224,0.75); max-width: 520px; margin: 0;">So I built the thing I wanted for myself: one team, one plan, and a coach who notices when you go quiet for a week. Everything under one roof &mdash; <a href="ecosystem.html" class="link-accent">training, nutrition, recovery and measurement</a>, coordinated &mdash; so nobody falls through the cracks again.</p>
+      <div class="fr" style="font-size: 22px; font-style: italic; color: rgba(242,235,224,0.65); margin-top: 10px;">&mdash; Chandler</div>
     </div>
-  </div>
+  </section>
 
-  <!-- ===== OUR COMMITMENT — bronze heavy ===== -->
-  <div id="our-commitment" style="position: relative; padding: 140px 72px; overflow: hidden; border-top: 1px solid rgba(245,242,237,0.07);">
-    <div style="position: absolute; inset: 0; background: linear-gradient(300deg, rgba(166,124,82,0.16) 0%, rgba(26,26,26,0) 60%);"></div>
-    <div style="position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; font-weight: 500;">Our commitment</div>
-      <div>
-        <h2 class="fr" style="font-size: 40px; line-height: 1.2; font-weight: 400; letter-spacing: -0.015em; margin-bottom: 32px;">Your health is handled. So you can focus on what matters.</h2>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-          <sc-for list="{{ commitments }}" as="c" hint-placeholder-count="4">
-            <div style="display: flex; gap: 14px; align-items: flex-start; border: 1px solid rgba(245,242,237,0.1); background: rgba(20,20,20,0.3); padding: 20px 18px; border-radius: 4px;">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" style="flex-shrink: 0; margin-top: 2px;" aria-hidden="true"><circle cx="8" cy="8" r="8" fill="#A67C52"></circle><path d="M4.5 8.2L6.8 10.5L11.5 5.5" stroke="#1A1A1A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              <div style="font-size: 15px; line-height: 1.6; color: rgba(245,242,237,0.75);">{{ c }}</div>
-            </div>
-          </sc-for>
+  <!-- ===== WHAT WE BELIEVE ===== -->
+  <section id="beliefs" style="padding: 122px 72px 34px; background: #17120F;">
+    <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 46px; gap: 60px;">
+      <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">What we believe</div>
+        <h2 class="fr" style="font-size: 52px; line-height: 1.04; font-weight: 400; letter-spacing: -0.02em; max-width: 660px;">Four things we won&rsquo;t compromise on.</h2>
+      </div>
+      <div style="font-size: 16px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.7); max-width: 330px; padding-bottom: 6px;">Tap one to see what it actually means in practice &mdash; not as a value statement, as a rule we run by.</div>
+    </div>
+
+    <div class="belief-tabs" role="tablist" aria-label="What we believe" style="display: flex; gap: 12px;">
+      <button type="button" role="tab" id="tab-together" class="belief-tab is-active" aria-selected="true" aria-controls="together" data-panel="together">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Belief one</span>
+        <span class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15;">Nobody trains alone</span>
+      </button>
+      <button type="button" role="tab" id="tab-assess" class="belief-tab" aria-selected="false" aria-controls="assess" data-panel="assess">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Belief two</span>
+        <span class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15;">Assess before you prescribe</span>
+      </button>
+      <button type="button" role="tab" id="tab-recovery" class="belief-tab" aria-selected="false" aria-controls="recovery" data-panel="recovery">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Belief three</span>
+        <span class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15;">Recovery isn&rsquo;t the reward</span>
+      </button>
+      <button type="button" role="tab" id="tab-honest" class="belief-tab" aria-selected="false" aria-controls="honest" data-panel="honest">
+        <span style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; opacity: 0.75;">Belief four</span>
+        <span class="fr" style="font-size: 24px; font-weight: 500; letter-spacing: -0.01em; line-height: 1.15;">Say the honest thing</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVE BELIEF ===== -->
+  <section style="padding: 0 72px 130px; background: #17120F;">
+
+    <!-- BELIEF ONE -->
+    <div class="belief-panel is-active" id="together" role="tabpanel" aria-labelledby="tab-together" style="grid-template-columns: 1fr 1.15fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 420px;">
+      <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Belief one</div>
+        <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">Discipline isn&rsquo;t the missing piece. Company is.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Our clients are not lazy people. They run companies. What they&rsquo;ve never had is someone who expects them at 6:40 and notices when they don&rsquo;t show. That relationship is the product &mdash; the <a href="ecosystem.html#train" class="link-accent">programming</a> is just how we express it.</div>
+        <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">In practice: your coach is the same person every session. You never get reassigned to whoever is free.</div>
+      </div>
+      <div class="belief-media" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-71.webp" alt="A coach and client mid-conversation between sets on the gym floor" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+
+    <!-- BELIEF TWO -->
+    <div class="belief-panel" id="assess" role="tabpanel" aria-labelledby="tab-assess" style="grid-template-columns: 1fr 1.15fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 420px;">
+      <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Belief two</div>
+        <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">We don&rsquo;t hand out a plan before we&rsquo;ve watched you move.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">Every client starts with a functional movement screening, not a workout. Restrictions, imbalances, the shoulder you stopped mentioning. Prescribing training without that is guessing with someone else&rsquo;s body.</div>
+        <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">In practice: no client trains with us until we&rsquo;ve screened them &mdash; no exceptions, however eager they are to start.</div>
+      </div>
+      <div class="belief-media" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-5.webp" alt="A functional movement screening in progress, the coach observing closely" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+      </div>
+    </div>
+
+    <!-- BELIEF THREE -->
+    <div class="belief-panel" id="recovery" role="tabpanel" aria-labelledby="tab-recovery" style="grid-template-columns: 1fr 1.15fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 420px;">
+      <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Belief three</div>
+        <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">Most of what people call aging is a problem nobody looked at.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);"><a href="ecosystem.html#restore" class="link-accent">Recovery</a> and <a href="ecosystem.html#fuel" class="link-accent">nutrition</a> are in the plan from day one, not the thing you add after something tears. The stiff hip, the sleep, the bloodwork nobody explained &mdash; those are training inputs, not complaints.</div>
+        <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">In practice: massage and functional medicine are part of the first plan we write, not an upsell in month four.</div>
+      </div>
+      <div class="belief-media" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-65.webp" alt="A hands-on recovery session, calm and unhurried" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+      </div>
+    </div>
+
+    <!-- BELIEF FOUR -->
+    <div class="belief-panel" id="honest" role="tabpanel" aria-labelledby="tab-honest" style="grid-template-columns: 1fr 1.15fr; background: #1C1611; border: 1px solid rgba(180,131,79,0.22); min-height: 420px;">
+      <div style="padding: 64px 60px; display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">Belief four</div>
+        <h3 class="fr" style="font-size: 38px; line-height: 1.12; font-weight: 400; letter-spacing: -0.02em;">If we&rsquo;re not right for you, you&rsquo;ll hear it from me on the call.</h3>
+        <div style="font-size: 17px; line-height: 1.78; font-weight: 300; color: rgba(242,235,224,0.75);">We&rsquo;d rather lose the sale than take someone we can&rsquo;t genuinely help. Same rule with <a href="ecosystem.html" class="link-accent">partners</a> &mdash; every specialist in the ecosystem is someone I&rsquo;d send my own family to, and that&rsquo;s the entire vetting standard.</div>
+        <div style="font-size: 15.5px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 18px;">In practice: no annual lock-in, no pressure close. If it isn&rsquo;t working, we say so first.</div>
+      </div>
+      <div class="belief-media" style="position: relative; overflow: hidden; background: #100C0A;">
+        <img src="images/ChanCL-56.webp" alt="Chandler in a direct, unhurried conversation with a client" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== WHO THIS IS FOR ===== -->
+  <section id="who-we-serve" style="background: #F2EBE0; color: #211A15; padding: 128px 72px;">
+    <div style="max-width: 1180px; margin: 0 auto; display: flex; flex-direction: column; gap: 56px;">
+      <div class="section-head" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 60px;">
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(33,26,21,0.7); font-weight: 500;">Who this is for</div>
+          <h2 class="fr" style="font-size: 48px; line-height: 1.06; font-weight: 400; letter-spacing: -0.02em; max-width: 640px;">We&rsquo;re not for everyone. Here&rsquo;s who we&rsquo;re for.</h2>
+        </div>
+        <div style="font-size: 16px; line-height: 1.7; font-weight: 300; color: rgba(33,26,21,0.72); max-width: 320px; padding-bottom: 6px;">If none of this sounds like you, I&rsquo;ll say so on the call and point you somewhere better.</div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">People who run things</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">Founders, executives, and operators whose calendars are the real constraint. You don&rsquo;t need motivation &mdash; you need the logistics to stop being your problem.</div>
+        </div>
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">People who&rsquo;ve tried alone</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">You&rsquo;ve had the membership, the app, the trainer who didn&rsquo;t remember your name. You already know the equipment was never what was missing.</div>
+        </div>
+        <div style="border-top: 1px solid rgba(180,131,79,0.55); padding-top: 26px; display: flex; flex-direction: column; gap: 14px;">
+          <h3 class="fr" style="font-size: 28px; line-height: 1.18; font-weight: 500;">People who want proof</h3>
+          <div style="font-size: 15.5px; line-height: 1.72; font-weight: 300; color: rgba(33,26,21,0.72);">You want to see what changed, in numbers, quarter over quarter &mdash; and you want someone accountable for the number moving. That&rsquo;s the <a href="ecosystem.html#measure" class="link-cream">Measure</a> pillar&rsquo;s whole job.</div>
         </div>
       </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 22px; align-items: center; font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(33,26,21,0.72); border-top: 1px solid rgba(33,26,21,0.14); padding-top: 34px;">
+        <div style="max-width: 620px;">We work on site &mdash; inside <a href="corporate.html" class="link-cream">companies</a> and <a href="residential.html" class="link-cream">residential buildings</a> in Austin &mdash; because the commute is where most good intentions die.</div>
+      </div>
     </div>
-  </div>
+  </section>
+
+  <!-- ===== THE RIPPLE — testimonial as proof of the mission ===== -->
+  <section style="background: #EAE1D3; color: #211A15; padding: 128px 72px;">
+    <div style="display: grid; grid-template-columns: 420px 1fr; gap: 84px; align-items: center; max-width: 1180px; margin: 0 auto;">
+      <!-- TODO: replace with a portrait of Kim once the client shoot happens.
+           Until then this is a context photo from the KN1 shoot, described as such. -->
+      <div style="position: relative; height: 480px; overflow: hidden; background: #ded3c1;">
+        <img src="images/ChanCL-72.webp" alt="A client reviewing her tracked progress with her coach" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+      </div>
+      <figure style="display: flex; flex-direction: column; gap: 28px;">
+        <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: rgba(33,26,21,0.7); font-weight: 500;">The part we&rsquo;re actually after</div>
+        <blockquote class="fr" style="font-size: 40px; line-height: 1.3; font-weight: 400; font-style: italic;">The training taught me to push through hard moments, and that fortitude shows up everywhere &mdash; in the boardroom, in tough decisions, in how I carry myself every day.</blockquote>
+        <figcaption style="display: flex; align-items: center; gap: 16px;">
+          <div style="width: 32px; height: 1px; background: #8F5A31;"></div>
+          <div style="display: flex; flex-direction: column; gap: 5px;">
+            <div style="font-size: 15px; font-weight: 500;">Kim</div>
+            <div style="font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(33,26,21,0.7);">Tech executive &middot; client since 2024</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
   <!-- ===== TAGLINE CLOSE ===== -->
-  <div style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 160px 72px; text-align: center;">
-    <blockquote class="fr" style="font-size: 68px; line-height: 1.14; font-weight: 400; font-style: italic; letter-spacing: -0.015em; max-width: 980px; margin: 0 auto; color: #F5F2ED;">Building Confidence in One&rsquo;s Health and Oneself.</blockquote>
-    <div style="width: 40px; height: 1px; background: #A67C52; margin: 52px auto 0;"></div>
-  </div>
-
-  <!-- ===== FOOTER CTA ===== -->
-  <div role="contentinfo" style="background: #161616; border-top: 1px solid rgba(245,242,237,0.07); padding: 140px 72px;">
-    <div style="text-align: center;">
-      <div style="font-size: 11px; letter-spacing: 0.34em; text-transform: uppercase; color: #A67C52; margin-bottom: 28px; font-weight: 500;">Let&rsquo;s talk</div>
-      <h2 class="fr" style="font-size: 78px; line-height: 1; font-weight: 400; letter-spacing: -0.025em; max-width: 900px; margin: 0 auto 32px;">Book a consultation</h2>
-      <div style="font-size: 17px; line-height: 1.6; font-weight: 300; color: rgba(245,242,237,0.6); max-width: 520px; margin: 0 auto 44px;">We&rsquo;ll discuss your goals, answer your questions, and find the right path forward.</div>
-      <a href="get-started.html" style="display: inline-block; background: #A67C52; color: #1A1A1A; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 20px 52px;">Book a consultation</a>
+  <section style="position: relative; background: #17120F; padding: 156px 72px; text-align: center; overflow: hidden;">
+    <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(180,131,79,0.16) 0%, rgba(23,18,15,0) 65%);"></div>
+    <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 0;">
+      <blockquote class="fr" style="font-size: 62px; line-height: 1.16; font-weight: 400; font-style: italic; letter-spacing: -0.015em; max-width: 940px; color: #F2EBE0;">Building confidence in one&rsquo;s health, and in oneself.</blockquote>
+      <div style="width: 40px; height: 1px; background: #B4834F; margin-top: 48px;"></div>
     </div>
-    <div style="display: flex; flex-direction: column; margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(245,242,237,0.07); font-size: 12px; letter-spacing: 0.04em; color: rgba(245,242,237,0.65); gap: 32px;">
+  </section>
+
+  <!-- ===== CLOSING CTA + FOOTER ===== -->
+  <div role="contentinfo" style="background: #14100D; border-top: 1px solid rgba(242,235,224,0.08); padding: 30px 72px 0;">
+    <div style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 26px; padding-top: 108px;">
+      <div style="font-size: 11px; letter-spacing: 0.32em; text-transform: uppercase; color: #C79862; font-weight: 500;">One conversation</div>
+      <h2 class="fr" style="font-size: 68px; line-height: 1.04; font-weight: 400; letter-spacing: -0.025em; max-width: 860px;">Come tell me where you actually are.</h2>
+      <div style="font-size: 18px; line-height: 1.66; font-weight: 300; color: rgba(242,235,224,0.72); max-width: 540px;">Fifteen minutes with me. No forms first, no program to buy. Just where you are, where you want to be, and whether we&rsquo;re the right team to get you there.</div>
+      <a href="get-started.html" class="cta-solid" style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; padding: 21px 52px; margin-top: 12px;">Book a consultation</a>
+      <div class="fr" style="font-size: 20px; font-style: italic; color: rgba(242,235,224,0.6); margin-top: 6px;">&mdash; Chandler</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; margin-top: 128px; padding-top: 40px; border-top: 1px solid rgba(242,235,224,0.08); font-size: 12px; letter-spacing: 0.04em; color: rgba(242,235,224,0.7); gap: 32px; padding-bottom: 56px;">
       <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
         <div>
           <div style="display: flex; align-items: center; gap: 24px; margin-bottom: 12px;">
-            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(245,242,237,0.7);">Konfide In One</span>
-            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,242,237,0.65);">
+            <span class="fr" style="font-size: 22px; letter-spacing: 0.02em; color: rgba(242,235,224,0.8);">Konfide In One</span>
+            <span style="display: flex; gap: 16px; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,235,224,0.7);">
               <a href="https://linkedin.com/company/konfideinone" target="_blank" rel="noopener nofollow">LinkedIn</a>
               <a href="https://instagram.com/konfideinone" target="_blank" rel="noopener nofollow">Instagram</a>
             </span>
           </div>
-          <div style="line-height: 1.7; font-size: 15px; color: rgba(245,242,237,0.75);">
+          <div style="line-height: 1.7; font-size: 15px; color: rgba(242,235,224,0.78);">
             <div>100 Congress Ave, Suite 200</div>
             <div>Austin, TX 78701, United States</div>
-            <div><a href="tel:+15125550142" style="color: rgba(245,242,237,0.75);">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com" style="color: rgba(245,242,237,0.75);">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
+            <div><a href="tel:+15125550142">(512) 555-0142</a> &middot; <a href="mailto:hello@konfideinone.com">hello<!-- -->&#64;<!-- -->konfideinone&#46;com</a></div>
           </div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 8px; align-items: flex-end;">
@@ -227,14 +388,76 @@
           </div>
         </div>
       </div>
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(245,242,237,0.05);">
-        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(245,242,237,0.55);">Est. 2026</span></div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 20px; border-top: 1px solid rgba(242,235,224,0.06);">
+        <div>&copy; 2026 Konfide In One LLC &middot; Austin, TX &middot; <span style="font-size: 11px; color: rgba(242,235,224,0.6);">Est. 2026</span></div>
       </div>
     </div>
   </div>
 
 </div>
 </x-dc>
+<script>
+(function () {
+  var SLUGS = ['together', 'assess', 'recovery', 'honest'];
+
+  /* ---- the four beliefs: tabs over plain HTML panels ---- */
+  function activateBelief(slug, scroll) {
+    if (SLUGS.indexOf(slug) === -1) return;
+    var panels = document.querySelectorAll('.belief-panel');
+    for (var i = 0; i < panels.length; i++) {
+      panels[i].classList.toggle('is-active', panels[i].id === slug);
+    }
+    var tabs = document.querySelectorAll('.belief-tab');
+    for (var j = 0; j < tabs.length; j++) {
+      var on = tabs[j].getAttribute('data-panel') === slug;
+      tabs[j].classList.toggle('is-active', on);
+      tabs[j].setAttribute('aria-selected', on ? 'true' : 'false');
+    }
+    if (scroll) {
+      /* scroll the panel itself, so this matches where the browser's own
+         #anchor jump lands (see .belief-panel scroll-margin-top) */
+      var panel = document.getElementById(slug);
+      if (panel) panel.scrollIntoView({ block: 'start' });
+    }
+  }
+
+  function initBeliefTabs() {
+    var tabs = document.querySelectorAll('.belief-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      (function (tab) {
+        tab.addEventListener('click', function () {
+          var slug = tab.getAttribute('data-panel');
+          activateBelief(slug, false);
+          try { history.replaceState(null, '', '#' + slug); } catch (e) {}
+        });
+      })(tabs[i]);
+    }
+    window.addEventListener('hashchange', function () {
+      activateBelief((window.location.hash || '').replace('#', '').toLowerCase(), true);
+    });
+  }
+
+  /* ---- hero video: some browsers ignore the autoplay attribute ---- */
+  function initHeroVideo() {
+    var v = document.getElementById('heroVideo');
+    if (v && v.paused) v.play().catch(function () {});
+  }
+
+  function init() {
+    initBeliefTabs();
+    initHeroVideo();
+    var hash = (window.location.hash || '').replace('#', '').toLowerCase();
+    if (SLUGS.indexOf(hash) > -1) {
+      activateBelief(hash, false);
+      /* the browser may already have jumped to the anchor if that panel was the
+         open one — re-scroll on the next frame so every belief lands the same */
+      (window.requestAnimationFrame || setTimeout)(function () { activateBelief(hash, true); });
+    }
+  }
+  if (document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
 <script type="application/ld+json">
 [
   {
@@ -273,20 +496,6 @@
     }
   }
 ]
-</script>
-<script type="text/x-dc" data-dc-script>
-class Component extends DCLogic {
-  renderVals() {
-    return {
-      commitments: [
-        "Every client receives expert coaching backed by science.",
-        "Recovery and nutrition are not afterthoughts — they are part of the system from day one.",
-        "Progress is measured and tracked.",
-        "Your health is handled. So you can focus on what matters.",
-      ],
-    };
-  }
-}
 </script>
 </body>
 </html>
