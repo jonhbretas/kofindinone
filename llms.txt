@@ -16,8 +16,8 @@ Konfide In One is an on-site wellness company based in Austin, TX that unifies p
 - **Residential Wellness**: On-site fitness and wellness for luxury residential properties
 - **Personal Coaching**: One-on-one and group training with functional movement assessment
 - **Nutrition Coaching**: On-site nutrition guidance integrated with training
-- **Recovery Services**: Massage therapy and functional medicine
-- **Body Composition Measurement**: Quarterly tracking via Siloh app
+- **Recovery Services**: Massage, chiropractic and injury care
+- **Body Composition Measurement**: Lab work and bloodwork via Nirvanix Health, plus ongoing tracking via Siloh app
 
 ## Audience
 Konfide In One serves three audiences:

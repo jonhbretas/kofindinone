@@ -247,7 +247,7 @@
             </button>
             <button type="button" class="aud-btn" data-audience="residential" aria-pressed="false">
               <h2 class="fr" style="font-size: 21px; font-weight: 500; letter-spacing: -0.005em;">Residential</h2>
-              <div style="font-size: 12.5px; line-height: 1.5; opacity: 0.75; margin-top: 8px;">You manage or live in a building</div>
+              <div style="font-size: 12.5px; line-height: 1.5; opacity: 0.75; margin-top: 8px;">You manage a building</div>
             </button>
             <button type="button" class="aud-btn" data-audience="individual" aria-pressed="false">
               <h2 class="fr" style="font-size: 21px; font-weight: 500; letter-spacing: -0.005em;">Individual</h2>
@@ -256,7 +256,7 @@
           </div>
           <!-- one note per audience, swapped with the buttons -->
           <div class="aud-note aud-corporate" style="font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 16px; margin-bottom: 48px;">We&rsquo;ll start with a 30-minute walkthrough of your space &mdash; I&rsquo;ll tell you honestly what it can support, whether or not you hire us.</div>
-          <div class="aud-note aud-residential aud-hidden" style="font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 16px; margin-bottom: 48px;">Property side, we walk the building. Resident side, we talk about you &mdash; either way, the first conversation is free and there&rsquo;s nothing to buy at the end of it.</div>
+          <div class="aud-note aud-residential aud-hidden" style="font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 16px; margin-bottom: 48px;">We&rsquo;ll walk the building and talk through what it can support &mdash; the first conversation is free and there&rsquo;s nothing to buy at the end of it.</div>
           <div class="aud-note aud-individual aud-hidden" style="font-size: 15px; line-height: 1.7; font-weight: 300; color: rgba(242,235,224,0.68); border-left: 2px solid rgba(180,131,79,0.5); padding-left: 16px; margin-bottom: 48px;">Fifteen minutes on the phone, then a functional movement screening if it feels like a fit. No program to buy before either of those.</div>
         </div>
 
@@ -304,13 +304,6 @@
           <!-- RESIDENTIAL -->
           <fieldset class="aud-group aud-residential aud-hidden">
             <legend class="aud-group-legend" hidden style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #C79862; font-weight: 500; padding: 28px 0 4px;">If you&rsquo;re a building</legend>
-            <div style="margin-top: 20px;">
-              <label class="lbl" for="gsResidentType">Are you</label>
-              <select class="fld" id="gsResidentType" name="resident_type">
-                <option>A property manager or HOA board member</option>
-                <option>A resident who lives in the building</option>
-              </select>
-            </div>
             <div style="margin-top: 20px;">
               <label class="lbl" for="gsBuilding">Which building?</label>
               <input class="fld" type="text" id="gsBuilding" name="building" placeholder="Property or community name">
