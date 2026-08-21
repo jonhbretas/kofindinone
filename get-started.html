@@ -227,16 +227,7 @@
         <div class="fr" style="font-size: 20px; font-style: italic; color: rgba(242,235,224,0.6); margin-top: 8px;">&mdash; Chandler</div>
       </div>
 
-      <!-- ==========================================================
-           TODO (backend): this form has no endpoint yet. `action` is
-           empty, so submission is handled entirely in JS below and the
-           answers are NOT sent anywhere — only the confirmation panel
-           is shown. To make it live, set action="<endpoint>" and delete
-           the preventDefault branch in initForm(). Field `name`s below
-           are already final. Until then the mailto/phone fallbacks are
-           the only paths that actually reach anyone.
-           ========================================================== -->
-      <form id="gsForm" method="post" action="" novalidate>
+      <form id="gsForm" method="post" action="/api/send" novalidate>
 
         <div class="aud-switcher">
           <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(242,235,224,0.6); margin-bottom: 18px; font-weight: 500;">First &mdash; which one are you?</div>
@@ -455,16 +446,37 @@
 
   /* ---- submit ----
      `novalidate` is on the form so we can style the invalid state ourselves,
-     which means we have to ask for the check explicitly. */
+     which means we have to ask for the check explicitly. Submission itself
+     goes out as JSON via fetch so checkbox groups (goals) serialize as an
+     array instead of a repeated form field. */
   function initForm() {
     var form = document.getElementById('gsForm');
     var thanks = document.getElementById('gsThanks');
     if (!form) return;
 
+    function formToJSON(f) {
+      var data = {};
+      var fields = f.querySelectorAll('input, textarea, select');
+      for (var i = 0; i < fields.length; i++) {
+        var el = fields[i];
+        if (!el.name || el.disabled) continue;
+        if (el.type === 'checkbox') {
+          if (!el.checked) continue;
+          if (data[el.name] === undefined) data[el.name] = [];
+          data[el.name].push(el.value);
+        } else if (el.type === 'radio') {
+          if (el.checked) data[el.name] = el.value;
+        } else {
+          data[el.name] = el.value;
+        }
+      }
+      return data;
+    }
+
     form.addEventListener('submit', function (e) {
+      e.preventDefault();
       form.classList.add('was-submitted');
       if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
-        e.preventDefault();
         /* scoped to controls: bare :invalid would also match the wrapping
            fieldset, which can't take focus */
         var bad = form.querySelector('input:invalid, select:invalid, textarea:invalid');
@@ -474,16 +486,25 @@
         }
         return;
       }
-      /* No endpoint yet — see the TODO above the form. Once `action` is set,
-         delete this branch and let the browser post normally. */
-      if (!form.getAttribute('action')) {
-        e.preventDefault();
+
+      var submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formToJSON(form))
+      }).then(function (res) {
+        if (!res.ok) throw new Error('Request failed');
         if (thanks) {
           form.hidden = true;
           thanks.hidden = false;
           thanks.scrollIntoView({ block: 'center' });
         }
-      }
+      }).catch(function () {
+        if (submitBtn) submitBtn.disabled = false;
+        alert('Something went wrong sending this — please email hello@konfideinone.com directly.');
+      });
     });
   }
 
